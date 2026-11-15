@@ -20,11 +20,11 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   metadataBase: new URL("https://wrapdbtc.github.io"),
   title: {
-    default: "Ajouri — Haut, Klang & Linie",
+    default: "Ajouri — Haut, Klang & Tattoo",
     template: "%s · Ajouri",
   },
   description:
-    "Drei Frauen, drei Handwerke, ein Name: Michelle Ajouri (Haut), Sabine Ajouri · Vita Sonus (Klang) und Isabelle Ajouri · Atelier Isabelle (Fine-Line) in Neuburg an der Donau.",
+    "Drei Frauen, drei Handwerke, ein Name: Michelle Ajouri (Haut & Darm), Sabine Ajouri · Vita Sonus (Klang) und Isabelle Ajouri · Inkabell Tattoo (Fineline & Blackwork) in Neuburg an der Donau.",
   openGraph: {
     siteName: "Ajouri",
     locale: "de_DE",

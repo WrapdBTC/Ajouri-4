@@ -4,12 +4,12 @@ import { Img } from "@/components/Img";
 import { Arrow, Button } from "@/components/Button";
 import { SectionIntro, Eyebrow } from "@/components/SectionIntro";
 import { PriceRow } from "@/components/PriceRow";
-import { contact } from "@/lib/site";
+import { contact, mailto } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Pakete & Preise · Michelle Ajouri",
+  title: "Behandlungen & Buchung · Michelle Ajouri",
   description:
-    "SKIN FIRST, SKIN START, SKIN RENEWAL, SKIN TRANSFORMATION sowie Korean Lash Lift und Brow Lift bei Michelle Ajouri in Neuburg — direkt buchbar über Beautinda.",
+    "SKIN FIRST, individuelle Facials, persönliche Hautbegleitung, ganzheitliche Darmbegleitung online sowie Korean Lash Lift und Brow Lift bei Michelle Ajouri in Neuburg.",
 };
 
 const c = contact.michelle;
@@ -29,21 +29,21 @@ const packages: Pkg[] = [
   {
     name: "SKIN START",
     claim: "Dein sanfter Einstieg",
-    sessions: "4 Termine à 80 Min.",
+    sessions: "4 Termine",
     duration: "rund 3 Monate",
     price: "1.890 €",
     text: "Dein sanfter Einstieg in eine Hautreise mit Begleitung. Behandlungen, die aufeinander aufbauen — und der Blick auf Haut und Darm zusammen.",
     features: [
       "4 Behandlungen, die aufeinander aufbauen",
-      "5 Reviderm-Produkte für zu Hause: Reinigung, Toner, Serum, Creme",
+      "5 abgestimmte REVIDERM-Produkte für zu Hause",
       "Haut und Darm im Blick",
-      "Video-Check-ins zwischen den Terminen gratis",
+      "Persönliche Check-ins zwischen den Terminen",
     ],
   },
   {
     name: "SKIN RENEWAL",
     claim: "Richtig ankommen",
-    sessions: "6 Termine à 80 Min.",
+    sessions: "6 Termine",
     duration: "rund 5 Monate",
     price: "2.390 €",
     popular: true,
@@ -51,28 +51,39 @@ const packages: Pkg[] = [
     features: [
       "6 Behandlungen, angepasst an deine Fortschritte",
       "Deine Haut gestärkt von innen und außen",
-      "5 Reviderm-Produkte inklusive",
+      "5 REVIDERM-Produkte inklusive",
       "Ich bin auch zwischen den Terminen für dich da",
     ],
   },
   {
     name: "SKIN TRANSFORMATION",
     claim: "Deine ganz große Hautreise",
-    sessions: "10 Termine à 80 Min.",
+    sessions: "10 Termine",
     duration: "rund 9 Monate",
     price: "3.490 €",
     text: "Neun Monate intensive Begleitung, in denen wir Haut und Darm in Balance bringen und dein Ergebnis langfristig festigen. Für dich, wenn du es von Herzen ernst meinst.",
     features: [
-      "10 Behandlungen, perfekt aufeinander abgestimmt",
+      "10 Behandlungen, aufeinander abgestimmt",
       "Haut und Darm in Balance",
-      "5 Reviderm-Produkte für zu Hause",
-      "Volle Begleitung mit Video-Check-ins",
+      "5 REVIDERM-Produkte für zu Hause",
+      "Volle Begleitung mit persönlichen Check-ins",
       "Alle Unterlagen als PDF",
     ],
   },
 ];
 
-export default function MichellePakete() {
+const facials = [
+  "Aquafacial",
+  "Microneedling",
+  "Acid Peels",
+  "Dermaplaning",
+  "Oxygen",
+  "Hydrolage",
+  "Galvanik",
+  "Mikroströme",
+];
+
+export default function MichelleBehandlungen() {
   return (
     <>
       <Hero
@@ -81,17 +92,17 @@ export default function MichellePakete() {
         image="/assets/michelle/entspannung.jpg"
         alt="Entspannte Kundin mit geschlossenen Augen auf der Liege"
         position="50% 35%"
-        eyebrow="Pakete & Preise · direkt buchbar"
+        eyebrow="Behandlungen & Buchung"
         title={
           <>
-            Deine <em>Hautreise.</em>
+            Deine Hautreise beginnt <em>mit SKIN FIRST.</em>
           </>
         }
-        lead="Starte mit SKIN FIRST, geh mit einem Paket den ganzen Weg — oder gönn dir Lash & Brow. Alles direkt über Beautinda buchbar."
+        lead="Bevor wir deine Haut gezielt behandeln, möchte ich sie verstehen. Danach entscheiden wir gemeinsam, wie es für dich weitergeht."
         actions={
           <>
             <Button href={c.bookingHref}>
-              Termin buchen <Arrow />
+              SKIN FIRST buchen <Arrow />
             </Button>
             <Button href="/michelle/hautreise/" variant="outline">
               So läuft&apos;s
@@ -100,31 +111,24 @@ export default function MichellePakete() {
         }
       />
 
-      {/* SKIN FIRST */}
+      {/* 01 SKIN FIRST */}
       <section className="section-y-tight">
         <div className="container-x grid gap-10 md:grid-cols-12 md:items-center md:gap-12">
           <div className="reveal md:col-span-6">
-            <Eyebrow index="I">Erstbehandlung</Eyebrow>
+            <Eyebrow index="01">Ersttermin mit Hautanalyse &amp; individueller Behandlung</Eyebrow>
             <h2 className="display-2 mt-6">
               SKIN <em>FIRST.</em>
             </h2>
             <p className="lead mt-6 !max-w-lg">
-              Du stehst vor dem Spiegel und fragst dich, warum deine Haut nicht zur Ruhe kommt? Dann
-              ist SKIN FIRST dein Moment: ganzheitliche Hautgesundheit in 2 Stunden.
-            </p>
-            <p className="body-copy mt-4 !max-w-lg">
-              Mit dem OBSERV, einem professionellen Hautanalysegerät, machen wir sichtbar, was dein
-              Auge allein nicht sieht: Pigmente, Feuchtigkeit, Talg, Rötungen, Poren und erste
-              Zeichen der Hautalterung. Du siehst deine Haut selbst auf dem Bildschirm — und ich muss
-              nicht raten.
+              Bei SKIN FIRST nehmen wir uns Zeit für deine Hautgeschichte, deine Wünsche und deine
+              aktuelle Pflegeroutine.
             </p>
             <ul className="mt-6 space-y-2 text-[0.98rem]">
               {[
-                "Deine persönliche OBSERV-Hautanalyse",
-                "Die passende Behandlung für deine Haut, alles inklusive — ob Aquafacial, Microneedling, Peeling, Galvanik oder Mikroströme",
-                "Der Blick auf Haut und Darm als Einheit",
-                "Dein persönlicher Plan für zu Hause",
-                "Ganz viel Raum für deine Fragen",
+                "Ausführliche Haut- und Bedarfsanalyse mit dem OBSERV 320 von REVIDERM",
+                "Die kosmetische Behandlung, die zu deinem Hautzustand passt",
+                "Deine tägliche Pflege und mögliche Einflüsse aus deinem Alltag",
+                "Deine persönliche Empfehlung für die nächsten Schritte",
               ].map((f) => (
                 <li key={f} className="flex gap-3">
                   <span aria-hidden className="text-accent-text">·</span>
@@ -132,14 +136,17 @@ export default function MichellePakete() {
                 </li>
               ))}
             </ul>
+            <p className="body-copy mt-6 !max-w-lg text-[0.92rem] text-muted">
+              SKIN FIRST ist für neue Gesichtskundinnen und Gesichtskunden der erste
+              Behandlungstermin.
+            </p>
           </div>
           <div className="reveal md:col-span-5 md:col-start-8">
             <div className="border border-line bg-elev p-8 md:p-10">
               <p className="eyebrow text-accent-text">SKIN FIRST · 2 Std.</p>
               <p className="font-display mt-4 text-[3.25rem] leading-none tabular-nums">249 €</p>
               <p className="body-copy mt-4 !max-w-none text-[0.95rem]">
-                Keine versteckten Kosten, keine Überraschungen — die Behandlung ist im Preis
-                inklusive.
+                Hautanalyse und Behandlung sind im Preis inklusive. Keine versteckten Kosten.
               </p>
               <Button href={c.bookingHref} className="mt-8 w-full">
                 SKIN FIRST buchen
@@ -149,19 +156,54 @@ export default function MichellePakete() {
         </div>
       </section>
 
-      {/* Packages */}
-      <section className="section-y bg-surface">
+      {/* 02 Individuelle Facials */}
+      <section className="section-y-tight bg-surface">
+        <div className="container-x grid gap-10 md:grid-cols-12 md:gap-14">
+          <div className="reveal md:col-span-5">
+            <Eyebrow index="02">Individuelle Facials</Eyebrow>
+            <h2 className="display-2 mt-6">
+              Deine Haut. Dein Moment. <em>Deine Behandlung.</em>
+            </h2>
+          </div>
+          <div className="reveal md:col-span-6 md:col-start-7">
+            <p className="lead !max-w-none">
+              Nach unserem ersten Kennenlernen kannst du auch einzelne Gesichtsbehandlungen buchen,
+              ganz ohne mehrmonatige Begleitung.
+            </p>
+            <ul className="mt-6 flex flex-wrap gap-2">
+              {facials.map((f) => (
+                <li key={f} className="border border-line bg-elev px-3 py-1.5 text-[0.9rem]">
+                  {f}
+                </li>
+              ))}
+            </ul>
+            <p className="body-copy mt-6 !max-w-none">
+              Welche Anwendung sinnvoll ist, hängt von deinem aktuellen Hautzustand ab. Manchmal
+              steht intensive Feuchtigkeit im Vordergrund, manchmal eine gezielte Wirkstoffbehandlung
+              und manchmal braucht deine Haut vor allem Ruhe. Eine ayurvedisch inspirierte
+              Gesichtsmassage gehört dazu, soweit die Anwendung es zulässt.
+            </p>
+            <p className="eyebrow mt-6 text-muted">In der Regel 90–100 Minuten</p>
+            <Button href={c.bookingHref} variant="text" className="mt-6">
+              Behandlung buchen <Arrow />
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* 03 Hautbegleitung */}
+      <section className="section-y">
         <div className="container-x">
           <SectionIntro
             layout="split"
-            index="II"
-            eyebrow="Hautreise"
+            index="03"
+            eyebrow="Deine persönliche Hautbegleitung"
             title={
               <>
-                Drei Pakete, <em>ein Weg.</em>
+                Wenn du mehr möchtest <em>als einen Termin.</em>
               </>
             }
-            lead="Jeder Termin dauert 80 Minuten. Deine fünf Reviderm-Pflegeprodukte für zu Hause sind in jedem Paket schon dabei."
+            lead="Manche Hautziele brauchen Zeit. Gemeinsam entwickeln wir einen Fahrplan mit abgestimmten Behandlungen, ausgewählter Heimpflege und regelmäßigen Gesprächen. Deine Haut gibt die Richtung vor, ich begleite dich auf dem Weg."
           />
 
           <div className="mt-12 grid items-stretch gap-6 md:mt-14 md:grid-cols-3 md:gap-6">
@@ -209,16 +251,20 @@ export default function MichellePakete() {
                   variant={p.popular ? "solid" : "outline"}
                   className="mt-8 w-full"
                 >
-                  {p.name} buchen
+                  {p.name} anfragen
                 </Button>
               </article>
             ))}
           </div>
+          <p className="reveal body-copy mt-8 !max-w-none text-[0.92rem] text-muted">
+            Die drei Rahmen sind ein Startpunkt, kein starrer Ablauf. Den genauen Fahrplan legen
+            wir nach SKIN FIRST gemeinsam fest.
+          </p>
         </div>
       </section>
 
-      {/* Home care */}
-      <section className="section-y">
+      {/* 04 Darmbegleitung */}
+      <section className="section-y-tight bg-surface">
         <div className="container-x grid gap-12 md:grid-cols-12 md:items-center md:gap-14">
           <div className="reveal ken-wrap relative aspect-[4/5] overflow-hidden md:col-span-5">
             <Img
@@ -229,43 +275,60 @@ export default function MichellePakete() {
             />
           </div>
           <div className="reveal md:col-span-6 md:col-start-7">
-            <Eyebrow index="III">Deine Heimpflege</Eyebrow>
+            <Eyebrow index="04">Ganzheitliche Darmbegleitung</Eyebrow>
             <h2 className="display-2 mt-6">
-              Zu Hause passiert <em>die Hälfte.</em>
+              Auch online <em>für dich da.</em>
             </h2>
             <p className="lead mt-6 !max-w-none">
-              In jedem Paket bekommst du deine fünf Reviderm-Pflegeprodukte für zu Hause, passend zu
-              deiner Haut: Reinigung, Toner, Serum und deine Creme. Was du zu Hause machst, ist
-              mindestens so wichtig wie das, was bei mir auf der Liege passiert.
+              Neben meiner kosmetischen Arbeit begleite ich dich individuell rund um Darmgesundheit,
+              Ernährung und Lebensstil, ganz bequem online.
             </p>
+            <p className="body-copy mt-5 !max-w-none">
+              Gemeinsam sprechen wir über deine Gewohnheiten, deine Fragen und mögliche
+              Veränderungen im Alltag. Bei Bedarf können auch vorhandene Blut- und Laborwerte oder
+              ergänzende Testverfahren Thema sein.
+            </p>
+            <p className="body-copy mt-4 !max-w-none text-[0.9rem] text-muted">
+              Medizinisch notwendige Untersuchungen und Befundbewertungen erfolgen über entsprechend
+              befugte Fachpersonen.
+            </p>
+            <Button
+              href={mailto(c.email, "Anfrage Online-Beratung Darmbegleitung")}
+              variant="text"
+              className="mt-7"
+            >
+              Online-Beratung anfragen <Arrow />
+            </Button>
           </div>
         </div>
       </section>
 
-      {/* Lash & Brow */}
-      <section className="section-y-tight bg-surface">
+      {/* 05 Lash & Brow */}
+      <section className="section-y-tight">
         <div className="container-x grid gap-10 md:grid-cols-12">
           <div className="reveal md:col-span-4">
-            <Eyebrow index="IV">Lash &amp; Brow</Eyebrow>
+            <Eyebrow index="05">Lash &amp; Brow Lift</Eyebrow>
             <h2 className="display-2 mt-6">
-              Ausdruck, <em>ganz natürlich.</em>
+              Kleine Veränderung. <em>Große Wirkung.</em>
             </h2>
             <p className="lead mt-6">
-              Schwung für deine eigenen Wimpern und volle, definierte Brauen — ganz ohne Extensions
-              und ohne tägliches Styling.
+              Manchmal braucht es gar nicht viel, um den eigenen Ausdruck zu unterstreichen.
+            </p>
+            <p className="body-copy mt-4 text-[0.92rem] text-muted">
+              Auch ohne vorherigen SKIN-FIRST-Termin möglich, einzeln oder kombiniert.
             </p>
           </div>
           <ul className="divide-y divide-line border-b border-line md:col-span-7 md:col-start-6">
             <PriceRow
               name="Korean Lash Lift"
               time="60 Min."
-              detail="Besonders sanftes Lifting vom Ansatz an: optisch längere, geschwungene, definierte Wimpern. Inklusive Wimpern färben."
+              detail="Deine natürlichen Wimpern bekommen einen schönen Schwung. Inklusive Wimpern färben."
               price="75 €"
             />
             <PriceRow
               name="Brow Lift"
               time="60 Min."
-              detail="Die Härchen werden aufgerichtet und fixiert — voller, definierter, harmonischer. Inklusive Färben und präzisem Zupfen."
+              detail="Wir bringen deine Augenbrauen in eine harmonische Form. Färben und Zupfen sind inklusive."
               price="65 €"
             />
             <PriceRow
@@ -279,22 +342,22 @@ export default function MichellePakete() {
       </section>
 
       {/* Booking */}
-      <section className="section-y-tight">
+      <section className="section-y-tight bg-surface">
         <div className="container-x grid gap-8 md:grid-cols-12 md:items-center">
           <div className="reveal md:col-span-7">
             <p className="eyebrow text-accent-text">Buchen &amp; bezahlen</p>
-            <p className="display-3 mt-3">Alles direkt über Beautinda buchbar.</p>
+            <p className="display-3 mt-3">Direkt über Beautinda buchbar.</p>
             <p className="body-copy mt-3 !max-w-none">
-              Sichere Onlinezahlung, auf Wunsch in Raten. Fragen vorher? Schreib mir einfach per
-              WhatsApp.
+              Sichere Onlinezahlung, auf Wunsch in Raten. Unsicher, was zu dir passt? Buch dir einen
+              kostenlosen Kennenlern-Call.
             </p>
           </div>
           <div className="reveal flex flex-wrap gap-3 md:col-span-4 md:col-start-9 md:justify-end">
             <Button href={c.bookingHref}>
               Termin buchen <Arrow />
             </Button>
-            <Button href={c.whatsappHref} variant="outline">
-              WhatsApp
+            <Button href={c.callHref} variant="outline">
+              Kennenlern-Call
             </Button>
           </div>
         </div>

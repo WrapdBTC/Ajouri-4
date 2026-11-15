@@ -11,6 +11,7 @@ export const family: {
   house: string;
   craft: string;
   numeral: string;
+  claim: string;
   line: string;
   href: string;
   portal: string;
@@ -25,7 +26,8 @@ export const family: {
     house: "Kosmetik · Haut & Darm",
     craft: "Haut & Darm",
     numeral: "I",
-    line: "Haut lesen, Darm verstehen — ich begleite dich mit Plan über Wochen und Monate statt Einzeltermine ins Blaue.",
+    claim: "Haut lesen. Darm verstehen. Bei dir ankommen.",
+    line: "Ganzheitliche Hautpflege, individuelle Gesichtsbehandlungen und persönliche Begleitung für deine Hautgesundheit und dein Wohlbefinden.",
     href: "/michelle/",
     portal: "/assets/michelle/herbst-blick.jpg",
     portalPosition: "50% 60%",
@@ -39,7 +41,8 @@ export const family: {
     house: "Vita Sonus",
     craft: "Klang",
     numeral: "II",
-    line: "Klangreise, Klangmassage, Meditation — ein Raum, in dem es still werden darf.",
+    claim: "Wenn die Welt draußen laut wird, darf es in dir still werden.",
+    line: "Klangmassagen, Klangreisen und Meditationen als bewusste Auszeit vom Alltag.",
     href: "/sabine/",
     portal: "/assets/sabine/portal-lachen.jpg",
     portalPosition: "50% 28%",
@@ -50,10 +53,11 @@ export const family: {
     slug: "isabelle",
     first: "Isabelle",
     name: "Isabelle Ajouri",
-    house: "Atelier Isabelle",
-    craft: "Linie",
+    house: "Inkabell Tattoo",
+    craft: "Tattoo",
     numeral: "III",
-    line: "Fine-Line-Tattoos — reduziert, präzise, für genau eine Haut gezeichnet.",
+    claim: "Deine Geschichte. Deine Haut. Deine Kunst.",
+    line: "Individuelle Fineline- und Blackwork-Tattoos, die so einzigartig sind wie der Mensch, der sie trägt.",
     href: "/isabelle/",
     portal: "/assets/isabelle/portal-lachen.jpg",
     portalPosition: "50% 30%",
@@ -75,6 +79,7 @@ export const contact = {
     phone: "+49 1577 5056789",
     phoneHref: "tel:+4915775056789",
     whatsappHref: "https://wa.me/4915775056789",
+    callHref: `https://wa.me/4915775056789?text=${encodeURIComponent("Hallo Michelle, ich hätte gern einen kostenlosen Kennenlern-Call.")}`,
     email: "info@michelleajouri.de",
     hours: "In Behandlungsblöcken · alle 9 Wochen für 3 Wochen in Neuburg",
     instagram: "@michelle.ajouri",
@@ -98,7 +103,7 @@ export const contact = {
     street: studio.street,
     city: studio.city,
     /** Eigene Kontaktdaten folgen — bis dahin laufen Anfragen über das Studio. */
-    booking: "Termine nur auf Anfrage",
+    booking: "Termine nach vorheriger Anfrage",
   },
 } as const;
 
@@ -145,11 +150,11 @@ export const headers: Record<
     },
     anchors: [
       { label: "Start", href: "/michelle/" },
-      { label: "Pakete & Preise", href: "/michelle/leistungen/" },
+      { label: "Behandlungen", href: "/michelle/leistungen/" },
       { label: "Hautreise", href: "/michelle/hautreise/" },
       { label: "Kontakt", href: "/michelle/kontakt/" },
     ],
-    cta: { label: "Termin buchen", href: "https://beautinda.de/artist/NV4Nm1FjNjNwZTo2LhNrgYPPWt53" },
+    cta: { label: "SKIN FIRST buchen", href: "https://beautinda.de/artist/NV4Nm1FjNjNwZTo2LhNrgYPPWt53" },
   },
   sabine: {
     title: "Vita Sonus",
@@ -163,12 +168,12 @@ export const headers: Record<
     cta: { label: "Termin wählen", href: "/sabine/kontakt/#buchen" },
   },
   isabelle: {
-    title: "Atelier Isabelle",
-    subtitle: "Isabelle Ajouri · Fine-Line",
+    title: "Inkabell Tattoo",
+    subtitle: "Isabelle Ajouri · Fineline & Blackwork",
     anchors: [
       { label: "Start", href: "/isabelle/" },
-      { label: "Galerie", href: "/isabelle/galerie/" },
-      { label: "Prozess", href: "/isabelle/prozess/" },
+      { label: "Meine Arbeit", href: "/isabelle/galerie/" },
+      { label: "Dein Tattoo", href: "/isabelle/prozess/" },
       { label: "Anfrage", href: "/isabelle/anfrage/" },
     ],
     cta: { label: "Anfrage", href: "/isabelle/anfrage/" },

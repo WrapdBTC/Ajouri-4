@@ -6,9 +6,9 @@ import { SectionIntro, Eyebrow } from "@/components/SectionIntro";
 import { contact, mailto } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Angebote · Vita Sonus — Klangreise, Klangmassage, Meditation",
+  title: "Angebote · Vita Sonus — Klangmassage, Klangreise, Meditation",
   description:
-    "Klangreise, Klangmassage, Meditation und Regulationsabend bei Vita Sonus — Sabine Ajouri in Neuburg.",
+    "Klangmassage, Klangreise und Meditation bei Vita Sonus — drei Wege zu mehr Ruhe und Achtsamkeit mit Sabine Ajouri in Neuburg an der Donau.",
 };
 
 const c = contact.sabine;
@@ -16,47 +16,45 @@ const c = contact.sabine;
 const offerings = [
   {
     numeral: "I",
-    name: "Klangreise",
-    mood: "Loslassen. Weit werden.",
-    forWhom: "Für alle, die Pause brauchen und dem Alltag entkommen wollen — ohne Leistung.",
-    detail:
-      "Eine geführte Reise mit Klangschalen, Stimme und Stille. Der Körper darf loslassen, der Geist zur Ruhe kommen.",
-    time: "60–90 Min.",
-    image: "/assets/sabine/klangreise.jpg",
-    position: "50% 50%",
-  },
-  {
-    numeral: "II",
     name: "Klangmassage",
-    mood: "Vibration. Wärme. Resonanz.",
-    forWhom: "Für Menschen, die Berührung über Schwingung spüren möchten — tief, ohne Worte.",
-    detail:
-      "Klangschalen auf und um den Körper — Vibration, Wärme und Resonanz, die tief in Gewebe und Nervensystem wirken.",
+    mood: "Wenn du Entspannung nicht nur hören, sondern auch spüren möchtest.",
+    detail: [
+      "Speziell ausgewählte Klangschalen werden auf oder neben dem bekleideten Körper platziert und sanft angeschlagen. Es entstehen unterschiedliche Töne und feine Schwingungen, die du teilweise auch direkt am Körper wahrnehmen kannst.",
+      "Anders als bei einer klassischen Massage wird nicht mit den Händen geknetet. Die besondere Erfahrung entsteht durch das Zusammenspiel von Klang, Schwingung und Ruhe. Du darfst die Augen schließen und einfach wahrnehmen, was die Klänge bei dir auslösen.",
+    ],
+    forWhom:
+      "Für Menschen, die sich eine besondere Form der Entspannung wünschen, neugierig auf die Wirkung von Klängen sind oder sich bewusst Zeit für sich selbst nehmen möchten.",
     time: "45–60 Min.",
     image: "/assets/sabine/04-klangmassage.jpg",
     position: "40% 50%",
     landscape: true,
   },
   {
-    numeral: "III",
-    name: "Meditation",
-    mood: "Klar. Alltagsnah. Ohne Ballast.",
-    forWhom: "Für Einsteiger und Geübte, die Präsenz üben wollen — einzeln oder in kleiner Gruppe.",
-    detail:
-      "Achtsamkeitsübungen in kleinen Gruppen oder einzeln. Klar, alltagsnah und ohne Esoterik-Ballast.",
-    time: "nach Absprache",
-    image: "/assets/sabine/meditation-sitzend.jpg",
-    position: "50% 40%",
+    numeral: "II",
+    name: "Klangreise",
+    mood: "Schließe deine Augen. Und lass dich von den Klängen tragen.",
+    detail: [
+      "Eine besondere Form der geführten Entspannung: Du machst es dir bequem und lässt dich von Klängen, sanften Schwingungen, Ruhe und gegebenenfalls meiner Stimme begleiten. Es gibt nichts, was du erreichen musst, und kein Gefühl, das entstehen muss.",
+      "Manche erleben die Klänge als beruhigend, andere nehmen Bilder, Erinnerungen oder Gefühle wahr. Jede Klangreise darf anders sein, denn jeder Mensch bringt etwas anderes mit.",
+    ],
+    forWhom:
+      "Für alle, die sich nach einer bewussten Auszeit sehnen, sich auf neue Entspannungserfahrungen einlassen möchten oder das Zusammenspiel verschiedener Klänge genießen wollen.",
+    time: "60–90 Min.",
+    image: "/assets/sabine/klangreise.jpg",
+    position: "50% 50%",
   },
   {
-    numeral: "IV",
-    name: "Regulationsabend",
-    mood: "Gemeinsam ankommen. Gemeinsam nachklingen.",
-    forWhom: "Für alle, die den Abend dem Nervensystem widmen wollen — in Gemeinschaft.",
-    detail:
-      "Ein Abend für das Nervensystem: Klang, Atem und Stille — gemeinsam ankommen, gemeinsam nachklingen.",
-    time: "ca. 90 Min.",
-    image: "/assets/sabine/gemeinsam.jpg",
+    numeral: "III",
+    name: "Meditation",
+    mood: "Wieder mehr im Hier und Jetzt ankommen.",
+    detail: [
+      "Meditation ist eine Einladung, die Aufmerksamkeit auf den gegenwärtigen Moment zu richten: den eigenen Atem, den Körper, die Gedanken, die kommen und gehen, und die kleinen Momente der Stille dazwischen.",
+      "Es geht nicht darum, den Kopf vollständig leer zu bekommen, sondern um einen freundlicheren Umgang mit den eigenen Gedanken. Begleitet von Atemübungen, Achtsamkeitsimpulsen und ausgewählten Klängen. Vorkenntnisse brauchst du keine.",
+    ],
+    forWhom:
+      "Für Menschen, die sich mehr Achtsamkeit im Alltag wünschen, Entspannung bewusst üben möchten oder neugierig sind, was Meditation für sie bedeuten kann.",
+    time: "nach Absprache",
+    image: "/assets/sabine/meditation-sitzend.jpg",
     position: "50% 40%",
   },
 ];
@@ -70,13 +68,13 @@ export default function SabineAngebote() {
         image="/assets/sabine/portrait-lachen-2.jpg"
         alt="Sabine Ajouri — Vita Sonus"
         position="62% 28%"
-        eyebrow="Angebote · Vita Sonus"
+        eyebrow="Meine Angebote · Vita Sonus"
         title={
           <>
-            Formate für <em>Auszeit und Regulation.</em>
+            Drei Wege zu mehr <em>Ruhe und Achtsamkeit.</em>
           </>
         }
-        lead="Jedes Angebot hat seine eigene Atmosphäre. Gemeinsam finden wir heraus, was du jetzt brauchst."
+        lead="Jedes Angebot hat seine eigene Atmosphäre. Gemeinsam finden wir heraus, was dir gerade guttut."
         actions={
           <>
             <Button href="/sabine/kontakt/#buchen">
@@ -97,10 +95,10 @@ export default function SabineAngebote() {
             eyebrow="Erlebnisse"
             title={
               <>
-                Vier Wege. <em>Ein Raum.</em>
+                Drei Wege. <em>Ein Raum.</em>
               </>
             }
-            lead="Jedes Angebot hat seine eigene Stimmung — und ist für jemand Bestimmten gedacht."
+            lead="Klangmassage, Klangreise und Meditation. Du brauchst keine Vorkenntnisse, nur ein wenig Zeit für dich."
           />
 
           <div className="mt-8 space-y-0 md:mt-10">
@@ -129,10 +127,14 @@ export default function SabineAngebote() {
                       <p className="eyebrow mt-2 text-muted">{o.time}</p>
                     </div>
                   </div>
-                  <p className="font-display mt-8 text-[1.55rem] leading-snug italic text-accent-text md:text-[1.75rem]">
+                  <p className="font-display mt-7 text-[1.45rem] leading-snug italic text-accent-text md:text-[1.6rem]">
                     {o.mood}
                   </p>
-                  <p className="body-copy mt-6 !max-w-md">{o.detail}</p>
+                  {o.detail.map((d) => (
+                    <p key={d.slice(0, 24)} className="body-copy mt-5 !max-w-md">
+                      {d}
+                    </p>
+                  ))}
                   <p className="mt-6 border-l border-accent/50 pl-5 text-[0.9rem] leading-relaxed text-muted">
                     <span className="eyebrow block text-accent-text">Für wen</span>
                     <span className="mt-2 block">{o.forWhom}</span>
@@ -147,21 +149,22 @@ export default function SabineAngebote() {
       <section className="section-y-tight">
         <div className="container-x grid gap-10 md:grid-cols-12 md:items-center">
           <div className="reveal md:col-span-6">
-            <Eyebrow>Im Fokus</Eyebrow>
-            <h3 className="display-2 mt-4">Die Klangmassage</h3>
+            <Eyebrow>Noch unsicher?</Eyebrow>
+            <h3 className="display-2 mt-4">Komm erst einmal vorbei.</h3>
             <p className="body-copy mt-6 !max-w-md">
-              Schalen werden auf und um den Körper gesetzt. Die Schwingung wirkt direkt — ohne
-              Worte, ohne Aufwand. Viele spüren danach mehr Weite, Wärme und eine tiefe Entspannung.
+              Du weißt noch nicht, welches Angebot zu dir passt? Freitags von 16:30 bis 18:00 Uhr ist
+              mein Studio offen: zum Kennenlernen, Fragenstellen und Austauschen, ganz ohne
+              Anmeldung.
             </p>
-            <Button href={mailto(c.email, "Anfrage Klangmassage")} variant="text" className="mt-8">
-              Klangmassage anfragen <Arrow />
+            <Button href={mailto(c.email, "Anfrage Vita Sonus")} variant="text" className="mt-8">
+              Angebot anfragen <Arrow />
             </Button>
           </div>
           <div className="reveal border border-line bg-elev p-8 md:col-span-5 md:col-start-8 md:p-10">
             <p className="eyebrow text-accent-text">Termine</p>
             <p className="display-3 mt-4">Einzeltermine nach Absprache.</p>
             <p className="body-copy mt-4 !max-w-none">
-              Der Buchungskalender folgt — bis dahin erreichst du mich direkt.
+              Ruf an oder schreib mir, ich melde mich persönlich bei dir.
             </p>
             <Button href="/sabine/kontakt/#buchen" className="mt-8">
               Termin wählen <Arrow />

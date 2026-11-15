@@ -9,7 +9,7 @@ import { contact, mailto, mapsHref } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Kontakt & Termin · Michelle Ajouri",
   description:
-    "Michelle Ajouri · Kosmetik, Haut & Darm — Sternstraße 180, 86633 Neuburg. WhatsApp, Telefon, Mail und Buchung über Beautinda.",
+    "Michelle Ajouri · Kosmetik, Haut & Darm — Sternstraße 180, 86633 Neuburg. Telefon, WhatsApp, Mail, kostenloser Kennenlern-Call und Buchung über Beautinda.",
 };
 
 const c = contact.michelle;
@@ -17,7 +17,7 @@ const c = contact.michelle;
 const faq = [
   {
     q: "Wie buche ich?",
-    a: "Termine buchst du über Beautinda. Oder schreib mir per WhatsApp, Mail oder über das Formular — ich melde mich persönlich.",
+    a: "SKIN FIRST, Behandlungen und Lash & Brow buchst du über Beautinda. Oder schreib mir per WhatsApp, Mail oder über das Formular. Wenn ich gerade in einer Behandlung bin, melde ich mich zurück.",
   },
   {
     q: "Wann bist du in Neuburg?",
@@ -42,20 +42,20 @@ export default function MichelleKontakt() {
         image="/assets/michelle/brauen-detail.jpg"
         alt="Nahaufnahme gepflegter Haut und Augenbraue"
         position="50% 45%"
-        eyebrow="Kontakt · Kosmetik · Haut & Darm"
+        eyebrow="Kontakt & Kennenlernen"
         title={
           <>
-            Für deine Haut. <em>Für dein Gefühl.</em>
+            Du hast Fragen? <em>Dann lass uns sprechen.</em>
           </>
         }
-        lead="Schreib mir oder ruf an — ich antworte dir so schnell wie möglich, auch aus meinen Kroatien-Wochen. Ich freu mich auf dich."
+        lead="Ruf an, schreib mir über WhatsApp oder buch dir direkt einen kostenlosen Kennenlern-Call. Auch persönliche Online-Beratungen sind möglich. Ich freue mich darauf, dich und deine Haut kennenzulernen."
         actions={
           <>
-            <Button href={c.bookingHref}>
-              Termin buchen <Arrow />
+            <Button href={c.callHref}>
+              Kennenlern-Call anfragen <Arrow />
             </Button>
-            <Button href={c.phoneHref} variant="outline">
-              Anrufen
+            <Button href={c.bookingHref} variant="outline">
+              SKIN FIRST buchen
             </Button>
           </>
         }
@@ -113,9 +113,14 @@ export default function MichelleKontakt() {
                 </div>
               </dl>
 
-              <div className="mt-8 flex flex-wrap gap-3">
+              <p className="font-display mt-8 text-[1.35rem] italic text-accent-text">Deine Michelle 🤎</p>
+
+              <div className="mt-6 flex flex-wrap gap-3">
                 <Button href={c.whatsappHref} variant="outline" size="sm">
                   WhatsApp
+                </Button>
+                <Button href={c.phoneHref} variant="outline" size="sm">
+                  Anrufen
                 </Button>
                 <Button href={mapsHref(c.street, c.city)} variant="text" size="sm">
                   Route planen <Arrow />
@@ -127,7 +132,7 @@ export default function MichelleKontakt() {
               <InquiryForm
                 to={c.email}
                 subject="Anfrage Michelle Ajouri · Haut & Darm"
-                title="Kurze Nachricht reicht."
+                title="Schreib mir eine Nachricht."
                 eyebrow="Anfrage"
                 submitLabel="Nachricht senden"
               />
@@ -144,7 +149,7 @@ export default function MichelleKontakt() {
                     Ein Studio, drei Handwerke.
                   </p>
                   <p className="body-copy mt-2 !max-w-md text-[0.95rem]">
-                    In der Sternstraße findest du auch Sabine Ajouri (Vita Sonus, Klang & Meditation) und Isabelle Ajouri (Fine-Line-Tattoos).
+                    In der Sternstraße findest du auch Sabine Ajouri (Vita Sonus, Klang & Meditation) und Isabelle Ajouri (Inkabell Tattoo, Fineline & Blackwork).
                   </p>
                 </div>
                 <Button href="/" variant="text" size="sm">
@@ -163,8 +168,8 @@ export default function MichelleKontakt() {
                 <p className="eyebrow text-accent">Online buchen</p>
                 <p className="display-3 mt-3">Deinen Termin buchst du über Beautinda.</p>
                 <p className="mt-3 max-w-xl text-[0.95rem] opacity-80">
-                  SKIN FIRST, die Pakete und Lash &amp; Brow — mit Onlinezahlung, auf Wunsch in
-                  Raten über Klarna oder PayPal.
+                  SKIN FIRST, Behandlungen, Hautbegleitung und Lash &amp; Brow — mit Onlinezahlung,
+                  auf Wunsch in Raten über Klarna oder PayPal.
                 </p>
               </div>
               <Button href={c.bookingHref} className="shrink-0">

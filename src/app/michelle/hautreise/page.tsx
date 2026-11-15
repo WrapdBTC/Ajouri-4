@@ -9,7 +9,7 @@ import { contact } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Deine Hautreise · Michelle Ajouri",
   description:
-    "So läuft die Hautreise bei Michelle Ajouri: Behandlungsblöcke in Neuburg, Ersttermin mit OBSERV-Analyse, Hautfotos, Pflegeplan und WhatsApp-Begleitung.",
+    "So läuft deine Hautreise bei Michelle Ajouri ab: Kennenlern-Call, Fragebogen und Hautfotos, SKIN FIRST mit OBSERV-Hautanalyse, Begleitung zwischen den Terminen und deine Hautpflege zu Hause.",
 };
 
 const c = contact.michelle;
@@ -29,12 +29,13 @@ const photoSteps: [string, string, string][] = [
   ["6", "Per WhatsApp oder Mail", "In Originalqualität, mit Fragebogen, spätestens 2 Tage vor dem Termin."],
 ];
 
-const careRules: [string, string][] = [
-  ["Du darfst gleich mit allem starten.", "Deine Produkte sind aufeinander abgestimmt. Du musst nichts einschleichen."],
-  ["Viele gute Produkte sind kein Problem.", "Was zu deiner Haut passt, darf zusammen in deine Routine. Die Reihenfolge steht in deinem Pflegeplan."],
-  ["Kurzes Kribbeln ist normal.", "Säuren, Vitamin C oder Retinol dürfen kurz brennen — das legt sich nach wenigen Minuten."],
-  ["Dranbleiben schlägt Perfektion.", "Morgens und abends, jeden Tag. Bei Säuren und Retinol tagsüber an Sonnenschutz denken."],
-  ["Schreib mir, wenn …", "das Brennen nicht nachlässt, die Haut stark rot wird, anschwillt, juckt oder Bläschen bildet. Dann lässt du das Produkt weg und wir schauen gemeinsam drauf."],
+const homeCare: [string, string][] = [
+  ["Reinigung", "Eine sanfte, passende Reinigung ist die Grundlage. Sie entfernt Schmutz, überschüssigen Talg und Rückstände, ohne deine Haut unnötig zu strapazieren."],
+  ["Wirkstoffe", "Nicht jeder Wirkstoff passt zu jeder Haut. Ich wähle gezielt aus, was sinnvoll ist und wie du es verträglich in deinen Alltag integrierst."],
+  ["Enzympeeling", "Kann abgestorbene Hautschüppchen sanft lösen und die Oberfläche glatter erscheinen lassen. Wie oft, hängt von deinem Hautzustand ab."],
+  ["Durchblutungsfördernde Masken", "Können die oberflächliche Durchblutung vorübergehend anregen. Bei empfindlicher Haut oder Rötungen sind andere Anwendungen oft sinnvoller."],
+  ["Sonnenschutz", "Gehört zu jeder guten Routine. Die schönste Behandlung bringt wenig, wenn wir die Haut danach nicht vor UV-Strahlung schützen."],
+  ["Kontinuität", "Du musst nicht jeden Trend mitmachen. Wichtiger ist eine Routine, die du verstehst, gut verträgst und langfristig beibehalten kannst."],
 ];
 
 export default function MichelleHautreise() {
@@ -49,17 +50,17 @@ export default function MichelleHautreise() {
         eyebrow="Deine Hautreise · vor Ort & online"
         title={
           <>
-            So läuft <em>deine Hautreise.</em>
+            So läuft deine <em>Hautreise ab.</em>
           </>
         }
-        lead="Vom Kennenlern-Call bis zur Re-Analyse: Wir gehen Schritt für Schritt, mit Plan — und du weißt immer, was als Nächstes kommt."
+        lead="Von unserem ersten Gespräch bis zu deinem persönlichen Hautgefühl. Ohne Druck und ohne Verpflichtung zu einem langfristigen Konzept."
         actions={
           <>
-            <Button href={c.bookingHref}>
-              Termin buchen <Arrow />
+            <Button href={c.callHref}>
+              Kennenlern-Call anfragen <Arrow />
             </Button>
             <Button href="/michelle/leistungen/" variant="outline">
-              Pakete &amp; Preise
+              Behandlungen
             </Button>
           </>
         }
@@ -74,11 +75,13 @@ export default function MichelleHautreise() {
               Alle 9 Wochen <em>3 Wochen Neuburg.</em>
             </h2>
             <p className="lead mt-6">
-              Das ist dein Behandlungsblock. Dazwischen bin ich in Kroatien und online für dich da.
+              In diesen Wochen bin ich im Studio. Dazwischen bin ich in Kroatien und online für dich
+              da.
             </p>
             <p className="body-copy mt-4">
-              Pro Block hast du zwei Termine: in Woche 1 und zwei Wochen später in Woche 3. Startest du mitten in einem Block, zählt dein
-              Fahrplan ab deinem ersten Termin — du bekommst trotzdem alle Termine.
+              In einer Hautbegleitung liegen pro Block meist zwei Termine: in Woche 1 und zwei Wochen
+              später in Woche 3. Startest du mitten in einem Block, zählt dein Fahrplan ab deinem
+              ersten Termin.
             </p>
           </div>
           <div className="reveal md:col-span-6 md:col-start-7">
@@ -103,7 +106,7 @@ export default function MichelleHautreise() {
             <div className="md:sticky md:top-28">
               <Eyebrow index="II">Schritt für Schritt</Eyebrow>
               <h2 className="display-2 mt-6">
-                Vom ersten Call <em>bis zum Vergleich.</em>
+                Vom ersten Gespräch <em>bis zu deinem Hautgefühl.</em>
               </h2>
               <div className="ken-wrap relative mt-10 hidden aspect-[3/4] overflow-hidden md:block">
                 <Img
@@ -118,12 +121,12 @@ export default function MichelleHautreise() {
           <ChapterIndex
             className="md:col-span-7 md:col-start-6"
             chapters={[
-              { numeral: "I", title: "Kennenlern-Call", line: "15 bis 30 Minuten über Microsoft Teams. Du erzählst, ich hör zu." },
-              { numeral: "II", title: "Fragebogen & Fotos", line: "Am Handy ausfüllen, Hautfotos nach Anleitung — spätestens 2 Tage vor dem Termin." },
-              { numeral: "III", title: "SKIN FIRST", line: "OBSERV-Hautanalyse, die passende Behandlung und dein persönlicher Plan für zu Hause." },
-              { numeral: "IV", title: "Deine Blöcke", line: "2 Termine pro Block, in Woche 1 und Woche 3 — je 80 Minuten." },
-              { numeral: "V", title: "Zwischen den Blöcken", line: "Pflege zu Hause mit deinen Reviderm-Produkten, Video-Check-ins — und ich bin für dich da." },
-              { numeral: "VI", title: "Re-Analyse", line: "Wir vergleichen: wo du warst und wo du jetzt bist." },
+              { numeral: "01", title: "Wir lernen uns kennen", line: "Ein kostenloser Kennenlern-Call, telefonisch oder online. Du erzählst von deinen Wünschen und Fragen, ich erkläre dir meine Arbeitsweise. SKIN FIRST kannst du natürlich auch direkt buchen." },
+              { numeral: "02", title: "Fragebogen & Hautfotos", line: "Vor dem ersten Termin bekommst du einen Fragebogen zu deiner Haut und deiner Pflege. Wenn es sinnvoll ist, schickst du mir aktuelle Hautfotos." },
+              { numeral: "03", title: "SKIN FIRST", line: "Wir besprechen deine Wünsche, machen die OBSERV-Hautanalyse und wählen die passende Behandlung. Du erfährst, worauf du zu Hause achten solltest." },
+              { numeral: "04", title: "Du entscheidest, wie es weitergeht", line: "Eine einzelne Gesichtsbehandlung, regelmäßige Selfcare-Termine oder eine Hautbegleitung mit individuellem Fahrplan." },
+              { numeral: "05", title: "Ich bin auch zwischen den Terminen da", line: "Bei Fragen zu Produkten, Unsicherheiten oder Veränderungen meldest du dich einfach. In der Hautbegleitung gibt es persönliche Check-ins und Impulse." },
+              { numeral: "06", title: "Wir schauen auf deine Entwicklung", line: "Wir dokumentieren deine Haut, betrachten Veränderungen und passen Behandlung oder Pflege an. Nicht, weil sie perfekt werden muss, sondern weil sie Aufmerksamkeit verdient." },
             ]}
           />
         </div>
@@ -141,7 +144,7 @@ export default function MichelleHautreise() {
                 Gut vorbereitet, <em>ganz entspannt.</em>
               </>
             }
-            lead="Den Link für den Kennenlern-Call bekommst du per WhatsApp oder Mail. Fragebogen und Fotos bitte spätestens 2 Tage vorher."
+            lead="Den Fragebogen bekommst du vor deinem ersten Termin. Fragebogen und Fotos bitte spätestens 2 Tage vorher zurückschicken."
           />
           <ul className="mt-10 grid gap-0 border-t border-line sm:grid-cols-2 lg:grid-cols-5">
             {[
@@ -195,8 +198,8 @@ export default function MichelleHautreise() {
               3 bis 4 Impulse <em>pro Woche.</em>
             </h2>
             <p className="lead mt-6">
-              In deiner Hautreise bin ich auch zwischen den Terminen für dich da. Ich sende, du
-              liest, wann es dir passt. Die anderen sehen deine Nummer nicht — Fragen schreibst du mir
+              In deiner Hautbegleitung bin ich auch zwischen den Terminen für dich da. Ich sende, du
+              liest, wann es dir passt. Die anderen sehen deine Nummer nicht, Fragen schreibst du mir
               einfach privat.
             </p>
             <p className="body-copy mt-4 text-[0.9rem]">
@@ -205,10 +208,10 @@ export default function MichelleHautreise() {
           </div>
           <ul className="grid gap-0 border-t border-line sm:grid-cols-2 md:col-span-6 md:col-start-7">
             {[
-              ["Rezepte", "Einfache Gerichte für Haut und Bauch, passend zur Jahreszeit."],
-              ["Übungen & Sport", "Kurze Bewegungseinheiten und Face Yoga."],
+              ["Ernährungsideen & Rezepte", "Einfache Gerichte für Haut und Bauch, passend zur Jahreszeit."],
+              ["Bewegung & Face Yoga", "Kurze Bewegungseinheiten für zwischendurch."],
               ["Wirkstoffe", "Was Hyaluron, Niacinamid, Vitamin C, Retinol und Co. wirklich machen."],
-              ["Anwendungen", "Wie du deine Produkte richtig benutzt."],
+              ["Hautpflege-Wissen", "Wie du deine Produkte richtig anwendest."],
             ].map(([t, l]) => (
               <li key={t} className="reveal border-b border-line py-6 sm:pr-6">
                 <p className="font-display text-[1.5rem] leading-tight">{t}</p>
@@ -219,27 +222,33 @@ export default function MichelleHautreise() {
         </div>
       </section>
 
-      {/* Care rules */}
+      {/* Home care */}
       <section className="section-y-tight bg-surface">
         <div className="container-x grid gap-10 md:grid-cols-12 md:gap-14">
           <div className="reveal md:col-span-4">
-            <Eyebrow index="VI">Dein Pflegeplan</Eyebrow>
+            <Eyebrow index="VI">Deine Hautpflege zu Hause</Eyebrow>
             <h2 className="display-2 mt-6">
-              Meine fünf <em>Pflegeregeln.</em>
+              Kleine Routinen. <em>Bewusste Entscheidungen.</em>
             </h2>
             <p className="lead mt-6">
-              Den genauen Plan bekommst du nach deinem Ersttermin per Mail — morgens und abends,
-              Schritt für Schritt.
+              Die Zeit im Studio ist wertvoll. Aber auch das, was du täglich zu Hause machst, spielt
+              eine wichtige Rolle. Deine Routine besprechen wir gemeinsam.
             </p>
           </div>
-          <ChapterIndex
-            className="md:col-span-7 md:col-start-6"
-            chapters={careRules.map(([t, l], i) => ({
-              numeral: ["I", "II", "III", "IV", "V"][i],
-              title: t,
-              line: l,
-            }))}
-          />
+          <div className="md:col-span-7 md:col-start-6">
+            <ChapterIndex
+              chapters={homeCare.map(([t, l], i) => ({
+                numeral: `0${i + 1}`,
+                title: t,
+                line: l,
+              }))}
+            />
+            <p className="reveal body-copy mt-6 !max-w-none text-[0.9rem] text-muted">
+              Schreib mir, wenn ein Produkt nach dem Auftragen nicht aufhört zu brennen, die Haut
+              stark rot wird, anschwillt, juckt oder Bläschen bildet. Dann lässt du es weg und wir
+              schauen gemeinsam drauf.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -247,7 +256,7 @@ export default function MichelleHautreise() {
         <div className="container-x flex flex-wrap items-center justify-between gap-6">
           <div>
             <p className="eyebrow text-accent-text">Bereit?</p>
-            <p className="display-3 mt-3">Du musst nichts perfekt machen. Du musst nur anfangen.</p>
+            <p className="display-3 mt-3">Deine Haut braucht keine Perfektion. Sondern die richtige Aufmerksamkeit.</p>
           </div>
           <div className="flex flex-wrap gap-3">
             <Button href={c.bookingHref}>

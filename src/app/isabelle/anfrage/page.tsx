@@ -4,18 +4,18 @@ import { Eyebrow } from "@/components/SectionIntro";
 import { contact, mapsStudioHref } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Anfrage · Atelier Isabelle",
+  title: "Anfrage · Inkabell Tattoo",
   description:
-    "Anfrage an Atelier Isabelle — Fine-Line Tattoos in Neuburg. Motiv, Stelle und Größe: das brauche ich für deine Anfrage.",
+    "Deine Tattoo-Idee anfragen bei Inkabell Tattoo — Fineline und Blackwork von Isabelle Ajouri, Sternstraße 180 in Neuburg an der Donau.",
 };
 
 const c = contact.isabelle;
 
 const checklist = [
-  ["Motiv", "Was soll die Linie erzählen? Gern mit ein, zwei Referenzbildern als Richtung."],
-  ["Stelle", "Wo am Körper soll das Tattoo sitzen — Unterarm, Schulter, Knöchel …"],
+  ["Wunschmotiv", "Eine konkrete Vorstellung, ein Gefühl oder nur eine kleine Idee: Alles ist ein guter Anfang. Gern mit ein, zwei Referenzbildern."],
+  ["Körperstelle", "Wo soll dein Tattoo sitzen, zum Beispiel Unterarm, Schulter oder Knöchel?"],
   ["Größe", "Ungefähr reicht, z. B. „ca. 8 cm“. Feine Linien brauchen etwas Raum."],
-  ["Timing", "Gibt es einen Anlass oder ein Datum, auf das du hinplanst?"],
+  ["Was dir wichtig ist", "Gibt es eine Geschichte, einen Anlass oder ein Datum, auf das du hinplanst?"],
 ];
 
 export default function IsabelleAnfrage() {
@@ -24,12 +24,13 @@ export default function IsabelleAnfrage() {
       <section className="relative isolate border-b border-line bg-surface">
         <div className="container-x pb-10 pt-14 md:pb-14 md:pt-20">
           <div className="anim-rise max-w-2xl">
-            <Eyebrow>Anfrage · Atelier Isabelle</Eyebrow>
+            <Eyebrow>Anfrage · Inkabell Tattoo</Eyebrow>
             <h1 className="display-2 mt-5">
-              Erzähl von <em>deiner Idee.</em>
+              Erzähl mir von <em>deiner Idee.</em>
             </h1>
-            <p className="lead anim-rise anim-rise-1 mt-5 !max-w-[36ch]">
-              Motiv. Stelle. Größe. Mehr brauche ich für den Anfang nicht.
+            <p className="lead anim-rise anim-rise-1 mt-5 !max-w-[40ch]">
+              Alles beginnt mit einem Gedanken. Ganz gleich, ob du dein erstes Tattoo planst oder
+              bereits mehrere Kunstwerke trägst.
             </p>
           </div>
         </div>
@@ -62,7 +63,7 @@ export default function IsabelleAnfrage() {
                 <p className="font-display mt-2 text-2xl leading-tight">{c.booking}</p>
               </div>
               <div>
-                <p className="eyebrow text-accent-text">Atelier</p>
+                <p className="eyebrow text-accent-text">Studio</p>
                 <p className="mt-2">{c.street}</p>
                 <p className="text-muted">{c.city}</p>
                 <Button href={mapsStudioHref()} variant="text" size="sm" className="mt-3">
@@ -70,8 +71,8 @@ export default function IsabelleAnfrage() {
                 </Button>
               </div>
               <div>
-                <p className="eyebrow text-accent-text">Walk-ins</p>
-                <p className="mt-2">Keine — jedes Motiv wird vorher besprochen.</p>
+                <p className="eyebrow text-accent-text">Stil</p>
+                <p className="mt-2">Fineline &amp; Blackwork, jedes Motiv individuell entworfen.</p>
               </div>
             </div>
 
@@ -84,7 +85,7 @@ export default function IsabelleAnfrage() {
                 </p>
               </div>
               <Button href="/isabelle/galerie/" variant="outline" className="self-start">
-                Zur Galerie
+                Meine Arbeit
               </Button>
             </div>
           </div>

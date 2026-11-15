@@ -2,10 +2,10 @@ import NextLink from "next/link";
 import { contact, family, headers, mailto, studio, type ThemeKey } from "@/lib/site";
 
 const taglines: Record<ThemeKey, string> = {
-  hub: "Drei Frauen. Drei Handwerke. Ein Name — Haut, Klang und Linie. Neuburg an der Donau.",
-  michelle: "Haut lesen. Darm verstehen. Kosmetik mit Plan über Wochen und Monate.",
-  sabine: "Klangreise, Klangmassage, Meditation. Ein Studio für Klang und Achtsamkeit.",
-  isabelle: "Fine-Line-Tattoos. Reduziert, präzise, für genau eine Haut gezeichnet.",
+  hub: "Drei Frauen. Drei Handwerke. Ein Name — Haut, Klang und Tattoo. Neuburg an der Donau.",
+  michelle: "Haut lesen. Darm verstehen. Bei dir ankommen. Skinhealth meets Selfcare.",
+  sabine: "Klangmassage, Klangreise, Meditation. Ein Raum, in dem es still werden darf.",
+  isabelle: "Inkabell Tattoo. Fineline & Blackwork — deine Geschichte, deine Haut, deine Kunst.",
 };
 
 type Line = { text: string; href?: string };
@@ -38,7 +38,7 @@ function contactLines(current: ThemeKey): Line[] {
         { text: c.street },
         { text: c.city },
         { text: c.booking },
-        { text: "Zur Anfrage", href: "/isabelle/anfrage/" },
+        { text: "Tattoo-Idee anfragen", href: "/isabelle/anfrage/" },
       ];
     }
     default:

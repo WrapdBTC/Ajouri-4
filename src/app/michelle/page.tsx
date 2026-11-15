@@ -15,10 +15,10 @@ import { contact } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Michelle Ajouri — Kosmetik · Haut & Darm",
   description:
-    "Haut lesen. Darm verstehen. Kosmetik in Neuburg an der Donau: Hautanalyse, Behandlungen und Begleitung mit Plan über Wochen und Monate.",
+    "Haut lesen. Darm verstehen. Bei dir ankommen. Kosmetik in Neuburg an der Donau: Hautanalyse mit dem OBSERV 320, individuelle Gesichtsbehandlungen und persönliche Hautbegleitung.",
   openGraph: {
     title: "Michelle Ajouri — Kosmetik · Haut & Darm",
-    description: "Haut lesen. Darm verstehen.",
+    description: "Haut lesen. Darm verstehen. Bei dir ankommen.",
     images: [{ url: asset("/assets/michelle/hero-herbst.jpg"), width: 2000, height: 1406 }],
   },
 };
@@ -36,30 +36,49 @@ export default function MichelleHome() {
         eyebrow="Kosmetik · Haut & Darm · Neuburg an der Donau"
         title={
           <>
-            Haut lesen. <em>Darm verstehen.</em>
+            Haut lesen. Darm verstehen. <em>Bei dir ankommen.</em>
           </>
         }
-        lead="Ich begleite dich mit Plan über mehrere Wochen und Monate — statt Einzeltermine ins Blaue. Von innen und außen, ruhig und ehrlich."
+        lead="Schöne Haut beginnt für mich nicht bei einer Creme. Sie beginnt damit, dich und deine Haut wirklich zu verstehen."
         actions={
           <>
             <Button href={c.bookingHref}>
-              Termin buchen <Arrow />
+              SKIN FIRST buchen <Arrow />
             </Button>
             <Button href="/michelle/leistungen/" variant="outline">
-              Pakete &amp; Preise
+              Behandlungen
             </Button>
           </>
         }
         meta={
           <p className="flex flex-wrap gap-x-6 gap-y-1">
-            <span>Erstbehandlung: SKIN FIRST · 2 Std. · 249 €</span>
+            <span>Skinhealth meets Selfcare.</span>
             <span className="text-muted">{c.phone}</span>
           </p>
         }
       />
 
-      {/* Welcome */}
-      <section className="section-y">
+      {/* Intro */}
+      <section className="section-y-tight">
+        <div className="container-x grid gap-8 md:grid-cols-12 md:items-end">
+          <p className="display-3 reveal md:col-span-6">
+            Zeit zum Durchatmen. Zum Loslassen. <em>Zum Ankommen.</em>
+          </p>
+          <div className="reveal md:col-span-5 md:col-start-8">
+            <p className="body-copy !max-w-none">
+              Ich verbinde moderne Hautanalysen, individuell abgestimmte Gesichtsbehandlungen und
+              ganzheitliche Beratung mit etwas, das im Alltag oft viel zu kurz kommt: Zeit für dich.
+            </p>
+            <p className="body-copy mt-4 !max-w-none">
+              Ob du dir eine wohltuende Einzelbehandlung wünschst oder deine Haut langfristig
+              begleiten lassen möchtest, wir finden gemeinsam heraus, was zu dir passt.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* I. Über mich */}
+      <section className="section-y-tight">
         <div className="container-x">
           <SplitFeature
             image="/assets/michelle/portal-herbst.jpg"
@@ -69,25 +88,37 @@ export default function MichelleHome() {
             eyebrow="Über mich"
             title={
               <>
-                Hey du, <em>schön, dass du da bist.</em>
+                Hey du, <em>schön, dass du hier bist.</em>
               </>
             }
           >
             <p className="lead !max-w-none">
-              Ich arbeite nicht mit Einzelterminen ins Blaue, sondern mit einem Plan, der zu dir
-              passt. Ich schau mir deine Haut genau an, frag auch nach Schlaf, Stress, Essen und
-              Bauch — und begleite dich über mehrere Wochen oder Monate.
+              Ich bin Michelle. Kosmetikerin, Haut- und Darmexpertin und angehende Heilpraktikerin.
+              Aber vor allem bin ich ein Mensch, dem es unglaublich am Herzen liegt, dass andere
+              sich wieder wohl in ihrer eigenen Haut fühlen.
             </p>
             <p className="body-copy !max-w-none">
-              Warum so? Weil sich die Haut ungefähr alle vier Wochen erneuert. Echte Veränderung
-              braucht ein paar dieser Zyklen. Und weil das, was du zu Hause machst, mindestens so
-              wichtig ist wie das, was bei mir auf der Liege passiert.
+              Ich weiß selbst, wie belastend es sein kann, wenn der eigene Körper immer wieder kleine
+              oder große Baustellen aufmacht. Wenn man von einer Empfehlung zur nächsten springt und
+              irgendwann gar nicht mehr weiß, wo man eigentlich anfangen soll. Genau deshalb möchte
+              ich anders arbeiten.
+            </p>
+            <p className="body-copy !max-w-none">
+              Ich möchte verstehen, was dich beschäftigt. Wie es deiner Haut geht, wie du dich
+              fühlst und was dein Alltag mit dir macht. Ob Stress, Schlaf, Ernährung oder deine
+              Verdauung möglicherweise eine Rolle spielen. Mein Schwerpunkt ist und bleibt die
+              Hautgesundheit, aber ich betrachte dein Wohlbefinden nicht losgelöst von deinem
+              restlichen Leben.
+            </p>
+            <p className="body-copy !max-w-none">
+              Mein Wunsch ist, dass du meine Räume nicht nur mit einem guten Hautgefühl verlässt.
+              Sondern auch ein bisschen leichter, ein bisschen entspannter und vielleicht wieder ein
+              Stück näher bei dir selbst.
             </p>
             <p className="body-copy !max-w-none text-[0.9rem] text-muted">
-              Gut zu wissen: Ich bin Kosmetikerin und mache gerade meine Ausbildung zur
-              Heilpraktikerin. Bis zur Erlaubnis arbeite ich kosmetisch und beratend und stelle
-              keine Diagnosen. Wenn ich etwas sehe, das eine Ärztin anschauen sollte, sag ich es dir
-              ehrlich.
+              Gut zu wissen: Bis zu meiner Heilpraktiker-Erlaubnis arbeite ich kosmetisch und
+              beratend und stelle keine Diagnosen. Wenn ich etwas sehe, das eine Ärztin anschauen
+              sollte, sag ich es dir ehrlich.
             </p>
             <p className="eyebrow mt-2 text-muted">Michelle Ajouri · Kosmetikerin</p>
           </SplitFeature>
@@ -96,64 +127,163 @@ export default function MichelleHome() {
 
       <section className="section-y-tight">
         <div className="container-x">
-          <PullQuote variant="statement" cite="— Michelle">
-            „Du musst nichts perfekt machen. Du musst nur anfangen. Den Rest machen wir zusammen.“
+          <PullQuote variant="statement" cite="Body · Mind · Soul">
+            „Ich möchte einen Menschen einmal als Ganzes betrachten. Denn für mich gehören Körper,
+            Kopf und Seele zusammen.“
           </PullQuote>
         </div>
       </section>
 
-      {/* Why a plan */}
-      <section className="section-y-tight">
+      {/* II. Philosophie */}
+      <section className="section-y-tight bg-surface">
+        <div className="container-x grid gap-10 md:grid-cols-12 md:gap-14">
+          <div className="reveal md:col-span-5">
+            <Eyebrow index="II">Meine Philosophie</Eyebrow>
+            <h2 className="display-2 mt-6">
+              Deine Haut braucht Aufmerksamkeit. <em>Und du auch.</em>
+            </h2>
+          </div>
+          <div className="reveal md:col-span-6 md:col-start-7">
+            <p className="lead !max-w-none">
+              Kennst du das Gefühl, wenn ständig irgendetwas erledigt werden muss? Genau deshalb ist
+              eine Gesichtsbehandlung bei mir mehr als reine Hautpflege. Sie ist auch deine bewusste
+              Auszeit vom Alltag.
+            </p>
+            <p className="body-copy mt-5 !max-w-none">
+              Meine regulären Gesichtsbehandlungen dauern in der Regel 90 bis 100 Minuten. Ich nehme
+              mir diese Zeit, weil ich nicht möchte, dass du dich wie der nächste Termin in meinem
+              Kalender fühlst.
+            </p>
+            <p className="body-copy mt-5 !max-w-none">
+              Herzstück vieler Behandlungen ist meine ayurvedisch inspirierte Gesichtsmassage:
+              sanfte, rhythmische Berührungen und bewusste Ruhe, eingesetzt, wenn sie zur Anwendung
+              und zu deinem Hautzustand passt. Während ich mich um deine Haut kümmere, darfst du dich
+              einmal um gar nichts kümmern.
+            </p>
+            <p className="font-display mt-7 text-[1.45rem] leading-snug italic text-accent-text">
+              Hautpflege für dein Äußeres. Entspannung für dein Inneres.
+            </p>
+          </div>
+        </div>
         <div className="container-x">
-          <p className="eyebrow text-muted">Warum mit Plan</p>
           <StatStrip
-            className="mt-6"
+            className="mt-12 md:mt-14"
             items={[
-              { value: "4 Wochen", label: "braucht die Haut ungefähr für eine Erneuerung" },
-              { value: "80 Min.", label: "jeder Termin, mit ayurvedischer Gesichtsmassage" },
-              { value: "2 Termine", label: "pro Behandlungsblock, Woche 1 und Woche 3" },
-              { value: "Fahrplan", label: "gemeinsam festgelegt, so wie deine Haut es braucht" },
+              { value: "90–100 Min.", label: "dauert eine reguläre Gesichtsbehandlung" },
+              { value: "Ayurveda", label: "inspirierte Gesichtsmassage als Herzstück" },
+              { value: "OBSERV 320", label: "bildbasierte Hautanalyse von REVIDERM" },
+              { value: "Online", label: "Darmbegleitung bequem von zu Hause" },
             ]}
           />
         </div>
       </section>
 
-      {/* Haut & Darm — brand moment with the mark */}
-      <section className="section-y bg-surface">
+      {/* III. Haut & Darm — brand moment with the mark */}
+      <section className="section-y">
         <div className="container-x grid gap-12 md:grid-cols-12 md:items-center md:gap-14">
           <div className="reveal flex justify-center md:col-span-4">
             <BrandMark className="h-72 w-40 md:h-96 md:w-52" />
           </div>
           <div className="reveal md:col-span-7 md:col-start-6">
-            <Eyebrow index="II">Haut &amp; Darm</Eyebrow>
+            <Eyebrow index="III">Haut &amp; Darm</Eyebrow>
             <h2 className="display-2 mt-6">
               Haut und Bauch <em>reden miteinander.</em>
             </h2>
             <p className="lead mt-8 !max-w-none">
-              Darum frag ich dich nicht nur nach deiner Creme, sondern auch nach Schlaf, Stress,
-              Essen und Verdauung. Schon bei SKIN FIRST schauen wir auf Haut und Darm als Einheit —
-              und in deiner Hautreise bringen wir beides Schritt für Schritt in Balance.
+              Unsere Haut ist ein komplexes Organ, das auf viele Einflüsse reagiert: Hormone,
+              Ernährung, Schlaf, Stress, Umwelt und natürlich deine tägliche Pflege. Auch zwischen
+              Darm und Haut gibt es interessante Zusammenhänge.
             </p>
-            <p className="body-copy mt-6 !max-w-none text-[0.9rem] text-muted">
-              Ich stelle keine Diagnosen. Bei starken Beschwerden schick ich dich zu einer Ärztin.
+            <p className="body-copy mt-5 !max-w-none">
+              Wichtig ist mir: Nicht jeder Pickel kommt vom Darm. Und nicht jede Hautveränderung
+              lässt sich durch eine Ernährungsumstellung lösen. Deshalb betrachten wir zuerst deine
+              Haut ganz genau und sprechen bei Bedarf auch über Ernährung, Verdauung, Schlaf und
+              deinen Alltag.
+            </p>
+            <p className="body-copy mt-5 !max-w-none">
+              Manchmal lohnt es sich, nicht nur zu fragen: „Welche Creme brauche ich?“ Sondern auch:
+              „Was könnte meine Haut gerade zusätzlich beeinflussen?“
             </p>
           </div>
         </div>
       </section>
 
-      {/* Journey preview */}
-      <section className="section-y">
+      {/* IV. Hautanalyse */}
+      <section className="section-y bg-deep text-deep-ink">
+        <div className="container-x">
+          <div className="grid gap-10 md:grid-cols-12 md:gap-14">
+            <div className="reveal md:col-span-5">
+              <p className="eyebrow text-accent">IV · Hautanalyse · REVIDERM OBSERV 320</p>
+              <h2 className="display-2 mt-6">
+                Was deine Haut dir <em className="!text-accent">erzählen möchte.</em>
+              </h2>
+            </div>
+            <div className="reveal md:col-span-6 md:col-start-7">
+              <p className="text-[1.1rem] leading-relaxed opacity-90">
+                Vielleicht fühlt sich deine Haut trocken an und glänzt trotzdem. Vielleicht entstehen
+                ständig neue Unreinheiten. Mit verschiedenen Licht- und Filtertechnologien des OBSERV
+                320 betrachten wir deinen Hautzustand genauer.
+              </p>
+              <p className="mt-5 text-[0.98rem] leading-relaxed opacity-80">
+                Wir schauen uns deine Aufnahmen gemeinsam an. Ich erkläre dir, was wir sehen und
+                welche Möglichkeiten wir für deine Pflege haben. In einer längeren Begleitung
+                vergleichen wir spätere Aufnahmen mit den ersten, damit du deine Fortschritte nicht
+                nur fühlst, sondern auch nachvollziehen kannst.
+              </p>
+            </div>
+          </div>
+          <ul className="mt-12 grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              ["Hautstruktur", "Unebenheiten, vergrößerte Poren oder feine Linien."],
+              ["Pigmentierungen", "Pigmentverschiebungen und ungleichmäßige Hauttöne."],
+              ["Rötungen & sensible Bereiche", "Partien, die empfindlich wirken oder auffällig sind."],
+              ["Talg & Hautoberfläche", "Wie sich der Hautfilm verteilt und wo andere Pflege hilft."],
+            ].map(([t, l]) => (
+              <li key={t} className="reveal border-t border-white/15 pt-5">
+                <h3 className="font-display text-[1.45rem] leading-tight">{t}</h3>
+                <p className="mt-2 text-[0.95rem] leading-relaxed opacity-80">{l}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* V. Produkte & Technologie */}
+      <section className="section-y-tight">
+        <div className="container-x grid gap-8 md:grid-cols-12 md:items-center md:gap-14">
+          <div className="reveal md:col-span-5">
+            <Eyebrow index="V">Produkte &amp; Technologie</Eyebrow>
+            <h2 className="display-2 mt-6">
+              Wirkstoffe mit Verstand. <em>Pflege mit Gefühl.</em>
+            </h2>
+          </div>
+          <div className="reveal md:col-span-6 md:col-start-7">
+            <p className="body-copy !max-w-none">
+              Ich glaube nicht daran, dass wir unsere Haut mit möglichst vielen Produkten überfordern
+              müssen. REVIDERM ist mein Partner für professionelle Hautpflege, moderne Hautanalysen
+              und gezielte Wirkstoffkonzepte. Ob Feuchtigkeit, Hautbarriere, unreine Haut oder erste
+              Zeichen der Hautalterung: Die Pflege wähle ich passend zu deinem Hautzustand.
+            </p>
+            <p className="font-display mt-6 text-[1.45rem] leading-snug italic text-accent-text">
+              So viel wie nötig. So individuell wie möglich.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* VI. Hautreise preview */}
+      <section className="section-y bg-surface">
         <div className="container-x">
           <div className="reveal grid gap-8 md:grid-cols-12 md:items-end">
             <div className="md:col-span-7">
-              <Eyebrow index="III">Deine Hautreise</Eyebrow>
+              <Eyebrow index="VI">Deine Hautreise</Eyebrow>
               <h2 className="display-2 mt-6">
-                Vom ersten Call <em>bis zum Vergleich.</em>
+                Ein Termin. <em>Oder eine Begleitung, die weitergeht.</em>
               </h2>
             </div>
             <p className="lead md:col-span-4 md:col-start-9">
-              Ich bin alle 9 Wochen für 3 Wochen in Neuburg — das ist dein Behandlungsblock.
-              Dazwischen bin ich online für dich da.
+              Wir beginnen nicht mit irgendeiner Behandlung, sondern damit, deine Haut
+              kennenzulernen. Danach entscheidest du, ohne Druck.
             </p>
           </div>
           <ChapterIndex
@@ -163,35 +293,35 @@ export default function MichelleHome() {
               {
                 numeral: "I",
                 title: "Kennenlernen",
-                line: "15 bis 30 Minuten per Video. Du erzählst, ich hör zu.",
+                line: "Ein kostenloser Call, telefonisch oder online. Du erzählst, ich hör zu.",
               },
               {
                 numeral: "II",
                 title: "Fragebogen & Fotos",
-                line: "Am Handy ausfüllen, Hautfotos nach Anleitung — ohne Filter.",
+                line: "Damit ich mich schon vorher mit deiner Haut beschäftigen kann.",
               },
               {
                 numeral: "III",
                 title: "SKIN FIRST",
-                line: "OBSERV-Hautanalyse, die passende Behandlung und dein Plan für zu Hause.",
+                line: "OBSERV-Hautanalyse, die passende Behandlung und deine nächsten Schritte.",
               },
               {
                 numeral: "IV",
-                title: "Deine Blöcke",
-                line: "Zwei Termine pro Block, Pflege zu Hause — und am Ende der Vergleich.",
+                title: "Du entscheidest",
+                line: "Einzelbehandlung, Selfcare-Termine oder persönliche Hautbegleitung.",
               },
             ]}
           />
           <div className="reveal mt-10">
             <Button href="/michelle/hautreise/" variant="text">
-              So läuft deine Hautreise <Arrow />
+              So läuft deine Hautreise ab <Arrow />
             </Button>
           </div>
         </div>
       </section>
 
       {/* Entry points */}
-      <section className="section-y bg-surface">
+      <section className="section-y">
         <div className="container-x">
           <div className="reveal max-w-2xl">
             <Eyebrow>Entdecken</Eyebrow>
@@ -203,9 +333,9 @@ export default function MichelleHome() {
           <div className="mt-12 grid items-stretch gap-8 md:mt-16 md:grid-cols-3 md:gap-7">
             <EditorialCover
               href="/michelle/leistungen/"
-              eyebrow="Pakete & Preise"
-              title="Von SKIN FIRST bis TRANSFORMATION"
-              text="SKIN FIRST, drei Hautreise-Pakete mit deinen Reviderm-Produkten für zu Hause — und Lash & Brow."
+              eyebrow="Behandlungen & Buchung"
+              title="Von SKIN FIRST bis Lash & Brow"
+              text="SKIN FIRST, individuelle Facials, persönliche Hautbegleitung, Darmbegleitung online und Lash & Brow Lift."
               image="/assets/michelle/entspannung.jpg"
               position="50% 35%"
               alt="Entspannte Kundin mit geschlossenen Augen auf der Liege"
@@ -214,8 +344,8 @@ export default function MichelleHome() {
             <EditorialCover
               href="/michelle/hautreise/"
               eyebrow="Hautreise"
-              title="Blöcke, Fahrplan, Fotos"
-              text="Wie die Termine liegen, was vor dem Ersttermin wichtig ist und wie du deine Hautfotos machst."
+              title="Vom ersten Gespräch bis zum Hautgefühl"
+              text="Wie deine Hautreise abläuft, wie du deine Hautfotos machst und was du zu Hause für deine Haut tun kannst."
               image="/assets/michelle/maske-berry.jpg"
               position="50% 40%"
               alt="Beerenfarbene Maske auf der Wange"
@@ -223,9 +353,9 @@ export default function MichelleHome() {
             />
             <EditorialCover
               href="/michelle/kontakt/"
-              eyebrow="Kontakt"
-              title="Studio & Termin"
-              text="Sternstraße 180 in Neuburg, WhatsApp, Mail — und die Buchung über Beautinda."
+              eyebrow="Kontakt & Kennenlernen"
+              title="Lass uns sprechen"
+              text="Telefon, WhatsApp, Mail oder ein kostenloser Kennenlern-Call. Sternstraße 180 in Neuburg."
               image="/assets/michelle/brauen-detail.jpg"
               position="50% 50%"
               alt="Nahaufnahme gepflegter Haut und Augenbraue"
@@ -235,7 +365,7 @@ export default function MichelleHome() {
         </div>
       </section>
 
-      <section className="section-y">
+      <section className="section-y bg-surface">
         <div className="container-x grid gap-10 md:grid-cols-12 md:items-center md:gap-14">
           <div className="reveal ken-wrap relative aspect-[4/5] overflow-hidden md:col-span-5">
             <Img
@@ -246,21 +376,24 @@ export default function MichelleHome() {
             />
           </div>
           <div className="reveal md:col-span-6 md:col-start-7">
-            <Eyebrow>Nächster Schritt</Eyebrow>
+            <Eyebrow>Kontakt &amp; Kennenlernen</Eyebrow>
             <h2 className="display-2 mt-6">
-              Du musst nur <em>anfangen.</em>
+              Du hast Fragen? <em>Dann lass uns sprechen.</em>
             </h2>
             <p className="lead mt-6">
-              Starte mit SKIN FIRST — 2 Stunden mit OBSERV-Hautanalyse, der passenden Behandlung
-              und deinem persönlichen Plan für zu Hause. Oder schreib mir einfach, dann finden wir gemeinsam den
-              Einstieg.
+              Vielleicht weißt du schon ganz genau, was du möchtest. Vielleicht bist du aber auch
+              noch unsicher, wo du anfangen sollst. Beides ist völlig in Ordnung.
             </p>
-            <div className="mt-9 flex flex-wrap gap-3">
-              <Button href={c.bookingHref}>
-                Termin buchen <Arrow />
+            <p className="font-display mt-6 text-[1.4rem] italic text-accent-text">Deine Michelle 🤎</p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Button href={c.callHref}>
+                Kennenlern-Call anfragen <Arrow />
               </Button>
-              <Button href={c.whatsappHref} variant="outline">
-                WhatsApp
+              <Button href={c.bookingHref} variant="outline">
+                SKIN FIRST buchen
+              </Button>
+              <Button href={c.whatsappHref} variant="text">
+                WhatsApp <Arrow />
               </Button>
             </div>
           </div>

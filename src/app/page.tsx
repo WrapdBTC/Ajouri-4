@@ -9,18 +9,18 @@ import { contact, family, mailto, mapsStudioHref, studio } from "@/lib/site";
 const principles = [
   {
     numeral: "I",
-    title: "Zeit statt Takt",
-    text: "Keine Termine im Minutentakt. Wer kommt, bekommt Aufmerksamkeit — nicht Abfertigung.",
+    title: "Kein festes Schema",
+    text: "Jeder Mensch bringt seine eigene Geschichte mit. Seine Wünsche, seine Bedürfnisse und manchmal auch seine Unsicherheiten.",
   },
   {
     numeral: "II",
-    title: "Verstehen vor Handeln",
-    text: "Zuerst zuhören und hinsehen: die Haut lesen, den Moment spüren.",
+    title: "Ohne Zeitdruck",
+    text: "Ohne Erwartungen und ohne Termine im Minutentakt. Hier darfst du einfach du selbst sein.",
   },
   {
     numeral: "III",
-    title: "Sorgfalt im Detail",
-    text: "Präzision im Kleinen, Ruhe im Raum, Ehrlichkeit in der Beratung. Das verbindet alle drei Häuser.",
+    title: "Mit ganz viel Herz",
+    text: "Ehrliche Aufmerksamkeit und Liebe zu dem, was wir tun. Das verbindet alle drei Welten.",
   },
 ];
 
@@ -60,7 +60,8 @@ function Portal({ m }: { m: (typeof family)[number] }) {
         </div>
       </div>
       <div className="flex flex-1 flex-col px-5 pt-4 pb-5 md:px-7 md:pb-6">
-        <p className="body-copy !max-w-none flex-1 text-[0.95rem]">{m.line}</p>
+        <p className="font-display text-[1.3rem] leading-snug italic text-ink">{m.claim}</p>
+        <p className="body-copy mt-3 !max-w-none flex-1 text-[0.95rem]">{m.line}</p>
         <span className="tap-row eyebrow mt-4 text-ink">
           <span className="sr-only">Zur Welt von {m.first}</span>
           Zur Welt <Arrow />
@@ -76,7 +77,7 @@ export default function HubPage() {
       {/* ---------- Editorial cover hero ---------- */}
       <section className="container-x pt-8 md:pt-16">
         <div className="anim-rise flex items-center justify-between gap-6">
-          <Eyebrow>Haut · Klang · Linie</Eyebrow>
+          <Eyebrow>Haut · Klang · Tattoo</Eyebrow>
           <p className="eyebrow hidden text-muted sm:block">Neuburg an der Donau</p>
         </div>
 
@@ -91,9 +92,8 @@ export default function HubPage() {
             <em className="sm:whitespace-nowrap">Ein Name.</em>
           </p>
           <p className="lead anim-rise anim-rise-3 !max-w-none md:col-span-4 md:col-start-9">
-            Michelle, Sabine und Isabelle Ajouri führen drei eigenständige Häuser — für die Haut,
-            den Klang und die Linie. Jedes spricht seine eigene Sprache. Alle teilen dieselbe
-            Haltung.
+            Drei Frauen, die unterschiedlicher kaum sein könnten. Drei Leidenschaften, die jede für
+            sich etwas Besonderes sind. Und doch verbindet uns weit mehr als unser Nachname.
           </p>
         </div>
       </section>
@@ -119,10 +119,10 @@ export default function HubPage() {
             eyebrow="Die drei Welten"
             title={
               <>
-                Drei Häuser, <em>eine Familie.</em>
+                Drei Welten. <em>Eine gemeinsame Haltung.</em>
               </>
             }
-            lead="Jede Welt steht für sich — mit eigener Atmosphäre, eigenem Handwerk und eigener Praxis. Unter einem Dach."
+            lead="Michelle, Sabine und Isabelle Ajouri. Jede Welt steht für sich, mit eigener Atmosphäre und eigenem Handwerk. Unter einem Dach in Neuburg."
           />
 
           <div className="mt-10 grid items-stretch gap-8 md:mt-14 md:grid-cols-3 md:gap-6 lg:gap-8">
@@ -137,8 +137,9 @@ export default function HubPage() {
       <section id="haltung" className="section-y-tight bg-surface">
         <div className="container-x">
           <div className="mx-auto max-w-3xl">
-            <PullQuote variant="statement" cite="— Die Haltung der Familie Ajouri">
-              „Genau hinsehen. Sich Zeit nehmen. Nichts versprechen, was man nicht halten kann.“
+            <PullQuote variant="statement" cite="— Michelle, Sabine & Isabelle Ajouri">
+              „Ohne Zeitdruck. Ohne Erwartungen. Dafür mit ganz viel Herz, ehrlicher Aufmerksamkeit
+              und Liebe zu dem, was wir tun.“
             </PullQuote>
           </div>
 
@@ -146,11 +147,14 @@ export default function HubPage() {
             <div className="reveal md:col-span-4">
               <Eyebrow>Die Haltung</Eyebrow>
               <h2 className="display-2 mt-6">
-                Drei Handwerke, <em>eine Haltung.</em>
+                Ein Ort, an dem du <em>du selbst sein darfst.</em>
               </h2>
               <p className="lead mt-8 !max-w-none">
-                Haut, Klang und Linie haben auf den ersten Blick wenig gemeinsam. Und doch folgen sie
-                denselben Regeln.
+                Wir glauben daran, dass Schönheit, Wohlbefinden und Persönlichkeit nicht nach einem
+                festen Schema funktionieren.
+              </p>
+              <p className="font-display mt-6 text-[1.5rem] italic text-accent-text">
+                Willkommen bei Ajouri.
               </p>
             </div>
             <ol className="md:col-span-7 md:col-start-6">
@@ -182,7 +186,7 @@ export default function HubPage() {
                 Wo du uns <em>findest.</em>
               </>
             }
-            lead="Drei Handwerke unter einem Dach. Jede Praxis hat ihren eigenen Draht."
+            lead="Drei Handwerke unter einem Dach. Jede Welt hat ihren eigenen Draht."
           />
 
           {/* One address for all three — said once, not per column */}
@@ -257,7 +261,7 @@ export default function HubPage() {
                   {m.slug === "isabelle" && (
                     <>
                       <p className="flex min-h-8 items-center">{contact.isabelle.booking}</p>
-                      <p>Fine-Line-Tattoos, jedes Motiv einzeln gezeichnet.</p>
+                      <p>Fineline &amp; Blackwork, jedes Motiv individuell entworfen.</p>
                     </>
                   )}
                 </div>
@@ -266,7 +270,7 @@ export default function HubPage() {
                   href={m.slug === "isabelle" ? "/isabelle/anfrage/" : `/${m.slug}/kontakt/`}
                   className="group/btn tap-row eyebrow mt-8 text-ink"
                 >
-                  Kontakt <Arrow />
+                  {m.slug === "isabelle" ? "Anfrage" : "Kontakt"} <Arrow />
                 </NextLink>
               </div>
             ))}

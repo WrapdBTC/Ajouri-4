@@ -92,22 +92,22 @@
   color-scheme: light;
 }
 
-/* Isabelle — Atelier: gemeinsame Basis (Creme · Sand · Gold),
- * eigene Stimme: Tinte + Altrosa. */
+/* Isabelle — Inkabell Tattoo: Cappuccino-Töne
+ * (Milchschaum, Espresso, Kaffeebraun). */
 [data-theme="isabelle"] {
-  --t-bg: #f7f3ec;
-  --t-surface: #efe7da;
-  --t-elev: #fbf9f4;
-  --t-ink: #26232a;
-  --t-muted: #5a5560;
-  --t-line: rgb(38 35 42 / 0.15);
-  --t-accent: #c6a15b;
-  --t-accent-text: #8a6a35;
-  --t-deep: #26232a;
-  --t-deep-ink: #f7f3ec;
-  --t-btn: #9c5b60;
-  --t-btn-ink: #f7f3ec;
-  --t-header: #f7f3ec;
+  --t-bg: #f5eee6;
+  --t-surface: #eadfd2;
+  --t-elev: #fbf7f2;
+  --t-ink: #3a2a20;
+  --t-muted: #6b5749;
+  --t-line: rgb(58 42 32 / 0.15);
+  --t-accent: #b88a64;
+  --t-accent-text: #87593a;
+  --t-deep: #3a2a20;
+  --t-deep-ink: #f5eee6;
+  --t-btn: #7a5238;
+  --t-btn-ink: #fbf7f2;
+  --t-header: #f5eee6;
   color-scheme: light;
 }
 
@@ -167,19 +167,19 @@ html[data-mode="dark"] [data-theme="sabine"] {
 
 
 html[data-mode="dark"] [data-theme="isabelle"] {
-  --t-bg: #161418;
-  --t-surface: #1e1b20;
-  --t-elev: #26232a;
-  --t-ink: #f7f3ec;
-  --t-muted: #c4bdb6;
-  --t-line: rgb(247 243 236 / 0.15);
-  --t-accent: #c6a15b;
-  --t-accent-text: #d8b878;
-  --t-deep: #0d0c0e;
-  --t-deep-ink: #f7f3ec;
-  --t-btn: #c6a15b;
-  --t-btn-ink: #26232a;
-  --t-header: #161418;
+  --t-bg: #1c1612;
+  --t-surface: #241c17;
+  --t-elev: #2f241d;
+  --t-ink: #f5eee6;
+  --t-muted: #cdbcad;
+  --t-line: rgb(245 238 230 / 0.15);
+  --t-accent: #c9a07c;
+  --t-accent-text: #d9b691;
+  --t-deep: #120e0b;
+  --t-deep-ink: #f5eee6;
+  --t-btn: #c9a07c;
+  --t-btn-ink: #2f241d;
+  --t-header: #1c1612;
   color-scheme: dark;
 }
 

@@ -17,15 +17,15 @@ const c = contact.sabine;
 const faq = [
   {
     q: "Offenes Studio?",
-    a: "Freitag 16:30–18:00 — ohne Anmeldung. Einfach vorbeikommen.",
+    a: "Freitags 16:30–18:00 Uhr ohne Anmeldung, zum Kennenlernen und Austauschen. Klangangebote finden in dieser Zeit nicht statt.",
   },
   {
     q: "Einzeltermin?",
-    a: "Nach Absprache. Formular, Anruf oder E-Mail — ich melde mich in Ruhe.",
+    a: "Klangmassage, Klangreise oder Meditation nach Absprache. Formular, Anruf oder E-Mail — ich melde mich persönlich.",
   },
   {
     q: "Was mitbringen?",
-    a: "Dich. Bequeme Kleidung hilft. Den Rest stellt der Raum.",
+    a: "Nichts außer dir. Bequeme Kleidung hilft, Vorkenntnisse brauchst du keine.",
   },
 ];
 
@@ -132,7 +132,7 @@ export default function SabineKontakt() {
                     Ein Studio, drei Handwerke.
                   </p>
                   <p className="body-copy mt-2 !max-w-md text-[0.95rem]">
-                    In der Sternstraße findest du auch Michelle Ajouri (Kosmetik, Haut & Darm) und Isabelle Ajouri (Fine-Line-Tattoos).
+                    In der Sternstraße findest du auch Michelle Ajouri (Kosmetik, Haut & Darm) und Isabelle Ajouri (Inkabell Tattoo, Fineline & Blackwork).
                   </p>
                 </div>
                 <Button href="/" variant="text" size="sm">

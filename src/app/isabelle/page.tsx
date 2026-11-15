@@ -8,42 +8,37 @@ import { PullQuote } from "@/components/PullQuote";
 import { Marquee } from "@/components/Marquee";
 import { FullBleed } from "@/components/FullBleed";
 import { asset } from "@/lib/asset";
-import { contact } from "@/lib/site";
+import { contact, mapsStudioHref } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Atelier Isabelle — Fine-Line Tattoos",
+  title: "Inkabell Tattoo — Isabelle Ajouri · Fineline & Blackwork",
   description:
-    "Fine-Line-Tattoo-Atelier von Isabelle Ajouri. Reduzierte Linien, botanische und geometrische Motive — gezeichnet für genau eine Haut.",
+    "Inkabell Tattoo von Isabelle Ajouri in Neuburg an der Donau: individuelle Fineline- und Blackwork-Tattoos. Deine Geschichte. Deine Haut. Deine Kunst.",
   openGraph: {
-    title: "Atelier Isabelle — Fine-Line Tattoos",
-    description: "Die Linie, die bleibt.",
+    title: "Inkabell Tattoo — Isabelle Ajouri",
+    description: "Deine Geschichte. Deine Haut. Deine Kunst.",
     images: [{ url: asset("/assets/isabelle/hero-wiese.jpg"), width: 1739, height: 2000 }],
   },
 };
 
 const c = contact.isabelle;
 
-const works = [
+const styles = [
   {
+    href: "/isabelle/galerie/#fineline",
     src: "/assets/isabelle/03-tattoo-botanical.jpg",
-    alt: "Fine-Line-Tattoo mit botanischem Motiv",
-    label: "Botanical",
+    alt: "Fineline-Tattoo mit botanischem Motiv",
+    label: "Fineline",
+    claim: "Feine Linien. Große Bedeutung.",
     position: "50% 45%",
-    aspect: "aspect-[3/4]",
   },
   {
+    href: "/isabelle/galerie/#blackwork",
     src: "/assets/isabelle/04-tattoo-geometric.jpg",
-    alt: "Fine-Line-Tattoo mit geometrischem Motiv",
-    label: "Geometric",
+    alt: "Tattoo mit klaren schwarzen Linien",
+    label: "Blackwork",
+    claim: "Klare Kontraste. Starker Ausdruck.",
     position: "50% 50%",
-    aspect: "aspect-[4/5]",
-  },
-  {
-    src: "/assets/isabelle/05-process.jpg",
-    alt: "Arbeitsprozess im Atelier",
-    label: "Session",
-    position: "50% 40%",
-    aspect: "aspect-[16/10]",
   },
 ];
 
@@ -55,20 +50,20 @@ export default function IsabelleHome() {
         image="/assets/isabelle/hero-wiese.jpg"
         alt="Isabelle Ajouri sitzt lächelnd im Herbstgras"
         position="50% 38%"
-        eyebrow="Atelier Isabelle · Fine-Line"
+        eyebrow="Inkabell Tattoo · Fineline & Blackwork"
         title={
           <>
-            Die Linie, <em>die bleibt.</em>
+            Deine Geschichte. Deine Haut. <em>Deine Kunst.</em>
           </>
         }
-        lead="Fine-Line-Tattoos — reduziert, präzise, für genau eine Haut gezeichnet."
+        lead="Manche Geschichten erzählen wir mit Worten. Andere tragen wir für immer auf unserer Haut."
         actions={
           <>
             <Button href="/isabelle/anfrage/">
-              Anfrage senden <Arrow />
+              Tattoo-Idee anfragen <Arrow />
             </Button>
             <Button href="/isabelle/galerie/" variant="outline">
-              Galerie
+              Meine Arbeit
             </Button>
           </>
         }
@@ -80,103 +75,44 @@ export default function IsabelleHome() {
         }
       />
 
-      {/* Gallery-first — work immediately after hero */}
+      {/* Welcome — real work photo */}
       <section className="section-y-tight">
-        <div className="container-x">
-          <div className="reveal flex items-end justify-between gap-6">
-            <div>
-              <Eyebrow>Arbeit</Eyebrow>
-              <h2 className="display-2 mt-4">
-                Die Linie <em>zuerst.</em>
-              </h2>
-            </div>
-            <Button href="/isabelle/galerie/" variant="text" className="hidden sm:inline-flex">
-              Zur Galerie <Arrow />
-            </Button>
+        <div className="container-x grid gap-10 md:grid-cols-12 md:items-center md:gap-12">
+          <div className="reveal md:col-span-6">
+            <p className="display-2">
+              Ein Tattoo kann <em>so vieles sein.</em>
+            </p>
+            <p className="lead mt-8 !max-w-none">
+              Eine Erinnerung. Ein Gefühl. Ein Neuanfang. Ein Symbol für etwas, das uns geprägt hat.
+              Oder einfach ein Motiv, das wir lieben.
+            </p>
+            <p className="body-copy mt-5 !max-w-none">
+              Für mich ist jedes Tattoo etwas Persönliches. Und genau deshalb verdient es Zeit,
+              Aufmerksamkeit und ganz viel Liebe zum Detail.
+            </p>
+            <p className="font-display mt-7 text-[1.5rem] italic text-accent-text">
+              Willkommen bei Inkabell Tattoo. 🖤
+            </p>
           </div>
-
-          <div className="mt-10 grid gap-4 md:mt-14 md:grid-cols-12 md:gap-5">
-            {/* Large botanical with type overlay */}
-            <NextLink
-              href="/isabelle/galerie/"
-              className="reveal ken-wrap group relative col-span-1 overflow-hidden bg-surface md:col-span-7"
-            >
-              <div className={`relative ${works[0].aspect} md:aspect-[5/4]`}>
-                <Img
-                  src={works[0].src}
-                  alt={works[0].alt}
-                  position={works[0].position}
-                  className="ken-img absolute inset-0 h-full w-full object-cover"
-                />
-                <div
-                  aria-hidden
-                  className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent"
-                />
-                <span className="font-display absolute bottom-6 left-6 text-[2.5rem] leading-none text-white md:bottom-8 md:left-8 md:text-[3.25rem]">
-                  {works[0].label}
-                </span>
-              </div>
-            </NextLink>
-
-            <div className="flex flex-col gap-4 md:col-span-5 md:gap-5">
-              <NextLink
-                href="/isabelle/galerie/"
-                className="reveal ken-wrap group relative flex-1 overflow-hidden bg-surface"
-              >
-                <div className="relative aspect-[4/5] md:aspect-auto md:h-full md:min-h-[11rem]">
-                  <Img
-                    src={works[1].src}
-                    alt={works[1].alt}
-                    position={works[1].position}
-                    className="ken-img absolute inset-0 h-full w-full object-cover"
-                  />
-                  <div
-                    aria-hidden
-                    className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent"
-                  />
-                  <span className="font-display absolute bottom-5 left-5 text-[1.85rem] leading-none text-white md:text-[2.25rem]">
-                    {works[1].label}
-                  </span>
-                </div>
-              </NextLink>
-              <NextLink
-                href="/isabelle/prozess/"
-                className="reveal ken-wrap group relative overflow-hidden bg-surface"
-              >
-                <div className="relative aspect-[16/9]">
-                  <Img
-                    src={works[2].src}
-                    alt={works[2].alt}
-                    position={works[2].position}
-                    className="ken-img absolute inset-0 h-full w-full object-cover"
-                  />
-                  <div
-                    aria-hidden
-                    className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent"
-                  />
-                  <span className="font-display absolute bottom-4 left-5 text-[1.65rem] leading-none text-white">
-                    {works[2].label}
-                  </span>
-                </div>
-              </NextLink>
+          <figure className="reveal ken-wrap md:col-span-5 md:col-start-8">
+            <div className="relative aspect-[4/5] overflow-hidden bg-surface">
+              <Img
+                src="/assets/isabelle/tattoo-lachen.jpg"
+                alt="Isabelle Ajouri tätowiert lächelnd einen Unterarm"
+                position="55% 40%"
+                className="ken-img absolute inset-0 h-full w-full object-cover"
+              />
             </div>
-          </div>
+            <figcaption className="eyebrow mt-4 text-muted">Isabelle bei der Arbeit</figcaption>
+          </figure>
         </div>
       </section>
 
       <Marquee
-        items={[
-          "Fine-Line",
-          "Botanik",
-          "Geometrie",
-          "Black Ink",
-          "Single Needle",
-          "Custom",
-          "Auf Anfrage",
-        ]}
+        items={["Fineline", "Blackwork", "Individuell", "Mit Liebe zum Detail", "Auf Anfrage", "Neuburg"]}
       />
 
-      {/* Sparse atelier intro */}
+      {/* I. Über mich */}
       <section className="section-y-tight">
         <div className="container-x grid gap-10 md:grid-cols-12 md:items-center md:gap-12">
           <figure className="reveal ken-wrap md:col-span-5">
@@ -188,48 +124,112 @@ export default function IsabelleHome() {
                 className="ken-img absolute inset-0 h-full w-full object-cover"
               />
             </div>
-            <figcaption className="eyebrow mt-4 text-muted">Isabelle Ajouri · Fine-Line</figcaption>
+            <figcaption className="eyebrow mt-4 text-muted">Isabelle Ajouri · Inkabell Tattoo</figcaption>
           </figure>
 
           <div className="reveal md:col-span-6 md:col-start-7">
-            <Eyebrow index="I">Atelier</Eyebrow>
+            <Eyebrow index="I">Über mich</Eyebrow>
             <h2 className="display-2 mt-6">
-              Weniger Linie. <em>Mehr Haltung.</em>
+              Hey, ich bin <em>Isabelle.</em>
             </h2>
             <p className="lead mt-8 !max-w-none">
-              Atelier Isabelle ist ein Fine-Line-Studio für Menschen, die eine Zeichnung wollen —
-              nicht ein Statement. Reduziert auf das Wesentliche.
+              Das Gesicht hinter Inkabell Tattoo. Was einmal als Leidenschaft begonnen hat, ist heute
+              mein ganz eigenes Herzensprojekt: ein Ort, an dem ich Kreativität, Liebe zur Kunst und
+              mein Gespür für Ästhetik verbinden kann.
             </p>
             <p className="body-copy mt-5 !max-w-none">
-              Ausschließlich auf Anfrage: Motiv, Stelle, Größe und Timing besprechen wir vorher. So
-              entsteht etwas, das zu deinem Körper gehört.
+              Ich habe mich auf Fineline- und Blackwork-Tattoos spezialisiert. Ich liebe es, aus
+              einer Idee etwas ganz Eigenes entstehen zu lassen. Etwas, das nicht einfach nur schön
+              aussieht, sondern sich für den Menschen, der es trägt, richtig anfühlt.
             </p>
+            <p className="body-copy mt-5 !max-w-none">
+              In meinem Studio sollst du dich wohlfühlen und deine Wünsche offen aussprechen können.
+              Ohne Druck und ohne das Gefühl, dich erklären zu müssen. Dafür mit ehrlicher Beratung,
+              Kreativität und einem offenen Ohr für deine Ideen.
+            </p>
+            <p className="font-display mt-6 text-[1.4rem] italic text-accent-text">Deine Isabelle ♡</p>
           </div>
         </div>
       </section>
 
       <section className="section-y-tight">
         <div className="container-x">
-          <PullQuote variant="statement">
-            „Eine gute Linie braucht keinen Lärm. Sie braucht nur den richtigen Ort.“
+          <PullQuote variant="statement" cite="— Isabelle">
+            „Nicht jedes Tattoo braucht eine große Bedeutung. Aber jedes Tattoo sollte zu dir
+            passen.“
           </PullQuote>
         </div>
       </section>
 
-      {/* Style points — sparse, black-heavy */}
+      {/* II. Meine Arbeit */}
+      <section className="section-y-tight">
+        <div className="container-x">
+          <div className="reveal flex items-end justify-between gap-6">
+            <div>
+              <Eyebrow index="II">Meine Arbeit</Eyebrow>
+              <h2 className="display-2 mt-4">
+                Fineline <em>&amp; Blackwork.</em>
+              </h2>
+            </div>
+            <Button href="/isabelle/galerie/" variant="text" className="hidden sm:inline-flex">
+              Mehr dazu <Arrow />
+            </Button>
+          </div>
+
+          <div className="mt-10 grid items-stretch gap-5 md:mt-14 md:grid-cols-2 md:gap-6">
+            {styles.map((w) => (
+              <NextLink
+                key={w.label}
+                href={w.href}
+                className="reveal ken-wrap group relative overflow-hidden bg-surface"
+              >
+                <div className="relative aspect-[4/5] md:aspect-[5/4]">
+                  <Img
+                    src={w.src}
+                    alt={w.alt}
+                    position={w.position}
+                    className="ken-img absolute inset-0 h-full w-full object-cover"
+                  />
+                  <div
+                    aria-hidden
+                    className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"
+                  />
+                  <div className="absolute bottom-6 left-6 text-white md:bottom-8 md:left-8">
+                    <span className="font-display block text-[2.4rem] leading-none md:text-[3rem]">
+                      {w.label}
+                    </span>
+                    <span className="eyebrow mt-3 block opacity-90">{w.claim}</span>
+                  </div>
+                </div>
+              </NextLink>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* III. Philosophie — deep espresso band */}
       <section className="section-y-tight bg-deep text-deep-ink">
         <div className="container-x">
-          <div className="reveal max-w-xl">
-            <p className="eyebrow opacity-60">Stil</p>
-            <h2 className="display-2 mt-6">
-              Fine-Line mit <em>klarer Handschrift.</em>
-            </h2>
+          <div className="reveal grid gap-8 md:grid-cols-12 md:gap-14">
+            <div className="md:col-span-5">
+              <p className="eyebrow opacity-70">III · Meine Philosophie</p>
+              <h2 className="display-2 mt-6">
+                Wohlfühlen beginnt damit, <em className="!text-accent">du selbst zu sein.</em>
+              </h2>
+            </div>
+            <div className="md:col-span-6 md:col-start-7">
+              <p className="text-[1.1rem] leading-relaxed opacity-90">
+                Unsere Haut begleitet uns ein Leben lang. Sie trägt Erinnerungen und erzählt
+                manchmal Geschichten, für die uns die Worte fehlen. Und manchmal möchten wir selbst
+                entscheiden, welche Geschichte sie erzählen soll.
+              </p>
+            </div>
           </div>
-          <ul className="mt-8 grid items-stretch gap-0 border-t border-current/20 md:mt-10 md:grid-cols-3">
+          <ul className="mt-10 grid items-stretch gap-0 border-t border-current/20 md:mt-12 md:grid-cols-3">
             {[
-              ["Fein & reduziert", "Wenige Linien, viel Raum. Nur das, was die Idee trägt."],
-              ["Botanik & Geometrie", "Pflanzen, die atmen. Formen, die ruhen."],
-              ["Für eine Haut", "Stelle, Größe, Charakter — auf dich abgestimmt."],
+              ["Feingefühl", "Ich begleite dich dabei, deine ganz persönliche Idee sichtbar zu machen."],
+              ["Gut aufgehoben", "Im Mittelpunkt steht nicht nur das Tattoo, sondern der Mensch auf meinem Stuhl."],
+              ["Ein Teil von dir", "Dein Tattoo soll sich nicht wie irgendein Bild anfühlen, sondern wie ein Teil von dir."],
             ].map(([title, text], i) => (
               <li
                 key={title}
@@ -246,31 +246,33 @@ export default function IsabelleHome() {
         </div>
       </section>
 
-      <FullBleed
-        src="/assets/isabelle/band-wiese.jpg"
-        alt=""
-        position="50% 45%"
-        height="band"
-      />
+      <FullBleed src="/assets/isabelle/band-wiese.jpg" alt="" position="50% 45%" height="band" />
 
+      {/* IV. Mein Studio */}
       <section className="section-y-tight">
         <div className="container-x grid gap-8 md:grid-cols-12 md:items-end">
           <div className="reveal md:col-span-7">
-            <Eyebrow>Nächster Schritt</Eyebrow>
+            <Eyebrow index="IV">Mein Studio</Eyebrow>
             <h2 className="display-2 mt-6">
-              Erzähl von <em>deiner Idee.</em>
+              Ein Ort für <em>deine Ideen.</em>
             </h2>
             <p className="lead mt-6">
-              Motiv, Stelle, ungefähre Größe — erzähl mir davon, dann planen wir gemeinsam. Keine
-              Walk-ins.
+              Mein Studio befindet sich im gemeinsamen Haus Ajouri in Neuburg an der Donau. Ganz
+              gleich, ob du dein erstes Tattoo planst oder schon mehrere Kunstwerke trägst: Wir nehmen
+              uns Zeit, deine Vorstellungen zu besprechen.
+            </p>
+            <p className="mt-6 text-[0.98rem] leading-relaxed">
+              <span className="font-medium">{c.street}</span> · {c.city} an der Donau
+              <br />
+              <span className="text-muted">{c.booking}.</span>
             </p>
           </div>
           <div className="reveal flex flex-wrap gap-3 md:col-span-5 md:justify-end">
             <Button href="/isabelle/anfrage/">
-              Anfrage senden <Arrow />
+              Deine Tattoo-Idee anfragen <Arrow />
             </Button>
-            <Button href="/isabelle/galerie/" variant="outline">
-              Galerie
+            <Button href={mapsStudioHref()} variant="outline">
+              Route
             </Button>
           </div>
         </div>

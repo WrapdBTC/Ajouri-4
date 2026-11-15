@@ -4,7 +4,6 @@ import { Img } from "@/components/Img";
 import { Arrow, Button } from "@/components/Button";
 import { Eyebrow } from "@/components/SectionIntro";
 import { PullQuote } from "@/components/PullQuote";
-import { ChapterIndex } from "@/components/ChapterIndex";
 import { Marquee } from "@/components/Marquee";
 import { EditorialCover } from "@/components/EditorialCover";
 import { FullBleed } from "@/components/FullBleed";
@@ -15,7 +14,7 @@ import { contact } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Vita Sonus — Sabine Ajouri",
   description:
-    "Klangreisen, Klangmassage und Meditation in Neuburg. Ein Studio für Klang, Achtsamkeit und innere Regulation — Vita Sonus von Sabine Ajouri.",
+    "Klangmassage, Klangreise und Meditation in Neuburg an der Donau. Vita Sonus von Sabine Ajouri: ein Raum für Entspannung, Achtsamkeit und die besondere Erfahrung von Klang.",
   openGraph: {
     title: "Vita Sonus — Sabine Ajouri",
     description: "Ein Raum, in dem es still werden darf.",
@@ -40,7 +39,7 @@ export default function SabineHome() {
             Ein Raum, in dem es <em>still werden darf.</em>
           </>
         }
-        lead="Du musst nichts erreichen. Du darfst ankommen."
+        lead="Hier musst du nichts leisten. Du darfst einfach ankommen."
         leadClassName="!text-[1.45rem] md:!text-[1.65rem] !leading-snug italic font-display !text-ink/90 !max-w-[26ch]"
         actions={
           <>
@@ -61,8 +60,28 @@ export default function SabineHome() {
       />
 
       <Marquee
-        items={["Resonanz", "Stille", "Achtsamkeit", "Regulation", "Klang", "Atem", "Nachklang"]}
+        items={["Klang", "Stille", "Achtsamkeit", "Ankommen", "Atem", "Ruhe", "Nachklang"]}
       />
+
+      {/* Intro */}
+      <section className="section-y-tight">
+        <div className="container-x grid gap-8 md:grid-cols-12 md:items-end">
+          <p className="display-3 reveal md:col-span-6">
+            Manchmal ist unser Alltag so laut, dass wir unsere eigene innere Stimme <em>kaum noch
+            wahrnehmen.</em>
+          </p>
+          <div className="reveal md:col-span-5 md:col-start-8">
+            <p className="body-copy !max-w-none">
+              Wir funktionieren, erledigen, organisieren und vergessen dabei etwas ganz Wesentliches:
+              uns selbst.
+            </p>
+            <p className="body-copy mt-4 !max-w-none">
+              Vita Sonus ist ein Ort, an dem du all das für einen Moment hinter dir lassen darfst. Ein
+              Raum für Entspannung, Achtsamkeit und die besondere Erfahrung von Klang.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Welcome + pull quote */}
       <section className="section-y">
@@ -82,15 +101,25 @@ export default function SabineHome() {
           <div className="reveal md:col-span-6 md:col-start-7">
             <Eyebrow index="I">Über mich</Eyebrow>
             <h2 className="display-2 mt-6">
-              Klang ist für mich <em>Zuhause kommen.</em>
+              Schön, dass <em>du hier bist.</em>
             </h2>
             <p className="lead mt-8 !max-w-none">
-              Vita Sonus ist mein Studio für Klang und Achtsamkeit in Neuburg. Hier geht es nicht um
-              Leistung — sondern darum, dem Nervensystem Raum zu geben, sich zu regulieren.
+              Ich bin Sabine. Mit Vita Sonus habe ich mir einen Herzenswunsch erfüllt: einen Ort, an
+              dem Menschen für einen Moment aus ihrem hektischen Alltag aussteigen und wieder
+              bewusster bei sich selbst ankommen können.
             </p>
             <p className="body-copy mt-5 !max-w-none">
-              Ob in einer Klangreise, einer Klangmassage oder in der Meditation: Ich begleite dich
-              mit Präsenz und einem ruhigen Rahmen.
+              Mich fasziniert, was Klänge in uns auslösen können. Wie ein einzelner Ton einen Raum
+              erfüllt, wie sich Schwingungen auf unterschiedliche Weise wahrnehmen lassen und wie
+              wohltuend es sein kann, einmal nichts anderes tun zu müssen, als zuzuhören.
+            </p>
+            <p className="body-copy mt-5 !max-w-none">
+              Mit Klangschalen und Meditation möchte ich dir genau diesen Raum schenken. Ohne
+              Erwartungen, ohne Leistungsdruck. Dafür mit viel Achtsamkeit, Ruhe und dem Vertrauen
+              darauf, dass jeder Mensch seine Entspannung auf seine eigene Weise findet.
+            </p>
+            <p className="font-display mt-6 text-[1.4rem] leading-snug italic text-accent-text">
+              Vita Sonus ist meine Einladung an dich, dir selbst wieder ein bisschen näherzukommen.
             </p>
           </div>
         </div>
@@ -98,8 +127,8 @@ export default function SabineHome() {
 
       <section className="section-y-tight">
         <div className="container-x">
-          <PullQuote variant="statement" cite="— Jon Kabat-Zinn">
-            „You can&apos;t stop the waves, but you can learn to surf.“
+          <PullQuote variant="statement" cite="— Sabine">
+            „Du brauchst nichts mitzubringen. Du musst nichts können. Du darfst einfach sein.“
           </PullQuote>
         </div>
       </section>
@@ -112,44 +141,28 @@ export default function SabineHome() {
         height="tall"
       />
 
-      {/* ChapterIndex journey */}
+      {/* Philosophie */}
       <section className="section-y bg-surface">
-        <div className="container-x">
-          <div className="reveal max-w-xl">
-            <Eyebrow>Die Reise</Eyebrow>
+        <div className="container-x grid gap-10 md:grid-cols-12 md:gap-14">
+          <div className="reveal md:col-span-5">
+            <Eyebrow index="II">Meine Philosophie</Eyebrow>
             <h2 className="display-2 mt-6">
-              Vier Stationen. <em>Ein Atem.</em>
+              Du musst nicht <em>immer funktionieren.</em>
             </h2>
-            <p className="lead mt-6">
-              So fühlt sich ein Besuch bei Vita Sonus an — nicht als Checkliste, sondern als
-              Verlauf.
+          </div>
+          <div className="reveal md:col-span-6 md:col-start-7">
+            <p className="lead !max-w-none">
+              Wir kümmern uns um so vieles. Um unsere Familie, unsere Arbeit, unsere Verpflichtungen
+              und die Menschen, die uns wichtig sind. Aber wann kümmern wir uns eigentlich einmal nur
+              um uns selbst?
+            </p>
+            <p className="body-copy mt-5 !max-w-none">
+              Ich glaube, dass Ruhe kein Luxus sein sollte, sondern etwas, das wir uns ganz bewusst
+              erlauben dürfen. Bei Vita Sonus bist du willkommen, ganz gleich, ob du schon
+              Erfahrungen mit Meditation und Klangschalen gesammelt hast oder diese Welt gerade erst
+              für dich entdeckst.
             </p>
           </div>
-          <ChapterIndex
-            className="mt-12 md:mt-14"
-            chapters={[
-              {
-                numeral: "I",
-                title: "Ankommen",
-                line: "Die Tür schließt. Das Licht ist warm. Du legst ab, was du tragen musstest.",
-              },
-              {
-                numeral: "II",
-                title: "Klang",
-                line: "Schalen, Stimme, Vibration — der Körper wird angesprochen, nicht belehrt.",
-              },
-              {
-                numeral: "III",
-                title: "Stille",
-                line: "Der Raum zwischen den Tönen. Hier darf das Nervensystem nachgeben.",
-              },
-              {
-                numeral: "IV",
-                title: "Nachklang",
-                line: "Du gehst anders raus, als du reingekommen bist. Ohne Eile.",
-              },
-            ]}
-          />
         </div>
       </section>
 
@@ -193,8 +206,8 @@ export default function SabineHome() {
             <EditorialCover
               href="/sabine/angebote/"
               eyebrow="Angebote"
-              title="Klangreise & mehr"
-              text="Klangreise, Klangmassage, Meditation und Regulationsabend — Formate für Auszeit."
+              title="Drei Wege zu mehr Ruhe"
+              text="Klangmassage, Klangreise und Meditation: bewusste Auszeiten vom Alltag."
               image="/assets/sabine/schneidersitz.jpg"
               position="50% 45%"
               alt="Sabine Ajouri im Schneidersitz zwischen Klangschalen"
@@ -204,7 +217,7 @@ export default function SabineHome() {
               href="/sabine/studio/"
               eyebrow="Studio"
               title="Freitagabend. Tür offen."
-              text="Jeden Freitag 16:30–18:00 ohne Anmeldung — für einen ersten Eindruck."
+              text="Jeden Freitag von 16:30 bis 18:00 Uhr ohne Anmeldung: ankommen, kennenlernen, austauschen."
               image="/assets/sabine/klangschalen-spiel.jpg"
               position="50% 50%"
               alt="Hände mit Klöppel an einer Klangschale"
@@ -214,7 +227,7 @@ export default function SabineHome() {
               href="/sabine/kontakt/"
               eyebrow="Kontakt"
               title="Melde dich. Ganz in Ruhe."
-              text="Adresse, Telefon und der Platz für den Buchungskalender."
+              text="Adresse, Telefon und E-Mail. Ich melde mich persönlich bei dir."
               image="/assets/sabine/lachen.jpg"
               position="50% 30%"
               alt="Sabine Ajouri lacht im Herbstlicht"
@@ -232,8 +245,8 @@ export default function SabineHome() {
               Melde dich. <em>Ganz in Ruhe.</em>
             </h2>
             <p className="lead mt-6">
-              Ruf an oder schreib mir — wir finden den passenden Einstieg. Oder komm Freitag ins
-              offene Studio.
+              Ruf an oder schreib mir, dann finden wir den passenden Einstieg. Oder komm freitags
+              ganz unverbindlich ins offene Studio.
             </p>
           </div>
           <div className="reveal flex flex-wrap gap-3 md:col-span-5 md:justify-end">
