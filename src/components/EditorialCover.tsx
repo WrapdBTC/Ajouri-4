@@ -49,10 +49,16 @@ export function EditorialCover({
           position={position}
           className="ken-img absolute inset-0 h-full w-full object-cover"
         />
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-gradient-to-t from-bg/90 via-bg/35 via-35% to-transparent to-65%"
+        />
+        <div className="absolute inset-x-0 bottom-0 p-6 md:p-7">
+          <p className="eyebrow text-accent-text">{eyebrow}</p>
+          <h3 className="display-3 mt-2 text-ink">{title}</h3>
+        </div>
       </div>
-      <p className="eyebrow mt-5 text-accent-text">{eyebrow}</p>
-      <h3 className="display-3 mt-2 text-ink">{title}</h3>
-      <p className="body-copy mt-3 flex-1 !max-w-none text-[0.95rem]">{text}</p>
+      <p className="body-copy mt-5 flex-1 !max-w-none text-[0.95rem]">{text}</p>
       <span className="tap-row eyebrow mt-4 text-ink">
         Weiterlesen <Arrow />
       </span>

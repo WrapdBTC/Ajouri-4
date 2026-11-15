@@ -24,7 +24,7 @@ const principles = [
   },
 ];
 
-/** Equal portal cards — clean photo, name and craft underneath. */
+/** Equal portal cards — photo fades into the card, text has its own inner margin. */
 function Portal({ m }: { m: (typeof family)[number] }) {
   return (
     <NextLink
@@ -39,10 +39,14 @@ function Portal({ m }: { m: (typeof family)[number] }) {
           position={m.portalPosition}
           className="ken-img absolute inset-0 h-full w-full object-cover"
         />
-        {/* Only a short shade at the top edge, for the numeral — the photo stays clear */}
+        {/* Veil in the world's own colour: the photo melts into the card below */}
         <div
           aria-hidden
-          className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black/45 to-transparent"
+          className="absolute inset-0 bg-gradient-to-t from-bg via-bg/35 via-30% to-transparent to-60%"
+        />
+        <div
+          aria-hidden
+          className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black/35 to-transparent"
         />
         <span className="font-display absolute top-5 left-5 text-[2rem] leading-none text-white md:top-6 md:left-6 md:text-[2.4rem]">
           {m.numeral}
@@ -50,11 +54,13 @@ function Portal({ m }: { m: (typeof family)[number] }) {
         <span className="eyebrow absolute top-6 right-5 text-white md:top-7 md:right-6">
           {m.craft}
         </span>
+        <div className="absolute inset-x-0 bottom-0 px-5 pb-1 md:px-7">
+          <p className="eyebrow text-accent-text">{m.house}</p>
+          <h3 className="font-display mt-2 text-[2rem] leading-none md:text-[2.35rem]">{m.first}</h3>
+        </div>
       </div>
-      <div className="flex flex-1 flex-col pt-5 pb-1">
-        <p className="eyebrow text-accent-text">{m.house}</p>
-        <h3 className="font-display mt-2 text-[2rem] leading-none md:text-[2.35rem]">{m.first}</h3>
-        <p className="body-copy mt-4 !max-w-none flex-1 text-[0.95rem]">{m.line}</p>
+      <div className="flex flex-1 flex-col px-5 pt-4 pb-5 md:px-7 md:pb-6">
+        <p className="body-copy !max-w-none flex-1 text-[0.95rem]">{m.line}</p>
         <span className="tap-row eyebrow mt-4 text-ink">
           <span className="sr-only">Zur Welt von {m.first}</span>
           Zur Welt <Arrow />
