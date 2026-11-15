@@ -93,6 +93,23 @@
 }
 
 /* ----- Mode overrides: darken light worlds ----- */
+[data-theme="isabelle"] {
+  --t-bg: #f7f3ec;
+  --t-surface: #efe7da;
+  --t-elev: #fbf9f4;
+  --t-ink: #26232a;
+  --t-muted: #5a5560;
+  --t-line: rgb(38 35 42 / 0.15);
+  --t-accent: #c6a15b;
+  --t-accent-text: #8a6a35;
+  --t-deep: #26232a;
+  --t-deep-ink: #f7f3ec;
+  --t-btn: #9c5b60;
+  --t-btn-ink: #f7f3ec;
+  --t-header: #f7f3ec;
+  color-scheme: light;
+}
+
 html[data-mode="dark"],
 html[data-mode="dark"] [data-theme="hub"] {
   --t-bg: #131b1d;
@@ -147,9 +164,27 @@ html[data-mode="dark"] [data-theme="sabine"] {
 }
 
 
+html[data-mode="dark"] [data-theme="isabelle"] {
+  --t-bg: #161418;
+  --t-surface: #1e1b20;
+  --t-elev: #26232a;
+  --t-ink: #f7f3ec;
+  --t-muted: #c4bdb6;
+  --t-line: rgb(247 243 236 / 0.15);
+  --t-accent: #c6a15b;
+  --t-accent-text: #d8b878;
+  --t-deep: #0d0c0e;
+  --t-deep-ink: #f7f3ec;
+  --t-btn: #c6a15b;
+  --t-btn-ink: #26232a;
+  --t-header: #161418;
+  color-scheme: dark;
+}
+
 body:has(> [data-theme="michelle"]) { background-color: var(--t-bg); }
 body:has(> [data-theme="sabine"]) { background-color: var(--t-bg); }
 body:has(> [data-theme="hub"]) { background-color: var(--t-bg); }
+body:has(> [data-theme="isabelle"]) { background-color: var(--t-bg); }
 
 /* ---------- Base ---------- */
 
@@ -523,12 +558,14 @@ body:has(> [data-theme="hub"]) { background-color: var(--t-bg); }
 /* Dark-leaning surfaces — stronger body / step copy */
 html[data-mode="dark"] [data-theme="sabine"] .body-copy,
 html[data-mode="dark"] [data-theme="hub"] .body-copy,
-html[data-mode="dark"] [data-theme="michelle"] .body-copy {
+html[data-mode="dark"] [data-theme="michelle"] .body-copy,
+html[data-mode="dark"] [data-theme="isabelle"] .body-copy {
   color: color-mix(in oklab, var(--t-ink) 78%, var(--t-muted));
 }
 html[data-mode="dark"] [data-theme="sabine"] .lead,
 html[data-mode="dark"] [data-theme="hub"] .lead,
-html[data-mode="dark"] [data-theme="michelle"] .lead {
+html[data-mode="dark"] [data-theme="michelle"] .lead,
+html[data-mode="dark"] [data-theme="isabelle"] .lead {
   color: color-mix(in oklab, var(--t-ink) 72%, var(--t-muted));
 }
 html[data-mode="light"] [data-theme="sabine"] .body-copy {

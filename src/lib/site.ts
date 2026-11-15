@@ -1,9 +1,9 @@
-export type Slug = "michelle" | "sabine";
+export type Slug = "michelle" | "sabine" | "isabelle";
 export type ThemeKey = "hub" | Slug;
 
 export type Link = { label: string; href: string };
 
-/** The two members of the family, in hub order. */
+/** The three members of the family, in hub order. */
 export const family: {
   slug: Slug;
   first: string;
@@ -46,9 +46,23 @@ export const family: {
     portrait: "/assets/sabine/portrait-herbst.jpg",
     portraitPosition: "50% 22%",
   },
+  {
+    slug: "isabelle",
+    first: "Isabelle",
+    name: "Isabelle Ajouri",
+    house: "Atelier Isabelle",
+    craft: "Linie",
+    numeral: "III",
+    line: "Fine-Line-Tattoos — reduziert, präzise, für genau eine Haut gezeichnet.",
+    href: "/isabelle/",
+    portal: "/assets/isabelle/02-portrait.jpg",
+    portalPosition: "47% 30%",
+    portrait: "/assets/isabelle/02-portrait.jpg",
+    portraitPosition: "47% 30%",
+  },
 ];
 
-/** Shared studio — both practices under one roof. */
+/** Shared studio — the practices under one roof. */
 export const studio = {
   street: "Sternstraße 180",
   city: "86633 Neuburg",
@@ -79,6 +93,12 @@ export const contact = {
     openStudio: "Freitag · 16:30 – 18:00 Uhr",
     web: "vitasonus.de",
     webHref: "https://vitasonus.de/",
+  },
+  isabelle: {
+    street: studio.street,
+    city: studio.city,
+    /** Eigene Kontaktdaten folgen — bis dahin laufen Anfragen über das Studio. */
+    booking: "Termine nur auf Anfrage",
   },
 } as const;
 
@@ -111,7 +131,7 @@ export const headers: Record<
     title: "Ajouri",
     subtitle: "Neuburg an der Donau",
     anchors: [
-      { label: "Die zwei Welten", href: "#welten" },
+      { label: "Die drei Welten", href: "#welten" },
       { label: "Haltung", href: "#haltung" },
       { label: "Adressen", href: "#adressen" },
     ],
@@ -141,5 +161,16 @@ export const headers: Record<
       { label: "Kontakt", href: "/sabine/kontakt/" },
     ],
     cta: { label: "Termin wählen", href: "/sabine/kontakt/#buchen" },
+  },
+  isabelle: {
+    title: "Atelier Isabelle",
+    subtitle: "Isabelle Ajouri · Fine-Line",
+    anchors: [
+      { label: "Start", href: "/isabelle/" },
+      { label: "Galerie", href: "/isabelle/galerie/" },
+      { label: "Prozess", href: "/isabelle/prozess/" },
+      { label: "Anfrage", href: "/isabelle/anfrage/" },
+    ],
+    cta: { label: "Anfrage", href: "/isabelle/anfrage/" },
   },
 };

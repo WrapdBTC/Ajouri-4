@@ -152,14 +152,14 @@ export default function MichelleKontakt() {
                 <div>
                   <p className="eyebrow text-accent-text">Unter einem Dach</p>
                   <p className="font-display mt-3 text-2xl leading-tight">
-                    Ein Studio, zwei Handwerke.
+                    Ein Studio, drei Handwerke.
                   </p>
                   <p className="body-copy mt-2 !max-w-md text-[0.95rem]">
-                    In der Sternstraße findest du auch Sabine Ajouri — Vita Sonus, Klang & Meditation.
+                    In der Sternstraße findest du auch Sabine Ajouri (Vita Sonus, Klang & Meditation) und Isabelle Ajouri (Fine-Line-Tattoos).
                   </p>
                 </div>
-                <Button href="/sabine/" variant="text" size="sm">
-                  Zu Sabine <Arrow />
+                <Button href="/" variant="text" size="sm">
+                  Alle drei Welten <Arrow />
                 </Button>
               </div>
             </div>

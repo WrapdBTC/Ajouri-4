@@ -18,6 +18,8 @@ type Props = {
    * "split" = copy left, portrait frame right — keeps smaller images sharp.
    */
   layout?: "overlay" | "split";
+  /** Split only: frame shape — "landscape" for wide images. */
+  imageShape?: "portrait" | "landscape";
 };
 
 /**
@@ -37,6 +39,7 @@ export function Hero({
   size = "full",
   leadClassName = "",
   layout = "overlay",
+  imageShape = "portrait",
 }: Props) {
   const isPage = size === "page";
 
@@ -59,7 +62,13 @@ export function Hero({
               </div>
             )}
           </div>
-          <div className="anim-settle relative aspect-[4/5] overflow-hidden md:col-span-5 md:col-start-8 md:max-h-[34rem]">
+          <div
+            className={`anim-settle relative overflow-hidden ${
+              imageShape === "landscape"
+                ? "aspect-[4/3] md:col-span-6 md:col-start-7"
+                : "aspect-[4/5] md:col-span-5 md:col-start-8 md:max-h-[34rem]"
+            }`}
+          >
             <Img
               src={image}
               alt={alt}

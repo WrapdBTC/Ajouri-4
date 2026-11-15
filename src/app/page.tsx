@@ -20,7 +20,7 @@ const principles = [
   {
     numeral: "III",
     title: "Sorgfalt im Detail",
-    text: "Präzision im Kleinen, Ruhe im Raum, Ehrlichkeit in der Beratung. Das verbindet beide Häuser.",
+    text: "Präzision im Kleinen, Ruhe im Raum, Ehrlichkeit in der Beratung. Das verbindet alle drei Häuser.",
   },
 ];
 
@@ -73,7 +73,7 @@ export default function HubPage() {
       {/* ---------- Editorial cover hero ---------- */}
       <section className="container-x pt-8 md:pt-16">
         <div className="anim-rise flex items-center justify-between gap-6">
-          <Eyebrow>Haut · Klang</Eyebrow>
+          <Eyebrow>Haut · Klang · Linie</Eyebrow>
           <p className="eyebrow hidden text-muted sm:block">Neuburg an der Donau</p>
         </div>
 
@@ -83,13 +83,14 @@ export default function HubPage() {
 
         <div className="mt-10 grid gap-8 md:mt-14 md:grid-cols-12 md:items-end">
           <p className="display-2 anim-rise anim-rise-2 md:col-span-7">
-            <span className="sm:whitespace-nowrap">Zwei Frauen.</span>{" "}
-            <span className="sm:whitespace-nowrap">Zwei Handwerke.</span>{" "}
+            <span className="sm:whitespace-nowrap">Drei Frauen.</span>{" "}
+            <span className="sm:whitespace-nowrap">Drei Handwerke.</span>{" "}
             <em className="sm:whitespace-nowrap">Ein Name.</em>
           </p>
           <p className="lead anim-rise anim-rise-3 !max-w-none md:col-span-4 md:col-start-9">
-            Michelle und Sabine Ajouri führen zwei eigenständige Häuser — für die Haut und für den
-            Klang. Jedes spricht seine eigene Sprache. Beide teilen dieselbe Haltung.
+            Michelle, Sabine und Isabelle Ajouri führen drei eigenständige Häuser — für die Haut,
+            den Klang und die Linie. Jedes spricht seine eigene Sprache. Alle teilen dieselbe
+            Haltung.
           </p>
         </div>
       </section>
@@ -107,21 +108,21 @@ export default function HubPage() {
         </div>
       </section>
 
-      {/* ---------- Die zwei Welten — portals ---------- */}
+      {/* ---------- Die drei Welten — portals ---------- */}
       <section id="welten" className="section-y-tight">
         <div className="container-x">
           <SectionIntro
             layout="split"
-            eyebrow="Die zwei Welten"
+            eyebrow="Die drei Welten"
             title={
               <>
-                Zwei Häuser, <em>eine Familie.</em>
+                Drei Häuser, <em>eine Familie.</em>
               </>
             }
             lead="Jede Welt steht für sich — mit eigener Atmosphäre, eigenem Handwerk und eigener Praxis. Unter einem Dach."
           />
 
-          <div className="mt-10 grid items-stretch gap-8 md:mt-14 md:grid-cols-2 md:gap-7 lg:gap-10">
+          <div className="mt-10 grid items-stretch gap-8 md:mt-14 md:grid-cols-3 md:gap-6 lg:gap-8">
             {family.map((m) => (
               <Portal key={m.slug} m={m} />
             ))}
@@ -142,10 +143,10 @@ export default function HubPage() {
             <div className="reveal md:col-span-4">
               <Eyebrow>Die Haltung</Eyebrow>
               <h2 className="display-2 mt-6">
-                Zwei Handwerke, <em>eine Haltung.</em>
+                Drei Handwerke, <em>eine Haltung.</em>
               </h2>
               <p className="lead mt-8 !max-w-none">
-                Haut und Klang haben auf den ersten Blick wenig gemeinsam. Und doch folgen sie
+                Haut, Klang und Linie haben auf den ersten Blick wenig gemeinsam. Und doch folgen sie
                 denselben Regeln.
               </p>
             </div>
@@ -178,10 +179,10 @@ export default function HubPage() {
                 Wo du uns <em>findest.</em>
               </>
             }
-            lead="Neues gemeinsames Studio in der Sternstraße — zwei Handwerke unter einem Dach. Jede Praxis hat ihren eigenen Draht."
+            lead="Gemeinsames Studio in der Sternstraße — drei Handwerke unter einem Dach. Jede Praxis hat ihren eigenen Draht."
           />
 
-          <div className="mt-12 grid items-stretch border-t border-line md:mt-16 md:grid-cols-2">
+          <div className="mt-12 grid items-stretch border-t border-line md:mt-16 md:grid-cols-3">
             {family.map((m) => (
               <div
                 key={m.slug}
@@ -236,10 +237,17 @@ export default function HubPage() {
                       <p className="pt-3">Offenes Studio: {contact.sabine.openStudio}</p>
                     </>
                   )}
+                  {m.slug === "isabelle" && (
+                    <>
+                      <p>{contact.isabelle.street}</p>
+                      <p>{contact.isabelle.city}</p>
+                      <p className="pt-3">{contact.isabelle.booking}</p>
+                    </>
+                  )}
                 </div>
 
                 <NextLink
-                  href={m.slug === "michelle" ? "/michelle/kontakt/" : "/sabine/kontakt/"}
+                  href={m.slug === "isabelle" ? "/isabelle/anfrage/" : `/${m.slug}/kontakt/`}
                   className="group/btn tap-row eyebrow mt-8 text-ink"
                 >
                   Kontakt <Arrow />
