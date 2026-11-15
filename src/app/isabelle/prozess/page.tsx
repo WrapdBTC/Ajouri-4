@@ -4,6 +4,7 @@ import { Img } from "@/components/Img";
 import { Arrow, Button } from "@/components/Button";
 import { Eyebrow } from "@/components/SectionIntro";
 import { ChapterIndex } from "@/components/ChapterIndex";
+import { contact } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Dein Tattoo · Inkabell Tattoo",
@@ -99,9 +100,17 @@ export default function IsabelleProzess() {
               Ich freue mich darauf, gemeinsam mit dir etwas entstehen zu lassen, das ein Teil von dir
               wird.
             </p>
-            <Button href="/isabelle/anfrage/" className="mt-8">
-              Tattoo-Idee anfragen <Arrow />
-            </Button>
+            <p className="body-copy mt-3 text-[0.92rem] text-muted">
+              Anfragen nehme ich ausschließlich über Instagram entgegen.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Button href={contact.isabelle.dmHref}>
+                Anfrage per Instagram <Arrow />
+              </Button>
+              <Button href="/isabelle/anfrage/" variant="outline">
+                Was ich wissen möchte
+              </Button>
+            </div>
           </div>
         </div>
       </section>

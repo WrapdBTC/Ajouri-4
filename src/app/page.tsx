@@ -260,8 +260,13 @@ export default function HubPage() {
                   )}
                   {m.slug === "isabelle" && (
                     <>
-                      <p className="flex min-h-8 items-center">{contact.isabelle.booking}</p>
-                      <p>Fineline &amp; Blackwork, jedes Motiv individuell entworfen.</p>
+                      <p>
+                        <a className="inline-flex min-h-8 items-center text-ink hover:underline" href={contact.isabelle.instagramHref} target="_blank" rel="noopener noreferrer">
+                          Instagram {contact.isabelle.instagram}
+                        </a>
+                      </p>
+                      <p>Anfragen ausschließlich über Instagram.</p>
+                      <p className="pt-2">{contact.isabelle.booking}</p>
                     </>
                   )}
                 </div>

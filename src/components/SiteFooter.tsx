@@ -38,6 +38,7 @@ function contactLines(current: ThemeKey): Line[] {
         { text: c.street },
         { text: c.city },
         { text: c.booking },
+        { text: `Instagram ${c.instagram}`, href: c.instagramHref },
         { text: "Tattoo-Idee anfragen", href: "/isabelle/anfrage/" },
       ];
     }
@@ -46,7 +47,7 @@ function contactLines(current: ThemeKey): Line[] {
         { text: `${studio.street} · ${studio.city}` },
         { text: `Michelle · ${contact.michelle.phone}`, href: "/michelle/kontakt/" },
         { text: `Sabine · ${contact.sabine.phone}`, href: "/sabine/kontakt/" },
-        { text: "Isabelle · Anfrage", href: "/isabelle/anfrage/" },
+        { text: `Isabelle · Instagram ${contact.isabelle.instagram}`, href: contact.isabelle.instagramHref },
       ];
   }
 }

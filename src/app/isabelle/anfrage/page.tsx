@@ -29,9 +29,17 @@ export default function IsabelleAnfrage() {
               Erzähl mir von <em>deiner Idee.</em>
             </h1>
             <p className="lead anim-rise anim-rise-1 mt-5 !max-w-[40ch]">
-              Alles beginnt mit einem Gedanken. Ganz gleich, ob du dein erstes Tattoo planst oder
-              bereits mehrere Kunstwerke trägst.
+              Alles beginnt mit einem Gedanken. Schreib mir einfach eine Nachricht auf Instagram,
+              Anfragen nehme ich ausschließlich dort entgegen.
             </p>
+            <div className="anim-rise anim-rise-2 mt-8 flex flex-wrap gap-3">
+              <Button href={c.dmHref}>
+                Nachricht auf Instagram <Arrow />
+              </Button>
+              <Button href={c.instagramHref} variant="outline">
+                {c.instagram}
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -39,7 +47,7 @@ export default function IsabelleAnfrage() {
       <section className="section-y-tight">
         <div className="container-x grid gap-10 md:grid-cols-12 md:gap-12">
           <div className="reveal md:col-span-6">
-            <Eyebrow index="I">Was ich wissen möchte</Eyebrow>
+            <Eyebrow index="I">Das hilft mir bei deiner Anfrage</Eyebrow>
             <ol className="mt-8">
               {checklist.map(([title, text], i) => (
                 <li
@@ -63,6 +71,13 @@ export default function IsabelleAnfrage() {
                 <p className="font-display mt-2 text-2xl leading-tight">{c.booking}</p>
               </div>
               <div>
+                <p className="eyebrow text-accent-text">Anfragen bearbeite ich</p>
+                <p className="mt-2">{c.requestHours}</p>
+                <p className="mt-1 text-muted">
+                  Ich antworte so schnell wie möglich. Außerhalb dieser Zeiten bitte etwas Geduld.
+                </p>
+              </div>
+              <div>
                 <p className="eyebrow text-accent-text">Studio</p>
                 <p className="mt-2">{c.street}</p>
                 <p className="text-muted">{c.city}</p>
@@ -79,13 +94,14 @@ export default function IsabelleAnfrage() {
             <div className="mt-6 flex flex-col gap-6 bg-deep p-6 text-deep-ink md:p-8">
               <div>
                 <p className="eyebrow text-accent">Kontakt</p>
-                <p className="display-3 mt-3">Isabelles direkter Draht folgt in Kürze.</p>
+                <p className="display-3 mt-3">Anfragen ausschließlich über Instagram.</p>
                 <p className="mt-3 text-[0.95rem] leading-relaxed opacity-85">
-                  Bis dahin erreichst du sie über das gemeinsame Studio in der Sternstraße.
+                  Schick mir eine Direktnachricht an {c.instagram}, gern mit Referenzbildern. Dort
+                  siehst du auch meine neuesten Arbeiten.
                 </p>
               </div>
-              <Button href="/isabelle/galerie/" variant="outline" className="self-start">
-                Meine Arbeit
+              <Button href={c.dmHref} className="self-start">
+                Nachricht schreiben <Arrow />
               </Button>
             </div>
           </div>

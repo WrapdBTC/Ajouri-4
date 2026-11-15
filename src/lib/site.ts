@@ -102,8 +102,12 @@ export const contact = {
   isabelle: {
     street: studio.street,
     city: studio.city,
-    /** Eigene Kontaktdaten folgen — bis dahin laufen Anfragen über das Studio. */
+    /** Anfragen ausschließlich über Instagram. */
     booking: "Termine nach vorheriger Anfrage",
+    instagram: "@_inkabell_",
+    instagramHref: "https://www.instagram.com/_inkabell_/",
+    dmHref: "https://ig.me/m/_inkabell_",
+    requestHours: "Mo – Fr · 10:00 – 18:00 Uhr",
   },
 } as const;
 

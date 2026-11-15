@@ -26,19 +26,15 @@ const c = contact.isabelle;
 const styles = [
   {
     href: "/isabelle/galerie/#fineline",
-    src: "/assets/isabelle/03-tattoo-botanical.jpg",
-    alt: "Fineline-Tattoo mit botanischem Motiv",
     label: "Fineline",
     claim: "Feine Linien. Große Bedeutung.",
-    position: "50% 45%",
+    text: "Zarte Konturen, kleine Details und eine reduzierte Ästhetik. Ein Symbol, ein Schriftzug, eine Blume oder eine persönliche Erinnerung.",
   },
   {
     href: "/isabelle/galerie/#blackwork",
-    src: "/assets/isabelle/04-tattoo-geometric.jpg",
-    alt: "Tattoo mit klaren schwarzen Linien",
     label: "Blackwork",
     claim: "Klare Kontraste. Starker Ausdruck.",
-    position: "50% 50%",
+    text: "Markante Linien, dunkle Flächen und bewusste Kontraste. Von reduziert und elegant bis ausdrucksstark und auffällig.",
   },
 ];
 
@@ -181,26 +177,14 @@ export default function IsabelleHome() {
               <NextLink
                 key={w.label}
                 href={w.href}
-                className="reveal ken-wrap group relative overflow-hidden bg-surface"
+                className="reveal group group/btn flex h-full flex-col border border-line bg-elev p-7 transition-colors duration-300 hover:border-accent md:p-10"
               >
-                <div className="relative aspect-[4/5] md:aspect-[5/4]">
-                  <Img
-                    src={w.src}
-                    alt={w.alt}
-                    position={w.position}
-                    className="ken-img absolute inset-0 h-full w-full object-cover"
-                  />
-                  <div
-                    aria-hidden
-                    className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"
-                  />
-                  <div className="absolute bottom-6 left-6 text-white md:bottom-8 md:left-8">
-                    <span className="font-display block text-[2.4rem] leading-none md:text-[3rem]">
-                      {w.label}
-                    </span>
-                    <span className="eyebrow mt-3 block opacity-90">{w.claim}</span>
-                  </div>
-                </div>
+                <span className="font-display text-[2.6rem] leading-none md:text-[3.25rem]">{w.label}</span>
+                <span className="eyebrow mt-4 text-accent-text">{w.claim}</span>
+                <p className="body-copy mt-5 !max-w-md flex-1">{w.text}</p>
+                <span className="tap-row eyebrow mt-7 text-ink">
+                  Arbeiten ansehen <Arrow />
+                </span>
               </NextLink>
             ))}
           </div>
@@ -264,12 +248,18 @@ export default function IsabelleHome() {
             <p className="mt-6 text-[0.98rem] leading-relaxed">
               <span className="font-medium">{c.street}</span> · {c.city} an der Donau
               <br />
-              <span className="text-muted">{c.booking}.</span>
+              <span className="text-muted">
+                {c.booking}, ausschließlich über Instagram{" "}
+                <a href={c.instagramHref} target="_blank" rel="noopener noreferrer" className="text-ink underline-offset-4 hover:underline">
+                  {c.instagram}
+                </a>
+                .
+              </span>
             </p>
           </div>
           <div className="reveal flex flex-wrap gap-3 md:col-span-5 md:justify-end">
-            <Button href="/isabelle/anfrage/">
-              Deine Tattoo-Idee anfragen <Arrow />
+            <Button href={c.dmHref}>
+              Anfrage per Instagram <Arrow />
             </Button>
             <Button href={mapsStudioHref()} variant="outline">
               Route
