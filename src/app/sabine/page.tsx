@@ -41,7 +41,7 @@ export default function SabineHome() {
           </>
         }
         lead="Du musst nichts erreichen. Du darfst ankommen."
-        leadClassName="!text-[1.2rem] md:!text-[1.3rem] !leading-relaxed italic font-display !text-ink/90 !max-w-[28ch]"
+        leadClassName="!text-[1.45rem] md:!text-[1.65rem] !leading-snug italic font-display !text-ink/90 !max-w-[26ch]"
         actions={
           <>
             <Button href="/sabine/kontakt/#buchen">

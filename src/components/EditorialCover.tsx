@@ -16,8 +16,8 @@ type Props = {
 };
 
 /**
- * Editorial cover teaser — not a TeaserCard clone.
- * Oversized photography, type overlay, stretches in equal grids via h-full.
+ * Editorial cover teaser: clean photograph, caption underneath.
+ * Stretches in equal grids via h-full.
  */
 export function EditorialCover({
   href,
@@ -49,17 +49,11 @@ export function EditorialCover({
           position={position}
           className="ken-img absolute inset-0 h-full w-full object-cover"
         />
-        <div
-          aria-hidden
-          className="absolute inset-0 bg-gradient-to-t from-bg/85 via-bg/10 to-bg/0"
-        />
-        <div className="absolute inset-x-0 bottom-0 p-6 md:p-7">
-          <p className="eyebrow text-accent-text">{eyebrow}</p>
-          <h3 className="display-3 mt-2 text-ink">{title}</h3>
-        </div>
       </div>
-      <p className="body-copy mt-5 flex-1 !max-w-none text-[0.95rem]">{text}</p>
-      <span className="tap-row eyebrow mt-5 text-ink">
+      <p className="eyebrow mt-5 text-accent-text">{eyebrow}</p>
+      <h3 className="display-3 mt-2 text-ink">{title}</h3>
+      <p className="body-copy mt-3 flex-1 !max-w-none text-[0.95rem]">{text}</p>
+      <span className="tap-row eyebrow mt-4 text-ink">
         Weiterlesen <Arrow />
       </span>
     </NextLink>

@@ -15,7 +15,7 @@ export function SiteHeader({ current }: { current: ThemeKey }) {
   return (
     <>
       <div className="bg-deep text-deep-ink">
-        <div className="container-x flex h-9 items-center justify-between gap-3 text-[0.6rem] uppercase tracking-[0.18em] sm:gap-4 sm:tracking-[0.22em] md:tracking-[0.28em]">
+        <div className="container-x flex h-9 items-center justify-between gap-3 text-[0.66rem] uppercase tracking-[0.16em] sm:gap-4 sm:tracking-[0.22em] md:tracking-[0.28em]">
           {current === "hub" ? (
             <span className="opacity-0 select-none" aria-hidden>
               ·
@@ -78,7 +78,7 @@ export function SiteHeader({ current }: { current: ThemeKey }) {
                 {cfg.title}
               </span>
             )}
-            <span className="eyebrow mt-1 text-[0.55rem] text-muted">{cfg.subtitle}</span>
+            <span className="eyebrow mt-1 text-[0.6rem] text-muted">{cfg.subtitle}</span>
             </span>
           </NextLink>
 

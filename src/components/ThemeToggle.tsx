@@ -1,14 +1,18 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 
 type Mode = "light" | "dark";
 
 function readMode(): Mode {
-  if (typeof document === "undefined") return "light";
-  const attr = document.documentElement.getAttribute("data-mode");
-  if (attr === "light" || attr === "dark") return attr;
-  return "light";
+  return document.documentElement.getAttribute("data-mode") === "dark" ? "dark" : "light";
+}
+
+/** The <html data-mode> attribute is the single source of truth (set before paint). */
+function subscribe(onChange: () => void) {
+  const observer = new MutationObserver(onChange);
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ["data-mode"] });
+  return () => observer.disconnect();
 }
 
 function applyMode(mode: Mode) {
@@ -21,17 +25,11 @@ function applyMode(mode: Mode) {
 }
 
 /**
- * Elegant Hell / Dunkel control. Works with per-world data-theme via
+ * Hell / Dunkel control. Works with per-world data-theme via
  * html[data-mode] overrides in globals.css.
  */
 export function ThemeToggle() {
-  const [mode, setMode] = useState<Mode>("light");
-  const [ready, setReady] = useState(false);
-
-  useEffect(() => {
-    setMode(readMode());
-    setReady(true);
-  }, []);
+  const mode = useSyncExternalStore<Mode>(subscribe, readMode, () => "light");
 
   const next: Mode = mode === "light" ? "dark" : "light";
   const label = mode === "light" ? "Dunkelmodus" : "Hellmodus";
@@ -42,12 +40,8 @@ export function ThemeToggle() {
       type="button"
       aria-label={label}
       title={label}
-      disabled={!ready}
-      onClick={() => {
-        applyMode(next);
-        setMode(next);
-      }}
-      className="eyebrow inline-flex h-8 items-center gap-2 rounded-[2px] px-2 text-[0.55rem] tracking-[0.2em] text-deep-ink/70 transition-opacity duration-300 hover:text-deep-ink hover:opacity-100 disabled:opacity-40"
+      onClick={() => applyMode(next)}
+      className="eyebrow inline-flex h-8 items-center gap-2 rounded-[2px] px-2 text-[0.62rem] tracking-[0.18em] text-deep-ink/70 transition-opacity duration-300 hover:text-deep-ink hover:opacity-100"
     >
       <span aria-hidden className="relative block h-3.5 w-3.5">
         {mode === "light" ? (

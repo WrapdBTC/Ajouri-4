@@ -4,10 +4,9 @@ import { Img } from "@/components/Img";
 import { Arrow, Button } from "@/components/Button";
 import { Eyebrow } from "@/components/SectionIntro";
 import { ChapterIndex } from "@/components/ChapterIndex";
-import { FullBleed } from "@/components/FullBleed";
 
 export const metadata: Metadata = {
-  title: "Prozess",
+  title: "Prozess · Atelier Isabelle",
   description:
     "Beratung, Entwurf, Session, Aftercare — der Fine-Line-Prozess bei Atelier Isabelle Ajouri.",
 };
@@ -81,13 +80,6 @@ export default function IsabelleProzess() {
           />
         </div>
       </section>
-
-      <FullBleed
-        src="/assets/isabelle/06-portal.jpg"
-        alt="Atelier-Atmosphäre"
-        position="50% 50%"
-        height="band"
-      />
 
       <section className="section-y-tight">
         <div className="container-x grid gap-8 md:grid-cols-12 md:items-center md:gap-10">

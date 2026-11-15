@@ -7,7 +7,7 @@ import { ChapterIndex } from "@/components/ChapterIndex";
 import { contact } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Deine Hautreise",
+  title: "Deine Hautreise · Michelle Ajouri",
   description:
     "So läuft die Hautreise bei Michelle Ajouri: Behandlungsblöcke in Neuburg, Ersttermin mit OBSERV-Analyse, Hautfotos, Pflegeplan und WhatsApp-Begleitung.",
 };

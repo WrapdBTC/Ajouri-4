@@ -2,7 +2,7 @@
 
 /*
  * AJOURI design system — editorial boutique
- * One set of components, three world palettes (hub / michelle / sabine).
+ * One set of components, four palettes (hub / michelle / sabine / isabelle).
  * Every surface reads colours from [data-theme]; light/dark via html[data-mode].
  */
 
@@ -92,7 +92,8 @@
   color-scheme: light;
 }
 
-/* ----- Mode overrides: darken light worlds ----- */
+/* Isabelle — Atelier: gemeinsame Basis (Creme · Sand · Gold),
+ * eigene Stimme: Tinte + Altrosa. */
 [data-theme="isabelle"] {
   --t-bg: #f7f3ec;
   --t-surface: #efe7da;
@@ -110,6 +111,7 @@
   color-scheme: light;
 }
 
+/* ----- Mode overrides: darken light worlds ----- */
 html[data-mode="dark"],
 html[data-mode="dark"] [data-theme="hub"] {
   --t-bg: #131b1d;
@@ -275,6 +277,16 @@ body:has(> [data-theme="isabelle"]) { background-color: var(--t-bg); }
     text-wrap: balance;
   }
 
+  /* Home hero headline — sized for the half-width copy column */
+  .display-hero {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(2.6rem, 5vw, 4.9rem);
+    line-height: 0.98;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
   .display-2 {
     font-family: var(--font-display);
     font-weight: 400;
@@ -294,6 +306,7 @@ body:has(> [data-theme="isabelle"]) { background-color: var(--t-bg); }
   }
 
   .display-0 em,
+  .display-hero em,
   .display-1 em,
   .display-2 em,
   .display-3 em {
@@ -529,7 +542,8 @@ body:has(> [data-theme="isabelle"]) { background-color: var(--t-bg); }
   .display-0 {
     font-size: clamp(2.6rem, 13vw, 4.25rem);
   }
-  .display-1 {
+  .display-1,
+  .display-hero {
     font-size: clamp(2.2rem, 10.5vw, 3.35rem);
   }
   .display-2 {
@@ -568,11 +582,11 @@ html[data-mode="dark"] [data-theme="michelle"] .lead,
 html[data-mode="dark"] [data-theme="isabelle"] .lead {
   color: color-mix(in oklab, var(--t-ink) 72%, var(--t-muted));
 }
-html[data-mode="light"] [data-theme="sabine"] .body-copy {
-  color: color-mix(in oklab, var(--t-ink) 70%, var(--t-muted));
-}
-html[data-mode="light"] [data-theme="sabine"] .lead {
-  color: var(--t-muted);
+
+/* Dark panels inside a light page (bg-deep): the small-text gold is too dark
+ * there, so gold accents switch to the light gold used in dark mode. */
+.bg-deep {
+  --t-accent-text: #d8b878;
 }
 
 /* Tap-friendly text CTAs */
@@ -580,6 +594,7 @@ html[data-mode="light"] [data-theme="sabine"] .lead {
   min-height: 2.75rem;
   display: inline-flex;
   align-items: center;
+  gap: 0.75rem;
 }
 
 /* Brand mark: swap line colour with light/dark mode */

@@ -14,7 +14,7 @@ type Props = {
   /** Tighter poetic lead — Sabine ritual style */
   leadClassName?: string;
   /**
-   * "overlay" = full-bleed photo behind the copy (needs a large photo).
+   * "overlay" = large stage photo beside the copy, bleeding to the window edge.
    * "split" = copy left, portrait frame right — keeps smaller images sharp.
    */
   layout?: "overlay" | "split";
@@ -23,9 +23,9 @@ type Props = {
 };
 
 /**
- * Unified overlay hero — full-bleed image + theme gradients + copy bottom-left.
- * Overlays are heavy so display type stays readable on pale/busy images
- * and before the photo settles (light and dark themes).
+ * Hero. "overlay" (name kept for the call sites) is now a clean stage:
+ * copy on the page colour, photo beside it at full strength — nothing is
+ * laid over the photograph, so skin tones and faces stay as shot.
  */
 export function Hero({
   image,
@@ -83,10 +83,14 @@ export function Hero({
   }
 
   return (
-    <section className="relative isolate overflow-hidden">
-      {/* Phone: photo stacked above the copy, so text never covers a face.
-          Desktop: full-bleed photo behind the copy. */}
-      <div className="relative aspect-[4/5] w-full md:absolute md:inset-0 md:-z-10 md:aspect-auto">
+    <section className="bg-bg md:grid md:grid-cols-12">
+      {/* Photo stays untouched — no wash, no scrim. Phone: stacked above the copy.
+          Desktop: right-hand stage running to the edge of the window. */}
+      <div
+        className={`relative aspect-[4/5] w-full overflow-hidden md:order-2 md:col-span-6 md:aspect-auto lg:col-span-7 ${
+          isPage ? "md:min-h-[26rem]" : "md:min-h-[min(calc(100svh-6.25rem),50rem)]"
+        }`}
+      >
         <Img
           src={image}
           alt={alt}
@@ -94,60 +98,21 @@ export function Hero({
           priority
           className="anim-settle absolute inset-0 h-full w-full object-cover"
         />
-        <div
-          aria-hidden
-          className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-bg to-transparent md:hidden"
-        />
       </div>
-      {/* Desktop: light wash + directional scrims keep the copy readable */}
-      <div aria-hidden className="absolute inset-0 -z-10 hidden bg-bg/15 md:block" />
-      <div
-        aria-hidden
-        className="absolute inset-0 -z-10 hidden bg-gradient-to-r from-bg/90 via-bg/35 to-transparent md:block"
-      />
-      <div
-        aria-hidden
-        className={`absolute inset-x-0 bottom-0 -z-10 hidden bg-gradient-to-t from-bg via-bg/60 to-transparent md:block ${
-          isPage ? "h-[75%]" : "h-[55%]"
-        }`}
-      />
 
-      <div
-        className={`container-x flex items-end ${
-          isPage
-            ? "pt-4 pb-10 md:min-h-[40svh] md:pt-28 md:pb-12"
-            : "pt-4 pb-12 md:min-h-[calc(100svh-5.25rem)] md:pt-44 md:pb-20"
-        }`}
-      >
-        <div className={`relative rounded-sm ${isPage ? "max-w-xl" : "max-w-3xl"}`}>
-          {/* Soft panel behind copy (desktop, over the photo) */}
-          <div
-            aria-hidden
-            className="pointer-events-none absolute -inset-x-8 -inset-y-5 -z-10 hidden rounded-sm bg-gradient-to-r from-bg/80 via-bg/45 to-transparent md:block"
-          />
+      <div className="flex md:order-1 md:col-span-6 md:items-center lg:col-span-5">
+        <div className="w-full px-[1.15rem] pt-9 pb-12 md:py-16 md:pr-10 md:pl-[max(2.75rem,calc((100vw-86rem)/2+2.75rem))] xl:pr-14 xl:pl-[max(3.5rem,calc((100vw-86rem)/2+3.5rem))]">
           <div className="anim-rise">
             <Eyebrow>{eyebrow}</Eyebrow>
           </div>
-          <h1
-            className={`anim-rise anim-rise-1 mt-5 text-ink ${isPage ? "display-2" : "display-1"}`}
-            style={{
-              textShadow:
-                "0 1px 2px color-mix(in oklab, var(--t-bg) 80%, transparent), 0 10px 32px color-mix(in oklab, var(--t-bg) 55%, transparent)",
-            }}
-          >
+          <h1 className={`anim-rise anim-rise-1 mt-5 text-ink ${isPage ? "display-2" : "display-hero"}`}>
             {title}
           </h1>
-          <p
-            className={`lead anim-rise anim-rise-2 !text-ink/92 ${isPage ? "mt-4" : "mt-7"} ${leadClassName}`}
-            style={{
-              textShadow:
-                "0 1px 14px color-mix(in oklab, var(--t-bg) 65%, transparent)",
-            }}
-          >
+          <p className={`lead anim-rise anim-rise-2 ${isPage ? "mt-4" : "mt-6"} ${leadClassName}`}>
             {lead}
           </p>
           <div
-            className={`anim-rise anim-rise-3 flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-center [&>a]:w-full sm:[&>a]:w-auto ${isPage ? "mt-6" : "mt-8 md:mt-10"}`}
+            className={`anim-rise anim-rise-3 flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-center [&>a]:w-full sm:[&>a]:w-auto ${isPage ? "mt-6" : "mt-8 md:mt-9"}`}
           >
             {actions}
           </div>

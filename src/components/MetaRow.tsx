@@ -49,10 +49,10 @@ export function StatStrip({
             i === items.length - 1 && items.length % 2 === 1 ? "col-span-2 sm:col-span-1" : ""
           }`}
         >
-          <p className="font-display text-[1.65rem] leading-none text-ink md:text-2xl">
+          <p className="font-display text-[1.9rem] leading-none text-ink md:text-[2.4rem]">
             {item.value}
           </p>
-          <p className="mt-2 text-[0.8rem] leading-snug text-muted">{item.label}</p>
+          <p className="mt-3 max-w-[22ch] text-[0.875rem] leading-snug text-muted">{item.label}</p>
         </li>
       ))}
     </ul>

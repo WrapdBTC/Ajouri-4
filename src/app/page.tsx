@@ -4,7 +4,7 @@ import { Img } from "@/components/Img";
 import { Arrow } from "@/components/Button";
 import { Eyebrow, SectionIntro } from "@/components/SectionIntro";
 import { PullQuote } from "@/components/PullQuote";
-import { contact, family, mailto } from "@/lib/site";
+import { contact, family, mailto, mapsStudioHref, studio } from "@/lib/site";
 
 const principles = [
   {
@@ -24,7 +24,7 @@ const principles = [
   },
 ];
 
-/** Equal portal cards — same aspect, stretch siblings. */
+/** Equal portal cards — clean photo, name and craft underneath. */
 function Portal({ m }: { m: (typeof family)[number] }) {
   return (
     <NextLink
@@ -39,26 +39,23 @@ function Portal({ m }: { m: (typeof family)[number] }) {
           position={m.portalPosition}
           className="ken-img absolute inset-0 h-full w-full object-cover"
         />
+        {/* Only a short shade at the top edge, for the numeral — the photo stays clear */}
         <div
           aria-hidden
-          className="absolute inset-0 bg-gradient-to-t from-bg/75 via-transparent to-transparent"
+          className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black/45 to-transparent"
         />
-        <span className="font-display absolute top-5 left-5 text-[2rem] leading-none text-white [text-shadow:0_1px_12px_rgb(0_0_0/0.45)] md:top-6 md:left-6 md:text-[2.4rem]">
+        <span className="font-display absolute top-5 left-5 text-[2rem] leading-none text-white md:top-6 md:left-6 md:text-[2.4rem]">
           {m.numeral}
         </span>
-        <span className="eyebrow absolute top-6 right-5 text-white [text-shadow:0_1px_10px_rgb(0_0_0/0.5)] md:top-7 md:right-6">
+        <span className="eyebrow absolute top-6 right-5 text-white md:top-7 md:right-6">
           {m.craft}
         </span>
-        <div className="absolute inset-x-0 bottom-0 p-5 md:p-7">
-          <p className="eyebrow text-accent-text">{m.house}</p>
-          <h3 className="font-display mt-2 text-[1.85rem] leading-none md:text-[2.15rem]">
-            {m.first}
-          </h3>
-        </div>
       </div>
-      <div className="flex flex-1 flex-col border-t border-line pt-6 pb-1">
-        <p className="body-copy !max-w-none flex-1 text-[0.95rem]">{m.line}</p>
-        <span className="tap-row eyebrow mt-5 text-ink">
+      <div className="flex flex-1 flex-col pt-5 pb-1">
+        <p className="eyebrow text-accent-text">{m.house}</p>
+        <h3 className="font-display mt-2 text-[2rem] leading-none md:text-[2.35rem]">{m.first}</h3>
+        <p className="body-copy mt-4 !max-w-none flex-1 text-[0.95rem]">{m.line}</p>
+        <span className="tap-row eyebrow mt-4 text-ink">
           <span className="sr-only">Zur Welt von {m.first}</span>
           Zur Welt <Arrow />
         </span>
@@ -179,10 +176,28 @@ export default function HubPage() {
                 Wo du uns <em>findest.</em>
               </>
             }
-            lead="Gemeinsames Studio in der Sternstraße — drei Handwerke unter einem Dach. Jede Praxis hat ihren eigenen Draht."
+            lead="Drei Handwerke unter einem Dach. Jede Praxis hat ihren eigenen Draht."
           />
 
-          <div className="mt-12 grid items-stretch border-t border-line md:mt-16 md:grid-cols-3">
+          {/* One address for all three — said once, not per column */}
+          <div className="reveal mt-10 flex flex-col gap-5 bg-surface p-6 sm:flex-row sm:items-center sm:justify-between md:mt-14 md:p-8">
+            <div>
+              <p className="eyebrow text-accent-text">Gemeinsames Studio</p>
+              <p className="display-3 mt-2">
+                {studio.street} · {studio.city}
+              </p>
+            </div>
+            <a
+              href={mapsStudioHref()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group/btn tap-row eyebrow shrink-0 text-ink"
+            >
+              In Maps öffnen <Arrow />
+            </a>
+          </div>
+
+          <div className="mt-2 grid items-stretch md:grid-cols-3">
             {family.map((m) => (
               <div
                 key={m.slug}
@@ -206,9 +221,7 @@ export default function HubPage() {
                 <div className="body-copy mt-6 !max-w-none flex-1 space-y-1 text-[0.95rem]">
                   {m.slug === "michelle" && (
                     <>
-                      <p>{contact.michelle.street}</p>
-                      <p>{contact.michelle.city}</p>
-                      <p className="pt-3">
+                      <p>
                         <a className="inline-flex min-h-8 items-center text-ink hover:underline" href={contact.michelle.phoneHref}>
                           {contact.michelle.phone}
                         </a>
@@ -222,9 +235,7 @@ export default function HubPage() {
                   )}
                   {m.slug === "sabine" && (
                     <>
-                      <p>{contact.sabine.street}</p>
-                      <p>{contact.sabine.city}</p>
-                      <p className="pt-3">
+                      <p>
                         <a className="inline-flex min-h-8 items-center text-ink hover:underline" href={contact.sabine.phoneHref}>
                           {contact.sabine.phone}
                         </a>
@@ -234,14 +245,13 @@ export default function HubPage() {
                           {contact.sabine.email}
                         </a>
                       </p>
-                      <p className="pt-3">Offenes Studio: {contact.sabine.openStudio}</p>
+                      <p className="pt-2">Offenes Studio: {contact.sabine.openStudio}</p>
                     </>
                   )}
                   {m.slug === "isabelle" && (
                     <>
-                      <p>{contact.isabelle.street}</p>
-                      <p>{contact.isabelle.city}</p>
-                      <p className="pt-3">{contact.isabelle.booking}</p>
+                      <p className="flex min-h-8 items-center">{contact.isabelle.booking}</p>
+                      <p>Fine-Line-Tattoos, jedes Motiv einzeln gezeichnet.</p>
                     </>
                   )}
                 </div>

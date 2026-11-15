@@ -6,7 +6,7 @@ import { SectionIntro, Eyebrow } from "@/components/SectionIntro";
 import { contact, mailto } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Angebote — Klangreise, Massage, Meditation",
+  title: "Angebote · Vita Sonus — Klangreise, Klangmassage, Meditation",
   description:
     "Klangreise, Klangmassage, Meditation und Regulationsabend bei Vita Sonus — Sabine Ajouri in Neuburg.",
 };
@@ -100,7 +100,7 @@ export default function SabineAngebote() {
                 Vier Wege. <em>Ein Raum.</em>
               </>
             }
-            lead="Keine Bullet-Menüs — jedes Angebot mit Stimmung und für wen es gedacht ist."
+            lead="Jedes Angebot hat seine eigene Stimmung — und ist für jemand Bestimmten gedacht."
           />
 
           <div className="mt-8 space-y-0 md:mt-10">
@@ -121,7 +121,7 @@ export default function SabineAngebote() {
                     className="ken-img absolute inset-0 h-full w-full object-cover"
                   />
                 </div>
-                <div className="flex flex-col md:col-span-6 md:col-start-7">
+                <div className="flex flex-col md:col-span-6 md:col-start-7 md:justify-center">
                   <div className="flex items-baseline gap-5">
                     <span className="chapter-num !text-[2.5rem] md:!text-[3rem]">{o.numeral}</span>
                     <div>

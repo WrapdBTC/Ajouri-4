@@ -7,7 +7,7 @@ import { MetaRow } from "@/components/MetaRow";
 import { contact, mailto, mapsHref } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Kontakt & Termin",
+  title: "Kontakt & Termin · Michelle Ajouri",
   description:
     "Michelle Ajouri · Kosmetik, Haut & Darm — Sternstraße 180, 86633 Neuburg. WhatsApp, Telefon, Mail und Buchung über Beautinda.",
 };
@@ -65,8 +65,7 @@ export default function MichelleKontakt() {
         <div className="container-x">
           <MetaRow
             items={[
-              { label: "Adresse", value: c.street },
-              { label: "Ort", value: c.city },
+              { label: "Adresse", value: `${c.street} · ${c.city}` },
               { label: "Buchung", value: "Über Beautinda" },
               { label: "Telefon", value: c.phone },
             ]}
@@ -135,20 +134,10 @@ export default function MichelleKontakt() {
             </div>
           </div>
 
-          {/* Map placeholder strip */}
+          {/* Under one roof */}
           <div className="reveal mt-8 overflow-hidden border border-line md:mt-10">
             <div className="grid md:grid-cols-12">
-              <div className="flex min-h-[9rem] flex-col justify-between bg-surface p-6 md:col-span-5 md:min-h-[11rem] md:p-8">
-                <div>
-                  <p className="eyebrow text-accent-text">Standort</p>
-                  <p className="font-display mt-3 text-2xl leading-tight">{c.street}</p>
-                  <p className="mt-1 text-[0.9rem] text-muted">{c.city}</p>
-                </div>
-                <Button href={mapsHref(c.street, c.city)} variant="text" size="sm" className="mt-6">
-                  In Maps öffnen <Arrow />
-                </Button>
-              </div>
-              <div className="flex flex-col justify-between gap-6 bg-elev p-6 md:col-span-7 md:p-8">
+              <div className="flex flex-col justify-between gap-6 bg-elev p-6 md:col-span-12 md:flex-row md:items-center md:p-8">
                 <div>
                   <p className="eyebrow text-accent-text">Unter einem Dach</p>
                   <p className="font-display mt-3 text-2xl leading-tight">

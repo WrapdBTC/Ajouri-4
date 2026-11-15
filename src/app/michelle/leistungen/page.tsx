@@ -7,7 +7,7 @@ import { PriceRow } from "@/components/PriceRow";
 import { contact } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Pakete & Preise",
+  title: "Pakete & Preise · Michelle Ajouri",
   description:
     "SKIN FIRST, SKIN START, SKIN RENEWAL, SKIN TRANSFORMATION sowie Korean Lash Lift und Brow Lift bei Michelle Ajouri in Neuburg — direkt buchbar über Beautinda.",
 };
@@ -180,7 +180,7 @@ export default function MichellePakete() {
                 <p className={`eyebrow ${p.popular ? "text-accent" : "text-accent-text"}`}>
                   {p.claim}
                 </p>
-                <h3 className="font-display mt-3 text-[1.9rem] leading-none tracking-[0.03em]">
+                <h3 className="font-display mt-3 text-[1.9rem] leading-none tracking-[0.03em] md:min-h-[3.8rem]">
                   {p.name}
                 </h3>
                 <p className={`mt-2 text-[0.9rem] ${p.popular ? "opacity-75" : "text-muted"}`}>

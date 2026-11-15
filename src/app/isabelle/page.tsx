@@ -63,7 +63,7 @@ export default function IsabelleHome() {
             Die Linie, <em>die bleibt.</em>
           </>
         }
-        lead="Fine-Line — reduziert, präzise, für genau eine Haut. Editorial. Ohne Lärm."
+        lead="Fine-Line-Tattoos — reduziert, präzise, für genau eine Haut gezeichnet."
         actions={
           <>
             <Button href="/isabelle/anfrage/">
@@ -112,9 +112,9 @@ export default function IsabelleHome() {
                 />
                 <div
                   aria-hidden
-                  className="absolute inset-0 bg-gradient-to-t from-bg/80 via-transparent to-transparent"
+                  className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent"
                 />
-                <span className="font-display absolute bottom-6 left-6 text-[2.5rem] leading-none text-ink md:bottom-8 md:left-8 md:text-[3.25rem]">
+                <span className="font-display absolute bottom-6 left-6 text-[2.5rem] leading-none text-white md:bottom-8 md:left-8 md:text-[3.25rem]">
                   {works[0].label}
                 </span>
               </div>
@@ -134,9 +134,9 @@ export default function IsabelleHome() {
                   />
                   <div
                     aria-hidden
-                    className="absolute inset-0 bg-gradient-to-t from-bg/75 via-transparent to-transparent"
+                    className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent"
                   />
-                  <span className="font-display absolute bottom-5 left-5 text-[1.85rem] leading-none text-ink md:text-[2.25rem]">
+                  <span className="font-display absolute bottom-5 left-5 text-[1.85rem] leading-none text-white md:text-[2.25rem]">
                     {works[1].label}
                   </span>
                 </div>
@@ -154,9 +154,9 @@ export default function IsabelleHome() {
                   />
                   <div
                     aria-hidden
-                    className="absolute inset-0 bg-gradient-to-t from-bg/75 via-transparent to-transparent"
+                    className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent"
                   />
-                  <span className="font-display absolute bottom-4 left-5 text-[1.65rem] leading-none text-ink">
+                  <span className="font-display absolute bottom-4 left-5 text-[1.65rem] leading-none text-white">
                     {works[2].label}
                   </span>
                 </div>
@@ -174,7 +174,7 @@ export default function IsabelleHome() {
           "Black Ink",
           "Single Needle",
           "Custom",
-          "Editorial",
+          "Auf Anfrage",
         ]}
       />
 
@@ -224,7 +224,7 @@ export default function IsabelleHome() {
           <div className="reveal max-w-xl">
             <p className="eyebrow opacity-60">Stil</p>
             <h2 className="display-2 mt-6">
-              Fine-Line mit <em className="!text-accent">editorialer Schärfe.</em>
+              Fine-Line mit <em>klarer Handschrift.</em>
             </h2>
           </div>
           <ul className="mt-8 grid items-stretch gap-0 border-t border-current/20 md:mt-10 md:grid-cols-3">

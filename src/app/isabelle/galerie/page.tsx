@@ -5,7 +5,7 @@ import { Arrow, Button } from "@/components/Button";
 import { Eyebrow } from "@/components/SectionIntro";
 
 export const metadata: Metadata = {
-  title: "Galerie",
+  title: "Galerie · Atelier Isabelle",
   description:
     "Fine-Line Galerie — botanische und geometrische Motive von Atelier Isabelle Ajouri.",
 };

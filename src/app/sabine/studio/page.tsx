@@ -8,7 +8,7 @@ import { MetaRow } from "@/components/MetaRow";
 import { contact, mapsHref } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Offenes Studio",
+  title: "Offenes Studio · Vita Sonus",
   description:
     "Offenes Studio bei Vita Sonus: Freitag 16:30–18:00 Uhr ohne Anmeldung — Sternstraße 180, Neuburg. Sabine Ajouri.",
 };
@@ -31,7 +31,7 @@ export default function SabineStudio() {
           </>
         }
         lead="Kein Terminzwang. Kein Programm. Ein Ritual mit dem Raum."
-        leadClassName="!text-[1.15rem] italic font-display !text-ink/90"
+        leadClassName="!text-[1.45rem] !leading-snug italic font-display !text-ink/90"
         actions={
           <>
             <Button href={c.phoneHref}>
@@ -49,8 +49,7 @@ export default function SabineStudio() {
           <MetaRow
             items={[
               { label: "Wann", value: c.openStudio },
-              { label: "Wo", value: c.street },
-              { label: "Ort", value: c.city },
+              { label: "Wo", value: `${c.street} · ${c.city}` },
               { label: "Anmeldung", value: "Nicht nötig" },
             ]}
           />
@@ -65,7 +64,7 @@ export default function SabineStudio() {
               Kein Terminzwang. <em>Kein Programm.</em>
             </h2>
             <p className="lead mt-8 !max-w-none">
-              Du kommst, bleibst so lange du magst und gehst, wenn es gut ist. Ein niedrigschwelliger
+              Du kommst, bleibst so lange du magst und gehst, wenn es gut ist. Ein leichter
               Einstieg in die Welt von Vita Sonus.
             </p>
             <p className="body-copy mt-5 !max-w-none">

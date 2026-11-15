@@ -4,7 +4,7 @@ import { Eyebrow } from "@/components/SectionIntro";
 import { contact, mapsStudioHref } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Anfrage",
+  title: "Anfrage · Atelier Isabelle",
   description:
     "Anfrage an Atelier Isabelle — Fine-Line Tattoos in Neuburg. Motiv, Stelle und Größe: das brauche ich für deine Anfrage.",
 };

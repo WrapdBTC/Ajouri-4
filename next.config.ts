@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 import path from "path";
 
-const repo = "Ajouri-3";
+const repo = "Ajouri-4";
 const isPages = process.env.GITHUB_PAGES === "true";
 const basePath = isPages ? `/${repo}` : "";
 

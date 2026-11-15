@@ -58,7 +58,7 @@ https://github.com/WrapdBTC/Ajouri
 
 ## Live (GitHub Pages)
 
-https://wrapdbtc.github.io/Ajouri-3/
+https://wrapdbtc.github.io/Ajouri-4/
 
 Lokal ohne basePath: `npm run dev`  
 Pages-Build setzt `GITHUB_PAGES=true` (basePath `/Ajouri`).
