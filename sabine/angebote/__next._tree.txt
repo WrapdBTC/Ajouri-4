@@ -3,4 +3,4 @@
 :HL["/Ajouri-4/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/Ajouri-4/_next/static/media/8bd76523131fa0fc-s.p.1pvupmngxrt5z.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/Ajouri-4/assets/sabine/portrait-lachen-2.jpg","image",{"fetchPriority":"high"}]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"sabine","param":null,"prefetchHints":4192,"slots":{"children":{"name":"angebote","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"QIVk7IebZyysJ_hKn1I3d"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"sabine","param":null,"prefetchHints":4192,"slots":{"children":{"name":"angebote","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"LXQ_zfeaCd7--g2BogCw2"}
