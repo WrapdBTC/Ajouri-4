@@ -24,8 +24,8 @@ type Props = {
 
 /**
  * Hero. "overlay" (name kept for the call sites) is now a clean stage:
- * copy on the page colour, photo beside it at full strength — nothing is
- * laid over the photograph, so skin tones and faces stay as shot.
+ * copy on the page colour, photo beside it under a soft veil that fades
+ * into the copy column — text never runs across a face or body.
  */
 export function Hero({
   image,
@@ -84,8 +84,8 @@ export function Hero({
 
   return (
     <section className="bg-bg md:grid md:grid-cols-12">
-      {/* Photo stays untouched — no wash, no scrim. Phone: stacked above the copy.
-          Desktop: right-hand stage running to the edge of the window. */}
+      {/* Phone: photo stacked above the copy. Desktop: right-hand stage running
+          to the edge of the window, veiled so it melts into the copy column. */}
       <div
         className={`relative aspect-[4/5] w-full overflow-hidden md:order-2 md:col-span-6 md:aspect-auto lg:col-span-7 ${
           isPage ? "md:min-h-[26rem]" : "md:min-h-[min(calc(100svh-6.25rem),50rem)]"
@@ -97,6 +97,17 @@ export function Hero({
           position={position}
           priority
           className="anim-settle absolute inset-0 h-full w-full object-cover"
+        />
+        {/* Veil in the page colour: a light wash, a fade towards the copy
+            (desktop) and a fade at the foot. The copy itself never sits on the photo. */}
+        <div aria-hidden className="absolute inset-0 bg-bg/10" />
+        <div
+          aria-hidden
+          className="absolute inset-y-0 left-0 hidden w-3/5 bg-gradient-to-r from-bg via-bg/50 via-35% to-transparent md:block"
+        />
+        <div
+          aria-hidden
+          className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-bg via-bg/45 via-45% to-transparent"
         />
       </div>
 
