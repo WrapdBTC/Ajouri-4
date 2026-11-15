@@ -15,6 +15,12 @@ const c = contact.isabelle;
 
 const works = [
   {
+    src: "/assets/isabelle/tattoo-lachen.jpg",
+    alt: "Isabelle Ajouri tätowiert lächelnd einen Unterarm",
+    label: "Isabelle bei der Arbeit",
+    position: "55% 40%",
+  },
+  {
     src: "/assets/isabelle/work-ranke.jpg",
     alt: "Fineline-Tattoo einer Blätterranke um den Unterarm",
     label: "Blätterranke",
@@ -135,19 +141,10 @@ export default function IsabelleGalerie() {
             </Button>
           </div>
 
-          <div className="mt-10 grid grid-cols-2 gap-3 md:mt-12 md:grid-cols-6 md:gap-5">
-            {works.map((w, i) => (
-              <figure
-                key={w.src}
-                className={`reveal flex flex-col ${
-                  i < 2 ? "md:col-span-3" : "md:col-span-2"
-                } ${i === 4 ? "col-span-2 md:col-span-2" : ""}`}
-              >
-                <div
-                  className={`ken-wrap relative overflow-hidden bg-surface ${
-                    i < 2 ? "aspect-[4/5] md:aspect-square" : i === 4 ? "aspect-[4/3] md:aspect-[4/5]" : "aspect-[4/5]"
-                  }`}
-                >
+          <div className="mt-10 grid grid-cols-2 gap-3 md:mt-12 md:grid-cols-3 md:gap-5">
+            {works.map((w) => (
+              <figure key={w.src} className="reveal flex flex-col">
+                <div className="ken-wrap relative aspect-[4/5] overflow-hidden bg-surface">
                   <Img
                     src={w.src}
                     alt={w.alt}

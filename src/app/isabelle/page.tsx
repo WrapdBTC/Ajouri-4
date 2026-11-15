@@ -71,14 +71,16 @@ export default function IsabelleHome() {
         }
       />
 
-      {/* Welcome — real work photo */}
+      {/* Welcome */}
       <section className="section-y-tight">
-        <div className="container-x grid gap-10 md:grid-cols-12 md:items-center md:gap-12">
+        <div className="container-x grid gap-8 md:grid-cols-12 md:items-end md:gap-12">
           <div className="reveal md:col-span-6">
             <p className="display-2">
               Ein Tattoo kann <em>so vieles sein.</em>
             </p>
-            <p className="lead mt-8 !max-w-none">
+          </div>
+          <div className="reveal md:col-span-5 md:col-start-8">
+            <p className="lead !max-w-none">
               Eine Erinnerung. Ein Gefühl. Ein Neuanfang. Ein Symbol für etwas, das uns geprägt hat.
               Oder einfach ein Motiv, das wir lieben.
             </p>
@@ -86,21 +88,10 @@ export default function IsabelleHome() {
               Für mich ist jedes Tattoo etwas Persönliches. Und genau deshalb verdient es Zeit,
               Aufmerksamkeit und ganz viel Liebe zum Detail.
             </p>
-            <p className="font-display mt-7 text-[1.5rem] italic text-accent-text">
+            <p className="font-display mt-6 text-[1.5rem] italic text-accent-text">
               Willkommen bei Inkabell Tattoo. 🖤
             </p>
           </div>
-          <figure className="reveal ken-wrap md:col-span-5 md:col-start-8">
-            <div className="relative aspect-[4/5] overflow-hidden bg-surface">
-              <Img
-                src="/assets/isabelle/tattoo-lachen.jpg"
-                alt="Isabelle Ajouri tätowiert lächelnd einen Unterarm"
-                position="55% 40%"
-                className="ken-img absolute inset-0 h-full w-full object-cover"
-              />
-            </div>
-            <figcaption className="eyebrow mt-4 text-muted">Isabelle bei der Arbeit</figcaption>
-          </figure>
         </div>
       </section>
 
