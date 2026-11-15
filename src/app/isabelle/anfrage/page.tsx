@@ -89,6 +89,26 @@ export default function IsabelleAnfrage() {
             </div>
           </div>
         </div>
+
+        <div className="container-x">
+          <div className="reveal mt-10 overflow-hidden border border-line md:mt-12">
+            <div className="flex flex-col justify-between gap-6 bg-elev p-6 md:flex-row md:items-center md:p-8">
+              <div>
+                <p className="eyebrow text-accent-text">Unter einem Dach</p>
+                <p className="font-display mt-3 text-2xl leading-tight">
+                  Ein Studio, drei Handwerke.
+                </p>
+                <p className="body-copy mt-2 !max-w-md text-[0.95rem]">
+                  In der Sternstraße findest du auch Michelle Ajouri (Kosmetik, Haut & Darm) und
+                  Sabine Ajouri (Vita Sonus, Klang & Meditation).
+                </p>
+              </div>
+              <Button href="/" variant="text" size="sm">
+                Alle drei Welten <Arrow />
+              </Button>
+            </div>
+          </div>
+        </div>
       </section>
     </>
   );
