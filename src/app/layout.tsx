@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: "Ajouri",
     locale: "de_DE",
     type: "website",
-    images: [{ url: asset("/assets/hub/zusammen.jpg"), width: 2000, height: 1333 }],
+    images: [{ url: asset("/assets/hub/drei-zusammen.jpg"), width: 2200, height: 1467 }],
   },
 };
 

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Atelier Isabelle — Fine-Line Tattoos",
     description: "Die Linie, die bleibt.",
-    images: [{ url: asset("/assets/isabelle/01-hero.jpg"), width: 1280, height: 720 }],
+    images: [{ url: asset("/assets/isabelle/hero-wiese.jpg"), width: 1739, height: 2000 }],
   },
 };
 
@@ -52,11 +52,9 @@ export default function IsabelleHome() {
     <>
       <Hero
         size="full"
-        layout="split"
-        imageShape="landscape"
-        image="/assets/isabelle/01-hero.jpg"
-        alt="Dunkles Tattoo-Atelier mit scharfer Linie und schwarzem Studio-Licht"
-        position="50% 40%"
+        image="/assets/isabelle/hero-wiese.jpg"
+        alt="Isabelle Ajouri sitzt lächelnd im Herbstgras"
+        position="50% 38%"
         eyebrow="Atelier Isabelle · Fine-Line"
         title={
           <>
@@ -184,9 +182,9 @@ export default function IsabelleHome() {
           <figure className="reveal ken-wrap md:col-span-5">
             <div className="relative aspect-[4/5] overflow-hidden bg-surface">
               <Img
-                src="/assets/isabelle/02-portrait.jpg"
-                alt="Isabelle Ajouri, Fine-Line Tattoo Artist"
-                position="52% 22%"
+                src="/assets/isabelle/portrait-fels.jpg"
+                alt="Isabelle Ajouri steht vor einer Felswand"
+                position="50% 40%"
                 className="ken-img absolute inset-0 h-full w-full object-cover"
               />
             </div>
@@ -249,9 +247,9 @@ export default function IsabelleHome() {
       </section>
 
       <FullBleed
-        src="/assets/isabelle/06-portal.jpg"
+        src="/assets/isabelle/band-wiese.jpg"
         alt=""
-        position="50% 50%"
+        position="50% 45%"
         height="band"
       />
 

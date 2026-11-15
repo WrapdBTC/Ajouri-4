@@ -85,9 +85,9 @@ export default function IsabelleProzess() {
         <div className="container-x grid gap-8 md:grid-cols-12 md:items-center md:gap-10">
           <div className="reveal ken-wrap relative aspect-[4/5] overflow-hidden md:col-span-4 md:aspect-[3/4]">
             <Img
-              src="/assets/isabelle/02-portrait.jpg"
+              src="/assets/isabelle/arme-himmel.jpg"
               alt=""
-              position="52% 22%"
+              position="50% 30%"
               className="ken-img absolute inset-0 h-full w-full object-cover"
             />
           </div>

@@ -116,9 +116,9 @@ export default function IsabelleGalerie() {
           <figure className="reveal mx-auto max-w-md">
             <div className="ken-wrap relative aspect-[3/4] overflow-hidden bg-surface">
               <Img
-                src="/assets/isabelle/02-portrait.jpg"
-                alt="Isabelle Ajouri"
-                position="52% 22%"
+                src="/assets/isabelle/portrait-kleid.jpg"
+                alt="Isabelle Ajouri lacht, eine Hand im Haar"
+                position="50% 35%"
                 className="ken-img absolute inset-0 h-full w-full object-cover"
               />
             </div>

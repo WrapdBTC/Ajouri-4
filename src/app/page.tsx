@@ -102,9 +102,9 @@ export default function HubPage() {
       <section className="anim-rise anim-rise-4 mt-10 md:mt-14" aria-hidden="true">
         <div className="relative aspect-[16/10] w-full overflow-hidden md:aspect-[21.5/10]">
           <Img
-            src="/assets/hub/zusammen.jpg"
+            src="/assets/hub/drei-zusammen.jpg"
             alt=""
-            position="50% 28%"
+            position="50% 58%"
             priority
             className="anim-settle absolute inset-0 h-full w-full object-cover"
           />

@@ -55,10 +55,10 @@ export const family: {
     numeral: "III",
     line: "Fine-Line-Tattoos — reduziert, präzise, für genau eine Haut gezeichnet.",
     href: "/isabelle/",
-    portal: "/assets/isabelle/02-portrait.jpg",
-    portalPosition: "47% 30%",
-    portrait: "/assets/isabelle/02-portrait.jpg",
-    portraitPosition: "47% 30%",
+    portal: "/assets/isabelle/portal-lachen.jpg",
+    portalPosition: "50% 30%",
+    portrait: "/assets/isabelle/portrait-fels.jpg",
+    portraitPosition: "50% 40%",
   },
 ];
 
