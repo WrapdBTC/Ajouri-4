@@ -13,10 +13,10 @@ import { contact, mapsStudioHref } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Inkabell Tattoo — Isabelle Ajouri · Fineline & Blackwork",
   description:
-    "Inkabell Tattoo von Isabelle Ajouri in Neuburg an der Donau: individuelle Fineline- und Blackwork-Tattoos. Deine Geschichte. Deine Haut. Deine Kunst.",
+    "Inkabell Tattoo von Isabelle Ajouri in Neuburg an der Donau: individuelle Fineline- und Blackwork-Tattoos. Deine Geschichte. Deine Haut. Meine Kunst.",
   openGraph: {
     title: "Inkabell Tattoo — Isabelle Ajouri",
-    description: "Deine Geschichte. Deine Haut. Deine Kunst.",
+    description: "Deine Geschichte. Deine Haut. Meine Kunst.",
     images: [{ url: asset("/assets/isabelle/hero-wiese.jpg"), width: 1739, height: 2000 }],
   },
 };
@@ -49,7 +49,7 @@ export default function IsabelleHome() {
         eyebrow="Inkabell Tattoo · Fineline & Blackwork"
         title={
           <>
-            Deine Geschichte. Deine Haut. <em>Deine Kunst.</em>
+            Deine Geschichte. Deine Haut. <em>Meine Kunst.</em>
           </>
         }
         lead="Manche Geschichten erzählen wir mit Worten. Andere tragen wir für immer auf unserer Haut."
@@ -221,7 +221,7 @@ export default function IsabelleHome() {
         </div>
       </section>
 
-      <FullBleed src="/assets/isabelle/band-wiese.jpg" alt="" position="50% 45%" height="band" />
+      <FullBleed src="/assets/isabelle/band-wiese-v2.jpg" alt="" position="45% 50%" height="band" />
 
       {/* IV. Mein Studio */}
       <section className="section-y-tight">

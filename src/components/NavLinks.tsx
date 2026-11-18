@@ -19,7 +19,7 @@ function normalize(path: string) {
 function isActive(pathname: string, href: string) {
   const path = normalize(pathname);
   // Hash-only anchors: never "active" in the route sense
-  if (href.startsWith("#")) return false;
+  if (href.includes("#")) return false;
   const target = normalize(href.split("#")[0] || "/");
   // Exact match only — house Start must not stay active on subpages
   return path === target;

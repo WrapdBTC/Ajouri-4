@@ -20,7 +20,7 @@ const offerings = [
     mood: "Wenn du Entspannung nicht nur hören, sondern auch spüren möchtest.",
     detail: [
       "Speziell ausgewählte Klangschalen werden auf oder neben dem bekleideten Körper platziert und sanft angeschlagen. Es entstehen unterschiedliche Töne und feine Schwingungen, die du teilweise auch direkt am Körper wahrnehmen kannst.",
-      "Anders als bei einer klassischen Massage wird nicht mit den Händen geknetet. Die besondere Erfahrung entsteht durch das Zusammenspiel von Klang, Schwingung und Ruhe. Du darfst die Augen schließen und einfach wahrnehmen, was die Klänge bei dir auslösen.",
+      "Die besondere Erfahrung entsteht durch das Zusammenspiel von Klang, Schwingung und Ruhe. Du darfst die Augen schließen und einfach wahrnehmen, was die Klänge bei dir auslösen.",
     ],
     forWhom:
       "Für Menschen, die sich eine besondere Form der Entspannung wünschen, neugierig auf die Wirkung von Klängen sind oder sich bewusst Zeit für sich selbst nehmen möchten.",

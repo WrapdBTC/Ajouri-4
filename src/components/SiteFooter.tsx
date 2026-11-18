@@ -5,7 +5,7 @@ const taglines: Record<ThemeKey, string> = {
   hub: "Drei Frauen. Drei Handwerke. Ein Name — Haut, Klang und Tattoo. Neuburg an der Donau.",
   michelle: "Haut lesen. Darm verstehen. Bei dir ankommen. Skinhealth meets Selfcare.",
   sabine: "Klangmassage, Klangreise, Meditation. Ein Raum, in dem es still werden darf.",
-  isabelle: "Inkabell Tattoo. Fineline & Blackwork — deine Geschichte, deine Haut, deine Kunst.",
+  isabelle: "Inkabell Tattoo. Fineline & Blackwork — deine Geschichte, deine Haut, meine Kunst.",
 };
 
 type Line = { text: string; href?: string };
@@ -19,7 +19,7 @@ function contactLines(current: ThemeKey): Line[] {
         { text: c.city },
         { text: c.phone, href: c.phoneHref },
         { text: c.email, href: mailto(c.email) },
-        { text: c.hours },
+        { text: `Termine: ${c.hours}` },
       ];
     }
     case "sabine": {
@@ -118,8 +118,12 @@ export function SiteFooter({ current }: { current: ThemeKey }) {
           </div>
         </div>
 
-        <div className="mt-20 border-t border-current/15 pt-6 text-[0.72rem] tracking-[0.04em] opacity-60">
-          <p>© {year} Ajouri · Neuburg an der Donau</p>
+        <div className="mt-20 flex flex-col gap-3 border-t border-current/15 pt-6 text-[0.72rem] tracking-[0.04em] sm:flex-row sm:items-center sm:justify-between">
+          <p className="opacity-60">© {year} Ajouri · Neuburg an der Donau</p>
+          <nav aria-label="Rechtliches" className="flex gap-6">
+            <FooterLink href="/impressum/">Impressum</FooterLink>
+            <FooterLink href="/datenschutz/">Datenschutz</FooterLink>
+          </nav>
         </div>
       </div>
     </footer>

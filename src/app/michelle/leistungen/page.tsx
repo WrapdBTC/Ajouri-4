@@ -31,13 +31,14 @@ const packages: Pkg[] = [
     claim: "Dein sanfter Einstieg",
     sessions: "4 Termine",
     duration: "rund 3 Monate",
-    price: "1.890 €",
+    price: "1.049 €",
     text: "Dein sanfter Einstieg in eine Hautreise mit Begleitung. Behandlungen, die aufeinander aufbauen — und der Blick auf Haut und Darm zusammen.",
     features: [
       "4 Behandlungen, die aufeinander aufbauen",
       "5 abgestimmte REVIDERM-Produkte für zu Hause",
       "Haut und Darm im Blick",
       "Persönliche Check-ins zwischen den Terminen",
+      "Deine WhatsApp-Gruppe mit Impulsen",
     ],
   },
   {
@@ -45,7 +46,7 @@ const packages: Pkg[] = [
     claim: "Richtig ankommen",
     sessions: "6 Termine",
     duration: "rund 5 Monate",
-    price: "2.390 €",
+    price: "1.549 €",
     popular: true,
     text: "Für alle, die richtig ankommen wollen. Deine Haut hat Zeit, sich nachhaltig zu verändern — Schritt für Schritt, von innen und außen.",
     features: [
@@ -53,6 +54,7 @@ const packages: Pkg[] = [
       "Deine Haut gestärkt von innen und außen",
       "5 REVIDERM-Produkte inklusive",
       "Ich bin auch zwischen den Terminen für dich da",
+      "Deine WhatsApp-Gruppe mit Impulsen",
     ],
   },
   {
@@ -60,13 +62,14 @@ const packages: Pkg[] = [
     claim: "Deine ganz große Hautreise",
     sessions: "10 Termine",
     duration: "rund 9 Monate",
-    price: "3.490 €",
+    price: "2.490 €",
     text: "Neun Monate intensive Begleitung, in denen wir Haut und Darm in Balance bringen und dein Ergebnis langfristig festigen. Für dich, wenn du es von Herzen ernst meinst.",
     features: [
       "10 Behandlungen, aufeinander abgestimmt",
       "Haut und Darm in Balance",
       "5 REVIDERM-Produkte für zu Hause",
       "Volle Begleitung mit persönlichen Check-ins",
+      "Deine WhatsApp-Gruppe mit Impulsen",
       "Alle Unterlagen als PDF",
     ],
   },
@@ -256,10 +259,27 @@ export default function MichelleBehandlungen() {
               </article>
             ))}
           </div>
-          <p className="reveal body-copy mt-8 !max-w-none text-[0.92rem] text-muted">
-            Die drei Rahmen sind ein Startpunkt, kein starrer Ablauf. Den genauen Fahrplan legen
-            wir nach SKIN FIRST gemeinsam fest.
-          </p>
+          <div className="reveal mt-8 grid gap-6 border-t border-line pt-8 md:grid-cols-12 md:gap-10">
+            <div className="md:col-span-5">
+              <p className="eyebrow text-accent-text">In jedem Paket dabei</p>
+              <p className="display-3 mt-3">
+                Deine WhatsApp-Gruppe: <em>3 bis 4 Impulse pro Woche.</em>
+              </p>
+            </div>
+            <div className="md:col-span-6 md:col-start-7">
+              <p className="body-copy !max-w-none">
+                Ernährungsideen und Rezepte für Haut und Bauch, Bewegung und Face Yoga, Wissen zu
+                Wirkstoffen wie Hyaluron, Niacinamid, Vitamin C oder Retinol und Tipps zur Anwendung
+                deiner Produkte. Ich sende, du liest, wann es dir passt. Die anderen sehen deine
+                Nummer nicht, Fragen schreibst du mir privat.
+              </p>
+              <p className="body-copy mt-4 !max-w-none text-[0.92rem] text-muted">
+                Zugang während deiner Hautbegleitung und bis 4 Wochen danach. Die drei Rahmen sind
+                ein Startpunkt, kein starrer Ablauf: Den genauen Fahrplan legen wir nach SKIN FIRST
+                gemeinsam fest.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

@@ -9,16 +9,10 @@ import { contact } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Deine Hautreise · Michelle Ajouri",
   description:
-    "So läuft deine Hautreise bei Michelle Ajouri ab: Kennenlern-Call, Fragebogen und Hautfotos, SKIN FIRST mit OBSERV-Hautanalyse, Begleitung zwischen den Terminen und deine Hautpflege zu Hause.",
+    "So läuft deine Hautreise bei Michelle Ajouri ab: Kennenlern-Call, Fragebogen und Hautfotos, SKIN FIRST mit OBSERV-Hautanalyse und deine Hautpflege zu Hause.",
 };
 
 const c = contact.michelle;
-
-const blocks = [
-  { label: "Dezember", dates: "15.12. – 19.12. und 28.12. – 30.12.2026" },
-  { label: "Februar", dates: "15.02. – 07.03.2027" },
-  { label: "April / Mai", dates: "19.04. – 09.05.2027" },
-];
 
 const photoSteps: [string, string, string][] = [
   ["1", "Gesicht zum Fenster", "Tageslicht von vorn. Keine Lampe, kein Blitz."],
@@ -66,45 +60,12 @@ export default function MichelleHautreise() {
         }
       />
 
-      {/* Rhythm + blocks */}
-      <section className="section-y-tight">
-        <div className="container-x grid gap-12 md:grid-cols-12 md:gap-14">
-          <div className="reveal md:col-span-5">
-            <Eyebrow index="I">Mein Rhythmus</Eyebrow>
-            <h2 className="display-2 mt-6">
-              Alle 9 Wochen <em>3 Wochen Neuburg.</em>
-            </h2>
-            <p className="lead mt-6">
-              In diesen Wochen bin ich im Studio. Dazwischen bin ich in Kroatien und online für dich
-              da.
-            </p>
-            <p className="body-copy mt-4">
-              In einer Hautbegleitung liegen pro Block meist zwei Termine: in Woche 1 und zwei Wochen
-              später in Woche 3. Startest du mitten in einem Block, zählt dein Fahrplan ab deinem
-              ersten Termin.
-            </p>
-          </div>
-          <div className="reveal md:col-span-6 md:col-start-7">
-            <p className="eyebrow text-accent-text">Die nächsten Blöcke</p>
-            <ul className="mt-4 divide-y divide-line border-y border-line">
-              {blocks.map((b) => (
-                <li key={b.label} className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 py-5">
-                  <span className="font-display text-[1.6rem] leading-tight">{b.label}</span>
-                  <span className="tabular-nums text-[0.98rem]">{b.dates}</span>
-                </li>
-              ))}
-            </ul>
-            <p className="body-copy mt-4 text-[0.9rem]">Weitere Blöcke bekommst du rechtzeitig von mir.</p>
-          </div>
-        </div>
-      </section>
-
       {/* Steps */}
       <section className="section-y bg-surface">
         <div className="container-x grid gap-10 md:grid-cols-12 md:gap-14">
           <div className="reveal md:col-span-4">
             <div className="md:sticky md:top-28">
-              <Eyebrow index="II">Schritt für Schritt</Eyebrow>
+              <Eyebrow index="I">Schritt für Schritt</Eyebrow>
               <h2 className="display-2 mt-6">
                 Vom ersten Gespräch <em>bis zu deinem Hautgefühl.</em>
               </h2>
@@ -137,7 +98,7 @@ export default function MichelleHautreise() {
         <div className="container-x">
           <SectionIntro
             layout="split"
-            index="III"
+            index="II"
             eyebrow="Vor deinem ersten Termin"
             title={
               <>
@@ -169,7 +130,7 @@ export default function MichelleHautreise() {
       {/* Photo guide */}
       <section className="section-y bg-deep text-deep-ink">
         <div className="container-x">
-          <p className="eyebrow text-accent">IV · In 5 Minuten · ohne Filter · mit Tageslicht</p>
+          <p className="eyebrow text-accent">III · In 5 Minuten · ohne Filter · mit Tageslicht</p>
           <h2 className="display-2 mt-6">
             So machst du deine <em className="text-accent">Hautfotos.</em>
           </h2>
@@ -189,44 +150,11 @@ export default function MichelleHautreise() {
         </div>
       </section>
 
-      {/* WhatsApp group */}
-      <section className="section-y-tight">
-        <div className="container-x grid gap-10 md:grid-cols-12 md:items-start md:gap-14">
-          <div className="reveal md:col-span-5">
-            <Eyebrow index="V">Deine WhatsApp-Gruppe</Eyebrow>
-            <h2 className="display-2 mt-6">
-              3 bis 4 Impulse <em>pro Woche.</em>
-            </h2>
-            <p className="lead mt-6">
-              In deiner Hautbegleitung bin ich auch zwischen den Terminen für dich da. Ich sende, du
-              liest, wann es dir passt. Die anderen sehen deine Nummer nicht, Fragen schreibst du mir
-              einfach privat.
-            </p>
-            <p className="body-copy mt-4 text-[0.9rem]">
-              Zugang während deiner Hautreise und bis 4 Wochen danach.
-            </p>
-          </div>
-          <ul className="grid gap-0 border-t border-line sm:grid-cols-2 md:col-span-6 md:col-start-7">
-            {[
-              ["Ernährungsideen & Rezepte", "Einfache Gerichte für Haut und Bauch, passend zur Jahreszeit."],
-              ["Bewegung & Face Yoga", "Kurze Bewegungseinheiten für zwischendurch."],
-              ["Wirkstoffe", "Was Hyaluron, Niacinamid, Vitamin C, Retinol und Co. wirklich machen."],
-              ["Hautpflege-Wissen", "Wie du deine Produkte richtig anwendest."],
-            ].map(([t, l]) => (
-              <li key={t} className="reveal border-b border-line py-6 sm:pr-6">
-                <p className="font-display text-[1.5rem] leading-tight">{t}</p>
-                <p className="body-copy mt-1.5 text-[0.95rem]">{l}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
       {/* Home care */}
       <section className="section-y-tight bg-surface">
         <div className="container-x grid gap-10 md:grid-cols-12 md:gap-14">
           <div className="reveal md:col-span-4">
-            <Eyebrow index="VI">Deine Hautpflege zu Hause</Eyebrow>
+            <Eyebrow index="IV">Deine Hautpflege zu Hause</Eyebrow>
             <h2 className="display-2 mt-6">
               Kleine Routinen. <em>Bewusste Entscheidungen.</em>
             </h2>
@@ -243,11 +171,6 @@ export default function MichelleHautreise() {
                 line: l,
               }))}
             />
-            <p className="reveal body-copy mt-6 !max-w-none text-[0.9rem] text-muted">
-              Schreib mir, wenn ein Produkt nach dem Auftragen nicht aufhört zu brennen, die Haut
-              stark rot wird, anschwillt, juckt oder Bläschen bildet. Dann lässt du es weg und wir
-              schauen gemeinsam drauf.
-            </p>
           </div>
         </div>
       </section>

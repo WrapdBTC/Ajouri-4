@@ -14,7 +14,7 @@ function normalize(path: string) {
 }
 
 function isActive(pathname: string, href: string) {
-  if (href.startsWith("#")) return false;
+  if (href.includes("#")) return false;
   const path = normalize(pathname);
   const target = normalize(href.split("#")[0] || "/");
   return path === target;

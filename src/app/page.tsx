@@ -93,7 +93,7 @@ export default function HubPage() {
           </p>
           <p className="lead anim-rise anim-rise-3 !max-w-none md:col-span-4 md:col-start-9">
             Drei Frauen, die unterschiedlicher kaum sein könnten. Drei Leidenschaften, die jede für
-            sich etwas Besonderes sind. Und doch verbindet uns weit mehr als unser Nachname.
+            sich etwas Besonderes ist. Und doch verbindet uns weit mehr als unser Nachname.
           </p>
         </div>
       </section>

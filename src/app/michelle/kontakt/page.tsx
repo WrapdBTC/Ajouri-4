@@ -20,8 +20,8 @@ const faq = [
     a: "SKIN FIRST, Behandlungen und Lash & Brow buchst du über Beautinda. Oder schreib mir per WhatsApp, Mail oder über das Formular. Wenn ich gerade in einer Behandlung bin, melde ich mich zurück.",
   },
   {
-    q: "Wann bist du in Neuburg?",
-    a: "Alle 9 Wochen für 3 Wochen — das sind die Behandlungsblöcke. Dazwischen bin ich in Kroatien und online für dich da.",
+    q: "Wann sind Termine möglich?",
+    a: "Termine nach Vereinbarung. Den kostenlosen Kennenlern-Call buchst du direkt online, persönliche Online-Beratungen sind ebenfalls möglich.",
   },
   {
     q: "Verschieben?",
@@ -108,7 +108,7 @@ export default function MichelleKontakt() {
                   </dd>
                 </div>
                 <div>
-                  <dt className="eyebrow text-accent-text">Im Studio</dt>
+                  <dt className="eyebrow text-accent-text">Termine</dt>
                   <dd className="mt-1.5">{c.hours}</dd>
                 </div>
               </dl>
