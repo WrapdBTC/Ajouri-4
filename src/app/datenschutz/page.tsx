@@ -75,16 +75,16 @@ export default function Datenschutz() {
         </p>
       </LegalSection>
 
-      <LegalSection title="3. Hosting durch IONOS">
-        <p>Unsere Website wird bei folgendem Anbieter gehostet:</p>
+      <LegalSection title="3. Hosting durch GitHub Pages">
+        <p>Unsere Website wird über den Dienst GitHub Pages bereitgestellt. Anbieter ist:</p>
         <Lines>
-          IONOS SE
+          GitHub, Inc.
           <br />
-          Elgendorfer Straße 57
+          88 Colin P. Kelly Jr. Street
           <br />
-          56410 Montabaur
+          San Francisco, CA 94107
           <br />
-          Deutschland
+          USA
         </Lines>
         <p>
           Beim Besuch unserer Website werden technisch erforderliche Informationen verarbeitet.
@@ -100,56 +100,30 @@ export default function Datenschutz() {
             "Technische Verbindungsdaten",
           ]}
         />
-        <p>Diese Informationen dienen der Bereitstellung, Stabilität und Sicherheit unserer Website.</p>
+        <p>
+          Diese Informationen dienen der Bereitstellung, Stabilität und Sicherheit unserer Website.
+          GitHub speichert sie in Server-Logfiles, um Angriffe zu erkennen und den Dienst sicher zu
+          betreiben. Wir selbst erhalten keinen Zugriff auf diese Daten und führen keine
+          Besucherstatistik.
+        </p>
         <p>
           Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse liegt im
           sicheren und funktionsfähigen Betrieb unseres Internetauftritts.
         </p>
         <p>
-          Die Daten werden nach Maßgabe der technisch erforderlichen und gesetzlichen
-          Aufbewahrungsfristen gespeichert und anschließend gelöscht.
+          Dabei können Daten in die USA übermittelt werden. GitHub ist nach dem EU-US Data Privacy
+          Framework zertifiziert; die Übermittlung stützt sich auf den Angemessenheitsbeschluss der
+          EU-Kommission (Art. 45 DSGVO) sowie ergänzend auf Standardvertragsklauseln (Art. 46 DSGVO).
         </p>
         <p>
-          Weitere Informationen zur Datenverarbeitung finden Sie in der Datenschutzerklärung von
-          IONOS:{" "}
-          <Ext href="https://www.ionos.de/terms-gtc/datenschutzerklaerung/">
-            www.ionos.de/terms-gtc/datenschutzerklaerung
+          Weitere Informationen finden Sie in der Datenschutzerklärung von GitHub:{" "}
+          <Ext href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement">
+            docs.github.com/de/site-policy/privacy-policies
           </Ext>
         </p>
       </LegalSection>
 
-      <LegalSection title="4. IONOS SiteAnalytics">
-        <p>Zur statistischen Auswertung der Besucherzugriffe verwenden wir IONOS SiteAnalytics.</p>
-        <p>
-          Mit diesem Dienst können wir nachvollziehen, welche Bereiche unserer Website besonders
-          häufig aufgerufen werden und wie wir unseren Internetauftritt verbessern können.
-        </p>
-        <p>Nach Angaben von IONOS können dabei folgende Informationen verarbeitet werden:</p>
-        <List
-          items={[
-            "Aufgerufene Seiten und Dateien",
-            "Datum und Uhrzeit des Zugriffs",
-            "Browsertyp und Browserversion",
-            "Betriebssystem",
-            "Gerätetyp",
-            "Zuvor besuchte Website",
-            "IP-Adresse in anonymisierter Form",
-          ]}
-        />
-        <p>
-          IONOS gibt an, dass SiteAnalytics keine Cookies verwendet und IP-Adressen nach der
-          Übertragung anonymisiert werden.
-        </p>
-        <p>Die Nutzung dient der statistischen Analyse sowie der Verbesserung unseres Internetangebots.</p>
-        <p>
-          Die datenschutzrechtliche Grundlage richtet sich nach der konkret verwendeten
-          Erfassungstechnik. Soweit eine Einwilligung gesetzlich erforderlich ist, erfolgt die
-          entsprechende Datenerhebung erst nach Erteilung dieser Einwilligung.
-        </p>
-        <p>Weitere Informationen finden Sie in den Datenschutzhinweisen von IONOS.</p>
-      </LegalSection>
-
-      <LegalSection title="5. Kontaktaufnahme">
+      <LegalSection title="4. Kontaktaufnahme">
         <p>
           Wenn Sie uns per E-Mail oder Telefon kontaktieren, verarbeiten wir die von Ihnen
           mitgeteilten personenbezogenen Daten zur Bearbeitung Ihrer Anfrage. Hierzu können gehören:
@@ -169,7 +143,7 @@ export default function Datenschutz() {
         </p>
       </LegalSection>
 
-      <LegalSection title="6. Terminbuchung über Beautinda">
+      <LegalSection title="5. Terminbuchung über Beautinda">
         <p>
           Für die Buchung von kosmetischen Behandlungen bei Michelle Ajouri verwenden wir die externe
           Buchungsplattform Beautinda. Wenn Sie auf den entsprechenden Buchungslink klicken, werden
@@ -198,7 +172,7 @@ export default function Datenschutz() {
         </p>
       </LegalSection>
 
-      <LegalSection title="7. Terminbuchung über Calendly">
+      <LegalSection title="6. Terminbuchung über Calendly">
         <p>
           Für die Terminbuchung bei Sabine Ajouri – Vita Sonus verwenden wir einen externen Link zur
           Buchungsplattform Calendly.
@@ -221,7 +195,7 @@ export default function Datenschutz() {
         </p>
       </LegalSection>
 
-      <LegalSection title="8. Verlinkung zum REVIDERM-Onlineshop">
+      <LegalSection title="7. Verlinkung zum REVIDERM-Onlineshop">
         <p>
           Auf unserer Website bieten wir Ihnen die Möglichkeit, über einen externen Link zum
           REVIDERM-Onlineshop zu gelangen. Der verlinkte Partnershop wird nach dem vorgesehenen
@@ -255,7 +229,7 @@ export default function Datenschutz() {
         </p>
       </LegalSection>
 
-      <LegalSection title="9. Verlinkungen zu Instagram">
+      <LegalSection title="8. Verlinkungen zu Instagram">
         <p>
           Unsere Website enthält Verlinkungen zu den Instagram-Profilen der bei AJOURI vertretenen
           Unternehmerinnen. Instagram wird von Unternehmen der Meta-Gruppe betrieben.
@@ -272,7 +246,7 @@ export default function Datenschutz() {
         </p>
       </LegalSection>
 
-      <LegalSection title="10. Cookies und ähnliche Technologien">
+      <LegalSection title="9. Cookies und ähnliche Technologien">
         <p>
           Unsere Website kann technisch erforderliche Funktionen einsetzen, die für ihren sicheren
           und ordnungsgemäßen Betrieb notwendig sind.
@@ -285,7 +259,7 @@ export default function Datenschutz() {
         </p>
       </LegalSection>
 
-      <LegalSection title="11. Speicherdauer">
+      <LegalSection title="10. Speicherdauer">
         <p>
           Wir speichern personenbezogene Daten nur so lange, wie dies für die jeweiligen Zwecke
           erforderlich ist. Eine längere Speicherung erfolgt, soweit gesetzliche
@@ -297,7 +271,7 @@ export default function Datenschutz() {
         </p>
       </LegalSection>
 
-      <LegalSection title="12. Ihre Datenschutzrechte">
+      <LegalSection title="11. Ihre Datenschutzrechte">
         <p>Sie haben im Rahmen der gesetzlichen Voraussetzungen folgende Rechte:</p>
         <ul>
           <li>
@@ -336,7 +310,7 @@ export default function Datenschutz() {
         </p>
       </LegalSection>
 
-      <LegalSection title="13. Datensicherheit">
+      <LegalSection title="12. Datensicherheit">
         <p>
           Wir treffen angemessene technische und organisatorische Maßnahmen, um personenbezogene
           Daten vor unbefugtem Zugriff, Verlust und Missbrauch zu schützen. Unsere Website verwendet
@@ -344,7 +318,7 @@ export default function Datenschutz() {
         </p>
       </LegalSection>
 
-      <LegalSection title="14. Änderungen dieser Datenschutzerklärung">
+      <LegalSection title="13. Änderungen dieser Datenschutzerklärung">
         <p>
           Wir behalten uns vor, diese Datenschutzerklärung anzupassen, wenn sich die technischen
           Funktionen unserer Website, die verwendeten Dienste oder gesetzliche Anforderungen ändern.

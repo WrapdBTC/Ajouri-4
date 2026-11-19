@@ -18,7 +18,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://wrapdbtc.github.io"),
+  metadataBase: new URL("https://www.ajouri.de"),
   title: {
     default: "Ajouri — Haut, Klang & Tattoo",
     template: "%s · Ajouri",
