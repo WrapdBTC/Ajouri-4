@@ -105,9 +105,9 @@ export default function IsabelleHome() {
           <figure className="reveal ken-wrap md:col-span-5">
             <div className="relative aspect-[4/5] overflow-hidden bg-surface">
               <Img
-                src="/assets/isabelle/portrait-fels.jpg"
-                alt="Isabelle Ajouri steht vor einer Felswand"
-                position="50% 40%"
+                src="/assets/isabelle/portrait-lachen.jpg"
+                alt="Isabelle Ajouri lacht im weißen Kleid"
+                position="50% 35%"
                 className="ken-img absolute inset-0 h-full w-full object-cover"
               />
             </div>

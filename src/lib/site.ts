@@ -61,7 +61,7 @@ export const family: {
     href: "/isabelle/",
     portal: "/assets/isabelle/portal-lachen-v2.jpg",
     portalPosition: "50% 30%",
-    portrait: "/assets/isabelle/portrait-fels.jpg",
+    portrait: "/assets/isabelle/portrait-lachen.jpg",
     portraitPosition: "50% 40%",
   },
 ];

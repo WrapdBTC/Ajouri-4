@@ -58,9 +58,9 @@ export default function IsabelleGalerie() {
       <Hero
         size="page"
         layout="split"
-        image="/assets/isabelle/portrait-kleid.jpg"
-        alt="Isabelle Ajouri lacht, eine Hand im Haar"
-        position="50% 30%"
+        image="/assets/isabelle/wiese-ruecken.jpg"
+        alt="Isabelle Ajouri läuft im weißen Kleid über eine Wiese"
+        position="50% 55%"
         eyebrow="Meine Arbeit · Inkabell Tattoo"
         title={
           <>
